@@ -1,0 +1,182 @@
+/**
+ */
+package org.lunifera.mobile.vaadin.ecview.model.impl;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecp.ecview.common.model.core.impl.YFieldImpl;
+import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
+import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>VM Switch</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMSwitchImpl#getDatadescription <em>Datadescription</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class VMSwitchImpl extends YFieldImpl implements VMSwitch {
+	/**
+	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDatadescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected YDatadescription datadescription;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VMSwitchImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return VaadinMobilePackage.Literals.VM_SWITCH;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDatadescription getDatadescription() {
+		if (datadescription != null && datadescription.eIsProxy()) {
+			InternalEObject oldDatadescription = (InternalEObject)datadescription;
+			datadescription = (YDatadescription)eResolveProxy(oldDatadescription);
+			if (datadescription != oldDatadescription) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, VaadinMobilePackage.VM_SWITCH__DATADESCRIPTION, oldDatadescription, datadescription));
+			}
+		}
+		return datadescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YDatadescription basicGetDatadescription() {
+		return datadescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDatadescription(YDatadescription newDatadescription) {
+		YDatadescription oldDatadescription = datadescription;
+		datadescription = newDatadescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VaadinMobilePackage.VM_SWITCH__DATADESCRIPTION, oldDatadescription, datadescription));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case VaadinMobilePackage.VM_SWITCH__DATADESCRIPTION:
+				if (resolve) return getDatadescription();
+				return basicGetDatadescription();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case VaadinMobilePackage.VM_SWITCH__DATADESCRIPTION:
+				setDatadescription((YDatadescription)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case VaadinMobilePackage.VM_SWITCH__DATADESCRIPTION:
+				setDatadescription((YDatadescription)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case VaadinMobilePackage.VM_SWITCH__DATADESCRIPTION:
+				return datadescription != null;
+		}
+		return super.eIsSet(featureID);
+	}
+	
+	/**
+	 * Sets the label by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabel(String label) {
+		YDatadescription ds = getDatadescription();
+		if (ds == null) {
+			setDatadescription(createDatadescription(label));
+		} else {
+			ds.setLabel(label);
+		}
+	}
+
+	/**
+	 * Sets the label i18nKey by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabelI18nKey(String i18nKey) {
+		YDatadescription ds = getDatadescription();
+		if (ds == null) {
+			setDatadescription(createDatadescriptionForI18n(i18nKey));
+		} else {
+			ds.setLabelI18nKey(i18nKey);
+		}
+	}
+
+} //VMSwitchImpl

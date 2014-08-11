@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.lunifera.mobile.vaadin</groupId>
+		<artifactId>org.lunifera.mobile.vaadin.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../org.lunifera.mobile.vaadin.parent/pom.xml</relativePath>
+	</parent>
+	<artifactId>org.lunifera.mobile.vaadin.ecview.editparts</artifactId>
+	<packaging>eclipse-plugin</packaging>
+	<name>Editparts API for extension model</name>
+	<description>Contains the API for ui controller</description>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

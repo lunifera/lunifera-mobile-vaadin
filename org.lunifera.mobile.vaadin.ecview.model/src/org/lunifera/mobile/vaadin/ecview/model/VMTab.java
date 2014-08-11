@@ -1,0 +1,132 @@
+/**
+ */
+package org.lunifera.mobile.vaadin.ecview.model;
+
+import org.eclipse.emf.ecp.ecview.common.model.core.YCssAble;
+import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
+import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
+import org.eclipse.emf.ecp.ecview.common.model.core.YView;
+import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>VM Tab</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * <ul>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getParent <em>Parent</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getEmbeddable <em>Embeddable</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getDatadescription <em>Datadescription</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMTab()
+ * @model
+ * @generated
+ */
+public interface VMTab extends YElement, YCssAble {
+	/**
+	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link org.lunifera.mobile.vaadin.ecview.model.VMTabSheet#getTabs <em>Tabs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent</em>' container reference.
+	 * @see #setParent(VMTabSheet)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMTab_Parent()
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMTabSheet#getTabs
+	 * @model opposite="tabs" required="true" transient="false"
+	 * @generated
+	 */
+	VMTabSheet getParent();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getParent <em>Parent</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent</em>' container reference.
+	 * @see #getParent()
+	 * @generated
+	 */
+	void setParent(VMTabSheet value);
+
+	/**
+	 * Returns the value of the '<em><b>Embeddable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Embeddable</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Embeddable</em>' containment reference.
+	 * @see #setEmbeddable(YEmbeddable)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMTab_Embeddable()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	YEmbeddable getEmbeddable();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getEmbeddable <em>Embeddable</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Embeddable</em>' containment reference.
+	 * @see #getEmbeddable()
+	 * @generated
+	 */
+	void setEmbeddable(YEmbeddable value);
+
+	/**
+	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Datadescription</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Datadescription</em>' reference.
+	 * @see #setDatadescription(YDatadescription)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMTab_Datadescription()
+	 * @model
+	 * @generated
+	 */
+	YDatadescription getDatadescription();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getDatadescription <em>Datadescription</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Datadescription</em>' reference.
+	 * @see #getDatadescription()
+	 * @generated
+	 */
+	void setDatadescription(YDatadescription value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	YView getView();
+	
+	/**
+	 * Sets the label by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabel(String label);
+
+	/**
+	 * Sets the label i18nKey by creating a new datadescription.
+	 * 
+	 * @param label
+	 */
+	public void setLabelI18nKey(String i18nKey);
+
+} // VMTab

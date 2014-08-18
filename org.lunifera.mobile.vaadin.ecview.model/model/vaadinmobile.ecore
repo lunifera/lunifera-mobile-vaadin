@@ -4,13 +4,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="VMHorizontalButtonGroup" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YLayout"/>
   <eClassifiers xsi:type="ecore:EClass" name="VMSwitch" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YField">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VMVerticalComponentGroup" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YLayout"/>
   <eClassifiers xsi:type="ecore:EClass" name="VMTabSheet" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YEmbeddable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tabs" upperBound="-1" eType="#//VMTab"
         containment="true" eOpposite="#//VMTab/parent"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VMTab" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YElement ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YCssAble">
+  <eClassifiers xsi:type="ecore:EClass" name="VMTab" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YElement ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YCssAble #//VMNavigationHandler">
     <eOperations name="getView" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YView"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//VMTabSheet" eOpposite="#//VMTabSheet/tabs"/>
@@ -19,11 +20,30 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VMNavigationPage" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YLayout"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VMNavigationPage" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YLayout #//VMNavigationHandler">
+    <eOperations name="createValueEndpoint" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/binding.ecore#//YECViewModelValueBindingEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VMNavigationButton" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YAction">
     <eOperations name="getView" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YView"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="page" eType="#//VMNavigationPage"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/datatypes.ecore#//YDatadescription"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VMNavigationCommand" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YCommand">
+    <eOperations name="createNavigationValueEndpoint" eType="ecore:EClass ../../org.eclipse.emf.ecp.ecview.common.model/model/binding.ecore#//YECViewModelValueBindingEndpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="navigationHandler" eType="#//VMNavigationHandler"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPage" eType="#//VMNavigationPage"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VMNavigationHandler" abstract="true"
+      interface="true" eSuperTypes="../../org.eclipse.emf.ecp.ecview.common.model/model/core.ecore#//YElement"/>
 </ecore:EPackage>

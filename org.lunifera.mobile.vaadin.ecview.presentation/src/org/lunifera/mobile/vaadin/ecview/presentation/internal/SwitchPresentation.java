@@ -23,6 +23,7 @@ import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackag
 import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.ICheckboxEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.ISwitchEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
+import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractFieldWidgetPresenter;
 
 import com.vaadin.addon.touchkit.ui.Switch;
@@ -159,7 +160,7 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 	protected void createBindings(VMSwitch yField, Switch field) {
 		// create the model binding from ridget to ECView-model
 		registerBinding(createBindings_Value(castEObject(getModel()),
-				ExtensionModelPackage.Literals.YCHECK_BOX__VALUE, field));
+				VaadinMobilePackage.Literals.VM_SWITCH__VALUE, field));
 
 		super.createBindings(yField, field, componentBase);
 	}

@@ -63,6 +63,7 @@ public class VaadinMobileFactoryImpl extends EFactoryImpl implements VaadinMobil
 			case VaadinMobilePackage.VM_TAB: return createVMTab();
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE: return createVMNavigationPage();
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON: return createVMNavigationButton();
+			case VaadinMobilePackage.VM_NAVIGATION_COMMAND: return createVMNavigationCommand();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -136,6 +137,16 @@ public class VaadinMobileFactoryImpl extends EFactoryImpl implements VaadinMobil
 	public VMNavigationButton createVMNavigationButton() {
 		VMNavigationButtonImpl vmNavigationButton = new VMNavigationButtonImpl();
 		return vmNavigationButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VMNavigationCommand createVMNavigationCommand() {
+		VMNavigationCommandImpl vmNavigationCommand = new VMNavigationCommandImpl();
+		return vmNavigationCommand;
 	}
 
 	/**

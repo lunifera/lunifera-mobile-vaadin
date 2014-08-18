@@ -19,11 +19,13 @@ import org.lunifera.mobile.vaadin.ecview.editparts.IHorizontalButtonGroupEditpar
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationCommandEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.ISwitchEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IVerticalComponentGroupEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
 import org.lunifera.mobile.vaadin.ecview.model.VMTab;
@@ -80,8 +82,12 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(INavigationPageEditpart.class)) {
 			result = createNewInstance(NavigationPageEditpart.class);
-		} else if (editPartClazz.isAssignableFrom(INavigationButtonEditpart.class)) {
+		} else if (editPartClazz
+				.isAssignableFrom(INavigationButtonEditpart.class)) {
 			result = createNewInstance(NavigationButtonEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(INavigationCommandEditpart.class)) {
+			result = createNewInstance(NavigationCommandEditpart.class);
 		}
 
 		if (result != null) {
@@ -120,6 +126,8 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(NavigationPageEditpart.class);
 		} else if (yElement instanceof VMNavigationButton) {
 			result = createNewInstance(NavigationButtonEditpart.class);
+		} else if (yElement instanceof VMNavigationCommand) {
+			result = createNewInstance(NavigationCommandEditpart.class);
 		}
 
 		if (result != null) {

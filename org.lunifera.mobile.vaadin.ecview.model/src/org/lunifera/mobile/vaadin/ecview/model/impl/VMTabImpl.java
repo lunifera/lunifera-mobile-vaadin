@@ -15,6 +15,7 @@ import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YView;
 import org.eclipse.emf.ecp.ecview.common.model.datatypes.DatatypesFactory;
 import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler;
 import org.lunifera.mobile.vaadin.ecview.model.VMTab;
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
@@ -524,6 +525,11 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 				default: return -1;
 			}
 		}
+		if (baseClass == VMNavigationHandler.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -537,6 +543,11 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 			switch (baseFeatureID) {
 				case CoreModelPackage.YCSS_ABLE__CSS_CLASS: return VaadinMobilePackage.VM_TAB__CSS_CLASS;
 				case CoreModelPackage.YCSS_ABLE__CSS_ID: return VaadinMobilePackage.VM_TAB__CSS_ID;
+				default: return -1;
+			}
+		}
+		if (baseClass == VMNavigationHandler.class) {
+			switch (baseFeatureID) {
 				default: return -1;
 			}
 		}

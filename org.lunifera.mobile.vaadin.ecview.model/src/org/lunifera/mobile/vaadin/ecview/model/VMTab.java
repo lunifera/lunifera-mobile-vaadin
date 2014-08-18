@@ -26,7 +26,7 @@ import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
  * @model
  * @generated
  */
-public interface VMTab extends YElement, YCssAble {
+public interface VMTab extends YElement, YCssAble, VMNavigationHandler {
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link org.lunifera.mobile.vaadin.ecview.model.VMTabSheet#getTabs <em>Tabs</em>}'.

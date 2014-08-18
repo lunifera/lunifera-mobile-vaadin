@@ -14,4 +14,12 @@ package org.lunifera.mobile.vaadin.ecview.model.validation;
 public interface VMNavigationPageValidator {
 	boolean validate();
 
+	boolean validateType(Class<?> value);
+
+	boolean validateEmfNsURI(String value);
+
+	boolean validateTypeQualifiedName(String value);
+
+	boolean validateValue(Object value);
+
 }

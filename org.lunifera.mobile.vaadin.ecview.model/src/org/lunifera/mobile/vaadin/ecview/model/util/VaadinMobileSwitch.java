@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import org.eclipse.emf.ecp.ecview.common.model.core.YAction;
+import org.eclipse.emf.ecp.ecview.common.model.core.YCommand;
 import org.eclipse.emf.ecp.ecview.common.model.core.YCssAble;
 import org.eclipse.emf.ecp.ecview.common.model.core.YEditable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
@@ -129,8 +130,9 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 			case VaadinMobilePackage.VM_TAB: {
 				VMTab vmTab = (VMTab)theEObject;
 				T result = caseVMTab(vmTab);
-				if (result == null) result = caseYElement(vmTab);
 				if (result == null) result = caseYCssAble(vmTab);
+				if (result == null) result = caseVMNavigationHandler(vmTab);
+				if (result == null) result = caseYElement(vmTab);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,6 +140,7 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				VMNavigationPage vmNavigationPage = (VMNavigationPage)theEObject;
 				T result = caseVMNavigationPage(vmNavigationPage);
 				if (result == null) result = caseYLayout(vmNavigationPage);
+				if (result == null) result = caseVMNavigationHandler(vmNavigationPage);
 				if (result == null) result = caseYEmbeddable(vmNavigationPage);
 				if (result == null) result = caseYElement(vmNavigationPage);
 				if (result == null) result = caseYCssAble(vmNavigationPage);
@@ -156,6 +159,21 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYCssAble(vmNavigationButton);
 				if (result == null) result = caseYVisibleable(vmNavigationButton);
 				if (result == null) result = caseYVisibilityProcessable(vmNavigationButton);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VaadinMobilePackage.VM_NAVIGATION_COMMAND: {
+				VMNavigationCommand vmNavigationCommand = (VMNavigationCommand)theEObject;
+				T result = caseVMNavigationCommand(vmNavigationCommand);
+				if (result == null) result = caseYCommand(vmNavigationCommand);
+				if (result == null) result = caseYElement(vmNavigationCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VaadinMobilePackage.VM_NAVIGATION_HANDLER: {
+				VMNavigationHandler vmNavigationHandler = (VMNavigationHandler)theEObject;
+				T result = caseVMNavigationHandler(vmNavigationHandler);
+				if (result == null) result = caseYElement(vmNavigationHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -265,6 +283,36 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVMNavigationButton(VMNavigationButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Navigation Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Navigation Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMNavigationCommand(VMNavigationCommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Navigation Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Navigation Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMNavigationHandler(VMNavigationHandler object) {
 		return null;
 	}
 
@@ -415,6 +463,21 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYAction(YAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YCommand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YCommand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYCommand(YCommand object) {
 		return null;
 	}
 

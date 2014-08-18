@@ -2,6 +2,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -321,13 +322,22 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_SWITCH__DATADESCRIPTION = CoreModelPackage.YFIELD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SWITCH__VALUE = CoreModelPackage.YFIELD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>VM Switch</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_SWITCH_FEATURE_COUNT = CoreModelPackage.YFIELD_FEATURE_COUNT + 1;
+	int VM_SWITCH_FEATURE_COUNT = CoreModelPackage.YFIELD_FEATURE_COUNT + 2;
 
 
 	/**
@@ -731,13 +741,49 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_PAGE__ELEMENTS = CoreModelPackage.YLAYOUT__ELEMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__TYPE = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__EMF_NS_URI = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__TYPE_QUALIFIED_NAME = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__VALUE = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>VM Navigation Page</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
@@ -876,6 +922,107 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_BUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl <em>VM Navigation Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationCommand()
+	 * @generated
+	 */
+	int VM_NAVIGATION_COMMAND = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_COMMAND__ID = CoreModelPackage.YCOMMAND__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_COMMAND__NAME = CoreModelPackage.YCOMMAND__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Navigation Handler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_COMMAND__NAVIGATION_HANDLER = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target Page</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_COMMAND__TARGET_PAGE = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_COMMAND__VALUE = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>VM Navigation Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_COMMAND_FEATURE_COUNT = CoreModelPackage.YCOMMAND_FEATURE_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler <em>VM Navigation Handler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationHandler()
+	 * @generated
+	 */
+	int VM_NAVIGATION_HANDLER = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_HANDLER__ID = CoreModelPackage.YELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_HANDLER__NAME = CoreModelPackage.YELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>VM Navigation Handler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_HANDLER_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup <em>VM Horizontal Button Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -905,6 +1052,17 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVMSwitch_Datadescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMSwitch#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSwitch#isValue()
+	 * @see #getVMSwitch()
+	 * @generated
+	 */
+	EAttribute getVMSwitch_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMVerticalComponentGroup <em>VM Vertical Component Group</em>}'.
@@ -991,6 +1149,50 @@ public interface VaadinMobilePackage extends EPackage {
 	EClass getVMNavigationPage();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getType()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EAttribute getVMNavigationPage_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getEmfNsURI()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EAttribute getVMNavigationPage_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getTypeQualifiedName()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EAttribute getVMNavigationPage_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getValue()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EAttribute getVMNavigationPage_Value();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton <em>VM Navigation Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1021,6 +1223,59 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVMNavigationButton_Datadescription();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand <em>VM Navigation Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VM Navigation Command</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand
+	 * @generated
+	 */
+	EClass getVMNavigationCommand();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand#getTargetPage <em>Target Page</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Target Page</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand#getTargetPage()
+	 * @see #getVMNavigationCommand()
+	 * @generated
+	 */
+	EReference getVMNavigationCommand_TargetPage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand#getValue()
+	 * @see #getVMNavigationCommand()
+	 * @generated
+	 */
+	EAttribute getVMNavigationCommand_Value();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand#getNavigationHandler <em>Navigation Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Navigation Handler</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand#getNavigationHandler()
+	 * @see #getVMNavigationCommand()
+	 * @generated
+	 */
+	EReference getVMNavigationCommand_NavigationHandler();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler <em>VM Navigation Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VM Navigation Handler</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler
+	 * @generated
+	 */
+	EClass getVMNavigationHandler();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1069,6 +1324,13 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference VM_SWITCH__DATADESCRIPTION = eINSTANCE.getVMSwitch_Datadescription();
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_SWITCH__VALUE = eINSTANCE.getVMSwitch_Value();
 		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMVerticalComponentGroupImpl <em>VM Vertical Component Group</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -1134,6 +1396,34 @@ public interface VaadinMobilePackage extends EPackage {
 		 */
 		EClass VM_NAVIGATION_PAGE = eINSTANCE.getVMNavigationPage();
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_PAGE__TYPE = eINSTANCE.getVMNavigationPage_Type();
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_PAGE__EMF_NS_URI = eINSTANCE.getVMNavigationPage_EmfNsURI();
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_PAGE__TYPE_QUALIFIED_NAME = eINSTANCE.getVMNavigationPage_TypeQualifiedName();
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_PAGE__VALUE = eINSTANCE.getVMNavigationPage_Value();
+		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1156,6 +1446,45 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference VM_NAVIGATION_BUTTON__DATADESCRIPTION = eINSTANCE.getVMNavigationButton_Datadescription();
+		/**
+		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl <em>VM Navigation Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationCommand()
+		 * @generated
+		 */
+		EClass VM_NAVIGATION_COMMAND = eINSTANCE.getVMNavigationCommand();
+		/**
+		 * The meta object literal for the '<em><b>Target Page</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_NAVIGATION_COMMAND__TARGET_PAGE = eINSTANCE.getVMNavigationCommand_TargetPage();
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_COMMAND__VALUE = eINSTANCE.getVMNavigationCommand_Value();
+		/**
+		 * The meta object literal for the '<em><b>Navigation Handler</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_NAVIGATION_COMMAND__NAVIGATION_HANDLER = eINSTANCE.getVMNavigationCommand_NavigationHandler();
+		/**
+		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler <em>VM Navigation Handler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationHandler()
+		 * @generated
+		 */
+		EClass VM_NAVIGATION_HANDLER = eINSTANCE.getVMNavigationHandler();
 
 	}
 

@@ -11,21 +11,35 @@ Package model <http://lunifera.org/vaadin/mobile/v1>
 
   Class VMSwitch -> YField
     Reference datadescription : YDatadescription
+    Attribute value : EBoolean
 
   Class VMVerticalComponentGroup -> YLayout
 
   Class VMTabSheet -> YEmbeddable
     Reference tabs : VMTab<<0..*>>
 
-  Class VMTab -> YElement, YCssAble
+  Class VMTab -> YElement, YCssAble, VMNavigationHandler
     Reference parent : VMTabSheet<<1..1>>
     Reference embeddable : YEmbeddable<<1..1>>
     Reference datadescription : YDatadescription
     Operation getView() : YView
 
-  Class VMNavigationPage -> YLayout
+  Class VMNavigationPage -> YLayout, VMNavigationHandler
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+    Attribute value : EJavaObject
+    Operation createValueEndpoint() : YECViewModelValueBindingEndpoint
 
   Class VMNavigationButton -> YAction
     Reference page : VMNavigationPage
     Reference datadescription : YDatadescription
     Operation getView() : YView
+
+  Class VMNavigationCommand -> YCommand
+    Reference navigationHandler : VMNavigationHandler
+    Reference targetPage : VMNavigationPage
+    Attribute value : EJavaObject
+    Operation createNavigationValueEndpoint() : YECViewModelValueBindingEndpoint
+
+  Class VMNavigationHandler -> YElement

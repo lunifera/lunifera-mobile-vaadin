@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.emf.ecp.ecview.common.model.core.YAction;
+import org.eclipse.emf.ecp.ecview.common.model.core.YCommand;
 import org.eclipse.emf.ecp.ecview.common.model.core.YCssAble;
 import org.eclipse.emf.ecp.ecview.common.model.core.YEditable;
 import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
@@ -107,6 +108,14 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 				return createVMNavigationButtonAdapter();
 			}
 			@Override
+			public Adapter caseVMNavigationCommand(VMNavigationCommand object) {
+				return createVMNavigationCommandAdapter();
+			}
+			@Override
+			public Adapter caseVMNavigationHandler(VMNavigationHandler object) {
+				return createVMNavigationHandlerAdapter();
+			}
+			@Override
 			public Adapter caseYElement(YElement object) {
 				return createYElementAdapter();
 			}
@@ -145,6 +154,10 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYAction(YAction object) {
 				return createYActionAdapter();
+			}
+			@Override
+			public Adapter caseYCommand(YCommand object) {
+				return createYCommandAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -261,6 +274,34 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVMNavigationButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand <em>VM Navigation Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand
+	 * @generated
+	 */
+	public Adapter createVMNavigationCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler <em>VM Navigation Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler
+	 * @generated
+	 */
+	public Adapter createVMNavigationHandlerAdapter() {
 		return null;
 	}
 
@@ -401,6 +442,20 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YCommand <em>YCommand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YCommand
+	 * @generated
+	 */
+	public Adapter createYCommandAdapter() {
 		return null;
 	}
 

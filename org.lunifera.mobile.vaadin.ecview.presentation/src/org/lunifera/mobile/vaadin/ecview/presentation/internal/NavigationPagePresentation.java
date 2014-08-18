@@ -12,16 +12,34 @@ package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 
 import java.util.Locale;
 
+import org.eclipse.core.databinding.Binding;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.databinding.EMFObservables;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecp.ecview.common.binding.IECViewBindingManager;
 import org.eclipse.emf.ecp.ecview.common.editpart.IElementEditpart;
 import org.eclipse.emf.ecp.ecview.common.editpart.IEmbeddableEditpart;
 import org.eclipse.emf.ecp.ecview.common.editpart.ILayoutEditpart;
+import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableEndpointEditpart;
+import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableValueEndpointEditpart;
 import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.presentation.INavigationPagePresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
+import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
+import org.lunifera.runtime.web.vaadin.databinding.VaadinObservables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.vaadin.addon.touchkit.ui.NavigationManager;
+import com.vaadin.addon.touchkit.ui.NavigationManager.NavigationEvent;
+import com.vaadin.addon.touchkit.ui.NavigationManager.NavigationListener;
 import com.vaadin.addon.touchkit.ui.NavigationView;
+import com.vaadin.server.ClientConnector;
+import com.vaadin.server.ClientConnector.AttachEvent;
+import com.vaadin.ui.AbstractComponent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CssLayout;
@@ -32,7 +50,8 @@ import com.vaadin.ui.VerticalLayout;
  */
 @SuppressWarnings("restriction")
 public class NavigationPagePresentation extends
-		AbstractLayoutPresenter<ComponentContainer> {
+		AbstractLayoutPresenter<ComponentContainer> implements
+		INavigationPagePresentation<ComponentContainer>, NavigationListener {
 
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(NavigationPagePresentation.class);
@@ -41,6 +60,9 @@ public class NavigationPagePresentation extends
 	private VerticalLayout content;
 	private ModelAccess modelAccess;
 	private CssLayout fillerLayout;
+
+	// the input data if navigation page is triggered by table selection,...
+	private IBindableEndpointEditpart inputDataBindingEndpoint;
 
 	/**
 	 * The constructor.
@@ -128,6 +150,39 @@ public class NavigationPagePresentation extends
 		return navigationView;
 	}
 
+	@SuppressWarnings("serial")
+	protected void createBindings(VMNavigationPage yPage,
+			AbstractComponent widget, AbstractComponent container) {
+
+		// if input data is available, then bind values against that input
+		if (inputDataBindingEndpoint != null) {
+			IECViewBindingManager bindingManager = getViewContext().getService(
+					IECViewBindingManager.class.getName());
+			IBindableValueEndpointEditpart modelValueEditpart = (IBindableValueEndpointEditpart) inputDataBindingEndpoint;
+			IObservableValue modelObservable = modelValueEditpart
+					.getObservable();
+
+			IObservableValue targetObservable = EMFObservables.observeValue(
+					(EObject) getModel(),
+					VaadinMobilePackage.Literals.VM_NAVIGATION_PAGE__VALUE);
+			Binding currentActiveNextNavPageBinding = bindingManager.bindValue(
+					targetObservable, modelObservable, new UpdateValueStrategy(
+							UpdateValueStrategy.POLICY_NEVER),
+					new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE));
+			registerBinding(currentActiveNextNavPageBinding);
+			
+			navigationView.addAttachListener(new ClientConnector.AttachListener() {
+				@Override
+				public void attach(AttachEvent event) {
+					navigationView.getNavigationManager().addNavigationListener(NavigationPagePresentation.this);
+				}
+			});
+			
+		}
+
+		super.createBindings(yPage, widget, container);
+	}
+
 	/**
 	 * Adds the children to the superclass and prevents rendering.
 	 */
@@ -145,6 +200,40 @@ public class NavigationPagePresentation extends
 	@Override
 	public ComponentContainer getWidget() {
 		return navigationView;
+	}
+
+	@Override
+	public void navigateTo(INavigationPageEditpart targetPageEditpart,
+			IBindableEndpointEditpart bindingEndpoint) {
+		if (isRendered()) {
+			// navigate and forget -> All required logic is handled by target
+			// navigation page
+
+			VaadinObservables.activateRealm(navigationView.getUI());
+			// set the input data to the child nav page
+			targetPageEditpart.setInputDataBindingEndpoint(bindingEndpoint);
+			Component currentActiveNextNavPage = (Component) targetPageEditpart
+					.render(null);
+			navigationView.getNavigationManager().navigateTo(
+					currentActiveNextNavPage);
+		}
+	}
+
+	@Override
+	public void setInputDataBindingEndpoint(
+			IBindableEndpointEditpart bindingEndpoint) {
+		this.inputDataBindingEndpoint = bindingEndpoint;
+	}
+
+	@Override
+	public void navigate(NavigationEvent event) {
+		if (event.getDirection() == NavigationEvent.Direction.BACK) {
+			NavigationManager mgr = (NavigationManager) event.getSource();
+			if (mgr.getNextComponent() == navigationView) {
+				navigationView.getNavigationManager().removeListener(this);
+				getEditpart().requestUnrender();
+			}
+		}
 	}
 
 	@Override
@@ -186,8 +275,9 @@ public class NavigationPagePresentation extends
 	@Override
 	protected void internalRemove(IEmbeddableEditpart child) {
 		if (navigationView != null && child.isRendered()) {
-			// will happen during disposal since children already disposed.
-			navigationView.removeComponent((Component) child.getWidget());
+			// just remove the content. A navigation view only contains 1
+			// element
+			navigationView.removeComponent(navigationView.getContent());
 		}
 
 		child.unrender();

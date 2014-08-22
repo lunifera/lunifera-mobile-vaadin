@@ -4,9 +4,8 @@ Bundle-Name: Osgi
 Bundle-SymbolicName: org.lunifera.mobile.vaadin.touchkit.osgi
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Bundle-ClassPath: lib/vaadin-touchkit-cval-4.0.0.beta2-javadoc.jar,
- lib/vaadin-touchkit-cval-4.0.0.beta2.jar,
- .
+Bundle-ClassPath: .,
+ vaadin-touchkit-cval-4.0.0.beta2.jar
 Export-Package: com.vaadin.addon.touchkit.annotations,
  com.vaadin.addon.touchkit.extensions,
  com.vaadin.addon.touchkit.gwt,

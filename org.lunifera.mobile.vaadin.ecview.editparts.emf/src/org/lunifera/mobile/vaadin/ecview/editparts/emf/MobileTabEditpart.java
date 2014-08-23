@@ -101,7 +101,6 @@ public class MobileTabEditpart extends ElementEditpart<VMTab> implements IMobile
 	protected void internalDispose() {
 		try {
 			// if directly attached to a view, then remove it
-			IViewEditpart view = getView();
 			IMobileTabSheetEditpart parent = getParent();
 			if (parent != null) {
 				parent.removeTab(this);

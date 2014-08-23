@@ -16,7 +16,6 @@ import java.util.Locale;
 import org.eclipse.emf.ecp.ecview.common.editpart.IElementEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
-import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabSheetPresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
 
@@ -59,10 +58,8 @@ public class MobileTabSheetPresentation extends
 	@Override
 	public void remove(IMobileTabEditpart editpart) {
 		super.remove(editpart);
-		
-		if(editpart.isRendered()){
-			tabSheet.removeComponent((Component) editpart.getWidget());
-		}
+
+		tabSheet.removeComponent((Component) editpart.getWidget());
 	}
 
 	@Override
@@ -110,7 +107,7 @@ public class MobileTabSheetPresentation extends
 				tabSheet.removeTab(comp);
 			}
 		}
- 
+
 		// iterate all elements and build the tab element
 		//
 		for (IMobileTabEditpart editPart : getEditpart().getTabs()) {

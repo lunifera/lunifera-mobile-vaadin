@@ -1,0 +1,457 @@
+Contains "Commercial Vaadin Add-On License version 3" and "Eclipse Public License v1".\n\
+\n\
+This feature uses Vaadin touchkit addon which is licensed under the CVAL 3.0 license. You are not permitted to use the code contained without a valid CVAL 3.0 license.\n\
+See https://vaadin.com/directory#addon/vaadin-touchkit.
+
+Code implemented by Lunifera DOT org project is licensed under the EPL v1.\n\
+
+For details about the licenses see \n\:
+EPL v1 license http://www.eclipse.org/legal/epl-v10.html\n\
+CVAL3 license https://vaadin.com/license/cval-3\n\
+
+
+Commercial Vaadin Add-On License version 3
+
+NOTICE TO USER: PLEASE READ THIS LICENSE AGREEMENT CAREFULLY. BY
+USING ALL OR ANY PART OF THE LICENSED SOFTWARE YOU ACCEPT ALL THE
+TERMS AND CONDITIONS OF THIS AGREEMENT, INCLUDING, IN PARTICULAR THE
+RESTRICTIONS ON: USE AND TRANSFERABILITY CONTAINED IN CLAUSE 2;
+WARRANTY IN CLAUSE 6; LIABILITY IN CLAUSE 7. YOU ACCEPT THAT THIS
+AGREEMENT IS ENFORCEABLE LIKE ANY WRITTEN NEGOTIATED AGREEMENT DULY
+SIGNED BY YOU. IF YOU DO NOT AGREE ON ALL THE TERMS AND CONDITIONS OF
+THIS AGREEMENT, STOP THE USE OF THE LICENSED SOFTWARE IMMEDIATELY.
+
+
+1. Definitions
+In this Agreement, unless the context requires otherwise, the
+following words and phrases shall have the following meanings:
+	* "Developer" shall mean a software developer, tester, designer
+	  or other person
+	* "Vaadin Framework" shall mean the Vaadin user interface library
+	  and web framework that help Developers in building rich internet
+	  applications and that is available for download at the
+	  vaadin.com website.
+	* "Licensed Software" shall mean an add-on software component,
+	  theme, tool or other software or resource that adds
+	  functionality to Vaadin Framework or helps Developers in
+	  developing Vaadin Framework based applications. Licensed
+	  Software include, but are not limited to, user interface
+	  components, data integration components, graphical themes
+	  and development tools.
+	* "Use Licensed Software" shall mean either directly interacting
+	  with, including without limitations using the user interface
+	  of, running on workstation or installing, the Licensed Software
+	  during Project or editing Project source code file that refers
+	  to or depends on Licensed Software either directly or
+	  indirectly. Developer who edits source code that can not be
+	  compiled and/or run without a copy of Licensed Software is
+	  considered to Use Licensed Software. Interacting with a test
+	  server that runs Licensed Software as a part of automated test
+	  suite is not consider as Use of Licensed Software, but the
+	  maintainers of the mentioned test suite are considered to Use
+	  Licensed Software.
+	* "Agreement" shall mean this Commercial Vaadin Add-On License
+	  version 3 agreement.
+	* "License" shall mean the right to Use Licensed Software
+	  according to Agreement by one Developer and is identified by a
+	  unique License Number.
+	* "License Number" shall mean a number that identifies one unique
+	  License and is created by Vaadin Ltd. and sent to Licensee after
+	  the payment of the license fee or Subscription fee.
+	* "Intellectual Property Rights" shall mean any and all patent,
+	  copyright, trademark, design right, petty patent, service mark,
+	  domain name or any other right or trade secret whether
+	  registered or not.
+	* "Licensee" shall mean the entity that has purchased Licensed
+	  Software or subscribed to a subscription that includes the right
+	  to Use Licensed Software.
+	* "Licensor" shall mean Vaadin Ltd. or a third party licensing
+	  Licensed Software under Agreement.
+	* "Parties/Party" shall mean Licensee and Licensor, or either of
+	  them.
+	* "Project" shall mean Licensee's software development project
+	  during which the participating Developers Use Licensed Software
+	  and which aims to produce Project Result.
+	* "Project Result" shall mean the outcome of the Project.
+	* "Vaadin Directory" shall mean the central on-line repository for
+	  add-on software components and tools at vaadin.com website
+	  operated by Vaadin Ltd.
+	* "Subscription" shall mean a subscription offered by Vaadin Ltd.
+	  in which Licensor grants rights to Use Licensed Software
+	  according to the terms of the subscription.
+	* "Major Version", "Minor Version" and "Maintenance Version" shall
+	  mean parts of a version number X.Y.Z, where X is considered to be
+	  Major Version, Y Minor Version and Z Maintenance version. For
+	  example, in version 7.1.3 the Major Version is 7, Minor Version
+	  1 and Maintenance Version 3.
+
+
+2. Grant of License
+
+2.1 Licensor grants to Licensee, against full payment of respected
+license fee or Subscription fee, a worldwide, royalty-free,
+irrevocable, non-exclusive limited License to Use Licensed Software in
+Project(s) by a Developer.
+2.2 Licensee shall not, unless expressly provided in Agreement or in
+the applicable legislation
+2.2.1 rent, lease or loan Licensed Software or any copy of it;
+2.2.2 remove, obliterate, deface or in any way alter the notice of
+Licensor or third parties' proprietary rights related to Licensed
+Software;
+2.2.3 grant sub-licenses to Licensed Software or assign its rights or
+obligations under this Agreement to a third party.
+2.3 Licensee may license, for free or against a payment, Project
+Result including Licensed Software whether regarded as derivative
+works or not. End users using Project Result that does not involve
+changing any source code are not required to have a valid License. If
+Project Result is further developed or modified by changing its source
+code or the Project Results is used as a software component or
+framework in a software development project, all persons who Use
+Licensed Software need to have a valid License. If Project Result is a
+software development tool, component or environment that provides the
+functionality of the Licensed Software for use in software development
+projects, all persons who Use Licensed Software need to have a valid
+License.
+2.4 Licensee may transfer License to another person or an entity for
+free or for a fee. License is transferred by giving the associated
+License Number to the recipient and ceasing Use of Licensed Software
+with that particular License Number by the original Licensee. After
+this, only the Developers of the original Licensee for whom the
+Licensee still has a valid License and License Number may continue to
+Use Licensed Software.
+2.5 If the License is obtained as a part of Subscription, the right to
+Use Licensed Software expires when Subscription ends.
+2.6 If the License has been given for a limited period, the right to
+Use Licensed Software expires when the this period ends.
+
+
+3. Intellectual Property Rights
+3.1 All Intellectual Property Rights in and to Licensed Software are
+and shall at all times remain the sole and exclusive property of
+Licensor and its third party licensors, if any.
+3.2 Licensee will not at any time do or cause to be done any such act
+or thing which in any way impairs, or intends to impair, any right,
+title, interest or any Intellectual Property Right of Licensor or its
+third party licensors. Licensee shall not in any manner represent that
+it has any ownership of any kind in any of the above mentioned
+Intellectual Property Rights.
+
+
+4. License fee
+4.1 In consideration for the license granted herein, Licensor shall
+charge Licensee a license fee according to price visible at Vaadin
+Directory at the time of purchase or a Subscription fee when the
+License is included as a part of Subscription. Licensee must have a
+valid License for all Developers who Use Licensed Software in Project.
+License may be used in many Projects simultaneously without additional
+payments. Project Result may be copied an unlimited number of times
+and deployed to an unlimited number of computers without additional
+payments.
+4.2 Licensee's License will be valid on the payment of respected
+license or Subscription fee and delivery of corresponding License
+Number by Vaadin Ltd. If License is given by Vaadin Ltd. without a
+fee, License if valid immediately after delivery of corresponding
+License Number by Vaadin Ltd.
+
+
+5. Term and termination
+5.1 This Agreement and the Licenses granted herein become effective as
+of the payment of the applicable license fee.
+5.2 In the event Licensee fails to comply with the terms set in this
+Agreement, the License granted herein shall not be valid and Licensee
+must either comply with one of the open source licenses available, if
+any, listed for Licensed Software at Vaadin Directory or at once cease
+the use of Licensed Software and any of its rights under Clause 2, and
+delete all copies of Licensed Software.
+5.3 Licensor has the right, in addition and without prejudice to any
+other rights or remedies, to terminate this Agreement immediately as
+follows:
+5.3.1 for any material breach of Agreement, that is not cured within
+seven (7) days of receipt by Licensee in default of a written notice
+specifying the breach and requiring its cure;
+5.3.2 upon receiving a written notice, if (a) all or a substantial
+portion of the assets of Licensee are transferred to an assignee for
+the benefit of creditors, or to a receiver or a trustee in bankruptcy,
+(b) a proceeding is commenced by or against Licensee for relief under
+bankruptcy or similar laws and such proceeding is not dismissed within
+sixty (60) days, or (c) Licensee is adjudged bankrupt.
+5.4 If and when this Agreement is terminated due to any reason or
+cause whatsoever, the Licensee shall cease to Use Licensed Software
+and any of its rights under Clause 2, and delete all copies of
+Licensed Software.
+5.5 Provisions of the Agreement which, by their nature, are intended
+to survive its termination or expiration, shall survive its
+termination or expiration.
+
+
+6. Warranties
+THE LICENSED SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND
+EXPRESS OR IMPLIED, AND TO THE MAXIMUM EXTENT PERMITTED BY THE
+APPLICABLE LAW. EXCEPT AS EXPRESSLY PROVIDED IN THIS CLAUSE, NO
+WARRANTY, CONDITION, UNDERTAKING, LIABILITY OR TERM, EXPRESS OR
+IMPLIED, STATUTORY OR OTHERWISE, AS TO CONDITION, QUALITY,
+PERFORMANCE, FUNCTIONALITY, INFRINGEMENT, MERCHANTABILITY, DURABILITY
+OR FITNESS FOR PURPOSE, IS GIVEN OR ASSUMED BY VAADIN LTD., LICENSOR
+OR ITS LICENSORS AND ALL SUCH WARRANTIES, CONDITIONS, UNDERTAKINGS AND
+TERMS ARE HEREBY EXCLUDED.
+
+
+7. Limitation of Liability
+VAADIN LTD. AND/OR LICENSOR WILL NOT BE LIABLE FOR ANY INDIRECT,
+INCIDENTAL, PUNITIVE OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF
+ANY KIND WHATSOEVER AND HOWSOEVER CAUSED (INCLUDING BUSINESS
+INTERRUPTION, OR ANY LOSS OF BUSINESS, ANTICIPATED SAVINGS, REVENUE,
+GOODWILL, MANAGEMENT TIME, LOSS OF PROFITS OR OF CONTRACTS, LOSS OF
+OPERATION TIME, LOSS OF REPUTATION OR OF DATA) INCLUDING NEGLIGENCE,
+WHETHER IN CONTRACT OR TORT, EVEN IF THEY HAVE BEEN ADVISED OF THE
+POSSIBILITY. DEVELOPER WILL USE REASONABLE EFFORTS TO MITIGATE THEIR
+LOSS SUFFERED. VAADIN LTD'S AND/OR LICENSOR'S AGGREGATE LIABILITY AND
+THAT OF ITS AFFILIATES AND SUPPLIERS UNDER OR IN CONNECTION WITH THIS
+LICENSE AGREEMENT WILL BE LIMITED TO THE AMOUNT PAID FOR THE LICENSED
+SOFTWARE.
+
+
+8. Updates, new versions maintenance and support
+Licensor may, in its sole discretion, provide maintenance releases,
+updates and upgrades as new versions of Licensed Software. All new
+Maintenance Version and Minor Version updates of Licensed Software are
+free and do not require a purchase of new Licenses. Major Version
+upgrades require a new License.
+Licensee is not entitled to receive support for the Licensed Software,
+but Licensor may, in its sole discretion, provide support either for
+free or for a fee.
+
+
+9. Miscellaneous
+
+9.1 No Waiver
+The failure of Licensor to exercise any of its rights under this
+Agreement or to require the performance of any term or provision of
+this Agreement, or the waiver by either Party of such breach of this
+Agreement, shall not prevent a subsequent exercise or enforcement of
+such right or be deemed a waiver of any subsequent breach of the same
+or any other term or provision of this Agreement. Any waiver of the
+performance of any of the terms or conditions of this Agreement shall
+be effective only if in writing and signed by the Party against which
+such waiver is to be enforced.
+
+9.2 Headings
+The headings in this Agreement are for the convenience of the Parties
+only and are not intended to define or limit the scope or
+interpretation of the Agreement or any provision hereof.
+
+9.3 Severability
+If any term of this Agreement is invalid or unenforceable, such terms
+or provisions shall not invalidate the rest of the Agreement which
+shall remain in full force and effect as if such invalidated or
+unenforceable terms or conditions had not been made a part of this
+Agreement. In the event this section (Severability) becomes operative,
+Parties agree to attempt to negotiate settlement that carries out the
+economic intent of the terms or provisions found invalid or
+unenforceable.
+
+9.4 Export Control
+The Licensed Software may be subject to import and export controls in
+other countries. Licensee agrees to strictly comply with all
+applicable import and export regulations and acknowledge that Licensee
+has the responsibility to obtain licenses to export, re-export,
+transfer or import Licensed Software.
+
+9.5 Entire Agreement and Assignment
+Agreement sets forth the entire agreement between the Parties with
+respect to the subject matter hereof and supersedes any prior
+proposals and representations, whether written or oral. Neither Party
+shall have the right to assign this Agreement to a third party without
+the prior written consent of the other party. However, Licensor shall
+have the right to assign this Agreement and all of the rights and
+obligations contained therein to a company belonging to the same group
+of companies as Licensor, and to a third party to which the business
+of Licensor is transferred. As an exception, the Licensee shall have
+the right to transfer License as described in 2.4.
+
+9.6 Governing Law
+This Agreement and its terms and conditions shall be governed by and
+construed in accordance with the substantive laws in force in: (a) the
+State of California, if Licensee's domicile is in the United States;
+or (b) Finland, if Licensee's domicile is outside the United States.
+This Agreement shall be construed and enforced without regard to the
+United Nations Convention on the International Sale of Goods. The
+official text of the Agreement or any notices given or accounts or
+statements required hereby shall be in English. Any dispute or
+controversy or claim arising out of or relating to this Agreement
+involving the Parties, shall be resolved by final and binding
+arbitration in accordance with: (a) the International Chamber of
+Commerce Rules of Arbitration if Licensee's domicile is in the United
+States; or (b) the Arbitration Rules of the Finnish Central Chamber of
+Commerce if Licensee's domicile is outside the United States; by one
+(1) arbitrator appointed according to the aforementioned rules. The
+arbitration shall be conducted in the English language in: (a) San
+Francisco, California, United States if Licensee's domicile is in the
+United States; or (b) Turku, Finland if Licensee's domicile is outside
+the United States.
+
+--------------------
+--------------------
+
+
+Eclipse Public License -v 1.0
+
+THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION
+OR DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
+
+1. DEFINITIONS
+
+"Contribution" means:
+
+a) in the case of the initial Contributor, the initial code and documentation distributed under this Agreement, and
+
+b) in the case of each subsequent Contributor:
+
+i) changes to the Program, and
+
+ii) additions to the Program;
+
+where such changes and/or additions to the Program originate from and are distributed by that particular Contributor.
+A Contribution 'originates' from a Contributor if it was added to the Program by such Contributor itself or anyone
+acting on such Contributor's behalf. Contributions do not include additions to the Program which: (i) are separate
+modules of software distributed in conjunction with the Program under their own license agreement, and (ii) are not
+derivative works of the Program.
+
+"Contributor" means any person or entity that distributes the Program.
+
+"Licensed Patents " mean patent claims licensable by a Contributor which are necessarily infringed by the use or sale of
+its Contribution alone or when combined with the Program.
+
+"Program" means the Contributions distributed in accordance with this Agreement.
+
+"Recipient" means anyone who receives the Program under this Agreement, including all Contributors.
+
+2. GRANT OF RIGHTS
+
+a) Subject to the terms of this Agreement, each Contributor hereby grants Recipient a non-exclusive, worldwide,
+royalty-free copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, distribute
+and sublicense the Contribution of such Contributor, if any, and such derivative works, in source code and object code
+form.
+
+b) Subject to the terms of this Agreement, each Contributor hereby grants Recipient a non-exclusive, worldwide,
+royalty-free patent license under Licensed Patents to make, use, sell, offer to sell, import and otherwise transfer the
+Contribution of such Contributor, if any, in source code and object code form. This patent license shall apply to the
+combination of the Contribution and the Program if, at the time the Contribution is added by the Contributor, such
+addition of the Contribution causes such combination to be covered by the Licensed Patents. The patent license shall not
+apply to any other combinations which include the Contribution. No hardware per se is licensed hereunder.
+
+c) Recipient understands that although each Contributor grants the licenses to its Contributions set forth herein, no
+assurances are provided by any Contributor that the Program does not infringe the patent or other intellectual property
+rights of any other entity. Each Contributor disclaims any liability to Recipient for claims brought by any other entity
+based on infringement of intellectual property rights or otherwise. As a condition to exercising the rights and
+licenses granted hereunder, each Recipient hereby assumes sole responsibility to secure any other intellectual property
+rights needed, if any. For example, if a third party patent license is required to allow Recipient to distribute the
+Program, it is Recipient's responsibility to acquire that license before distributing the Program.
+
+d) Each Contributor represents that to its knowledge it has sufficient copyright rights in its Contribution, if any, to
+grant the copyright license set forth in this Agreement.
+
+3. REQUIREMENTS
+
+A Contributor may choose to distribute the Program in object code form under its own license agreement, provided that:
+
+a) it complies with the terms and conditions of this Agreement; and
+
+b) its license agreement:
+
+i) effectively disclaims on behalf of all Contributors all warranties and conditions, express and implied, including
+warranties or conditions of title and non-infringement, and implied warranties or conditions of merchantability and
+fitness for a particular purpose;
+
+ii) effectively excludes on behalf of all Contributors all liability for damages, including direct, indirect, special,
+incidental and consequential damages, such as lost profits;
+
+iii) states that any provisions which differ from this Agreement are offered by that Contributor alone and not by any
+other party; and
+
+iv) states that source code for the Program is available from such Contributor, and informs licensees how to obtain it
+in a reasonable manner on or through a medium customarily used for software exchange.
+
+When the Program is made available in source code form:
+
+a) it must be made available under this Agreement; and
+
+b) a copy of this Agreement must be included with each copy of the Program.
+
+Contributors may not remove or alter any copyright notices contained within the Program.
+
+Each Contributor must identify itself as the originator of its Contribution, if any, in a manner that reasonably allows
+subsequent Recipients to identify the originator of the Contribution.
+
+4. COMMERCIAL DISTRIBUTION
+
+Commercial distributors of software may accept certain responsibilities with respect to end users, business partners and
+the like. While this license is intended to facilitate the commercial use of the Program, the Contributor who includes
+the Program in a commercial product offering should do so in a manner which does not create potential liability for
+other Contributors. Therefore, if a Contributor includes the Program in a commercial product offering, such Contributor
+("Commercial Contributor") hereby agrees to defend and indemnify every other Contributor ("Indemnified Contributor")
+against any losses, damages and costs (collectively "Losses") arising from claims, lawsuits and other legal actions
+brought by a third party against the Indemnified Contributor to the extent caused by the acts or omissions of such
+Commercial Contributor in connection with its distribution of the Program in a commercial product offering. The
+obligations in this section do not apply to any claims or Losses relating to any actual or alleged intellectual
+property infringement. In order to qualify, an Indemnified Contributor must: a) promptly notify the Commercial
+Contributor in writing of such claim, and b) allow the Commercial Contributor to control, and cooperate with the
+Commercial Contributor in, the defense and any related settlement negotiations. The Indemnified Contributor may
+ participate in any such claim at its own expense.
+
+For example, a Contributor might include the Program in a commercial product offering, Product X. That Contributor is
+then a Commercial Contributor. If that Commercial Contributor then makes performance claims, or offers warranties
+related to Product X, those performance claims and warranties are such Commercial Contributor's responsibility alone.
+Under this section, the Commercial Contributor would have to defend claims against the other Contributors related to
+those performance claims and warranties, and if a court requires any other Contributor to pay any damages as a result,
+the Commercial Contributor must pay those damages.
+
+5. NO WARRANTY
+
+EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE,
+NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Each Recipient is solely responsible for
+determining the appropriateness of using and distributing the Program and assumes all risks associated with its
+exercise of rights under this Agreement , including but not limited to the risks and costs of program errors, compliance
+with applicable laws, damage to or loss of data, programs or equipment, and unavailability or interruption of operations.
+
+6. DISCLAIMER OF LIABILITY
+
+EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS),
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE EXERCISE OF ANY RIGHTS GRANTED
+HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+7. GENERAL
+
+If any provision of this Agreement is invalid or unenforceable under applicable law, it shall not affect the validity or
+enforceability of the remainder of the terms of this Agreement, and without further action by the parties hereto, such
+provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable.
+
+If Recipient institutes patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit)
+alleging that the Program itself (excluding combinations of the Program with other software or hardware) infringes such
+Recipient's patent(s), then such Recipient's rights granted under Section 2(b) shall terminate as of the date such
+litigation is filed.
+
+All Recipient's rights under this Agreement shall terminate if it fails to comply with any of the material terms or
+conditions of this Agreement and does not cure such failure in a reasonable period of time after becoming aware of such
+noncompliance. If all Recipient's rights under this Agreement terminate, Recipient agrees to cease use and distribution
+of the Program as soon as reasonably practicable. However, Recipient's obligations under this Agreement and any licenses
+ granted by Recipient relating to the Program shall continue and survive.
+
+Everyone is permitted to copy and distribute copies of this Agreement, but in order to avoid inconsistency the Agreement
+is copyrighted and may only be modified in the following manner. The Agreement Steward reserves the right to publish
+new versions (including revisions) of this Agreement from time to time. No one other than the Agreement Steward has the
+right to modify this Agreement. The Eclipse Foundation is the initial Agreement Steward. The Eclipse Foundation may
+assign the responsibility to serve as the Agreement Steward to a suitable separate entity. Each new version of the
+Agreement will be given a distinguishing version number. The Program (including Contributions) may always be
+distributed subject to the version of the Agreement under which it was received. In addition, after a new version of
+the Agreement is published, Contributor may elect to distribute the Program (including its Contributions) under the
+new version. Except as expressly stated in Sections 2(a) and 2(b) above, Recipient receives no rights or licenses to
+the intellectual property of any Contributor under this Agreement, whether expressly, by implication, estoppel or
+otherwise. All rights in the Program not expressly granted under this Agreement are reserved.
+
+This Agreement is governed by the laws of the State of New York and the intellectual property laws of the United States
+of America. No party to this Agreement will bring a legal action under this Agreement more than one year after the cause
+of action arose. Each party waives its rights to a jury trial in any resulting litigation.

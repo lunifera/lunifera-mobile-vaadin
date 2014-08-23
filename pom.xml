@@ -28,13 +28,6 @@
 	<!-- <lunifera.build.p2.project.name>org.lunifera.runtime.web.p2</lunifera.build.p2.project.name> -->
 	<!-- </properties> -->
 
-	<modules>
-		<module>org.lunifera.mobile.vaadin.parent</module>
-		<module>org.lunifera.mobile.vaadin.ecview.presentation</module>
-		
-		<module>org.lunifera.mobile.vaadin.p2</module>
-	</modules>
-
 	<profiles>
 		<profile>
 			<id>build.features</id>
@@ -46,9 +39,15 @@
 			</build>
 			<modules>
 				<module>org.lunifera.mobile.vaadin.parent</module>
+				<module>org.lunifera.mobile.vaadin.touchkit.osgi</module>
+				<module>org.lunifera.mobile.vaadin.widgetset</module>
+				<module>org.lunifera.mobile.vaadin.ecview.model</module>
+				<module>org.lunifera.mobile.vaadin.ecview.editparts</module>
+				<module>org.lunifera.mobile.vaadin.ecview.editparts.emf</module>
 				<module>org.lunifera.mobile.vaadin.ecview.presentation</module>
 
-			
+				<module>org.lunifera.mobile.vaadin.feature.ecview</module>
+				<module>org.lunifera.mobile.vaadin.feature.touchkit</module>
 			</modules>
 		</profile>
 		<profile>
@@ -73,16 +72,30 @@
 						</executions>
 						<configuration>
 							<newVersion>${next-release}</newVersion>
-							<artifacts>org.lunifera.runtime.web.aggregator,
-								org.lunifera.runtime.web.parent,
-								org.lunifera.runtime.web.p2
+							<artifacts>org.lunifera.mobile.aggregator,
+								org.lunifera.mobile.parent,
+								org.lunifera.mobile.p2
 							</artifacts>
 						</configuration>
 					</plugin>
 				</plugins>
 			</build>
 		</profile>
-	
+
+		<profile>
+			<id>build.widgetset</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<defaultGoal>clean verify</defaultGoal>
+			</build>
+			<modules>
+				<module>org.lunifera.mobile.vaadin.parent</module>
+				<module>org.lunifera.mobile.vaadin.widgetset</module>
+			</modules>
+		</profile>
+
 		<profile>
 			<id>build.p2</id>
 			<activation>

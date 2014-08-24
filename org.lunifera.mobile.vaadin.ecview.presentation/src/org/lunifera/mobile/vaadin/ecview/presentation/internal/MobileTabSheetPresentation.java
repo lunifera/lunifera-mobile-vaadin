@@ -59,7 +59,7 @@ public class MobileTabSheetPresentation extends
 	public void remove(IMobileTabEditpart editpart) {
 		super.remove(editpart);
 
-		tabSheet.removeComponent((Component) editpart.getWidget());
+//		tabSheet.removeComponent((Component) editpart.getWidget());
 	}
 
 	@Override

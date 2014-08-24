@@ -14,8 +14,8 @@
 
 	<parent>
 		<groupId>org.lunifera.releng.maven</groupId>
-		<artifactId>org.lunifera.releng.maven.parent.tycho.aggregator</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
+		<version>0.10.1-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
@@ -23,33 +23,24 @@
 	<artifactId>org.lunifera.mobile.vaadin.aggregator</artifactId>
 	<packaging>pom</packaging>
 
-	<!-- <properties> -->
-	<!-- <lunifera.deployment.p2.name>runtime-web</lunifera.deployment.p2.name> -->
-	<!-- <lunifera.build.p2.project.name>org.lunifera.runtime.web.p2</lunifera.build.p2.project.name> -->
-	<!-- </properties> -->
+<!-- 	<properties> -->
+<!-- 		<stage.p2.name>vaadin-mobile</stage.p2.name> -->
+<!-- 	</properties> -->
+
+	<modules>
+		<module>org.lunifera.mobile.vaadin.ecview.editparts</module>
+		<module>org.lunifera.mobile.vaadin.ecview.editparts.emf</module>
+		<module>org.lunifera.mobile.vaadin.ecview.model</module>
+		<module>org.lunifera.mobile.vaadin.ecview.presentation</module>
+		<module>org.lunifera.mobile.vaadin.touchkit.osgi</module>
+		<module>org.lunifera.mobile.vaadin.widgetset</module>
+		<module>org.lunifera.mobile.vaadin.parent</module>
+
+		<module>org.lunifera.mobile.vaadin.feature.ecview</module>
+		<module>org.lunifera.mobile.vaadin.feature.touchkit</module>
+	</modules>
 
 	<profiles>
-		<profile>
-			<id>build.features</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<defaultGoal>clean verify</defaultGoal>
-			</build>
-			<modules>
-				<module>org.lunifera.mobile.vaadin.parent</module>
-				<module>org.lunifera.mobile.vaadin.touchkit.osgi</module>
-				<module>org.lunifera.mobile.vaadin.widgetset</module>
-				<module>org.lunifera.mobile.vaadin.ecview.model</module>
-				<module>org.lunifera.mobile.vaadin.ecview.editparts</module>
-				<module>org.lunifera.mobile.vaadin.ecview.editparts.emf</module>
-				<module>org.lunifera.mobile.vaadin.ecview.presentation</module>
-
-				<module>org.lunifera.mobile.vaadin.feature.ecview</module>
-				<module>org.lunifera.mobile.vaadin.feature.touchkit</module>
-			</modules>
-		</profile>
 		<profile>
 			<id>prepare-for-next-release</id>
 			<activation>
@@ -99,19 +90,9 @@
 		<profile>
 			<id>build.p2</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<build>
-				<defaultGoal>clean verify</defaultGoal>
-			</build>
-			<modules>
-				<module>org.lunifera.mobile.vaadin.p2</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>stage.p2</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
+				<property>
+					<name>lunifera.build.p2</name>
+				</property>
 			</activation>
 			<modules>
 				<module>org.lunifera.mobile.vaadin.p2</module>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.lunifera.mobile.vaadin.feature.ecview_0.7.3.qualifier.jar" id="org.lunifera.mobile.vaadin.feature.ecview" version="0.7.3.qualifier">
+   <feature id="org.lunifera.mobile.vaadin.feature.ecview" version="0.0.0">
       <category name="lunifera-mobile-vaadin"/>
    </feature>
-   <feature url="features/org.lunifera.mobile.vaadin.feature.touchkit_0.7.3.qualifier.jar" id="org.lunifera.mobile.vaadin.feature.touchkit" version="0.7.3.qualifier">
+   <feature id="org.lunifera.mobile.vaadin.feature.touchkit" version="0.0.0">
+      <category name="lunifera-mobile-vaadin"/>
+   </feature>
+   <feature id="org.lunifera.mobile.vaadin.feature.ecview.source" version="0.0.0">
+      <category name="lunifera-mobile-vaadin"/>
+   </feature>
+   <feature id="org.lunifera.mobile.vaadin.feature.touchkit.source" version="0.0.0">
       <category name="lunifera-mobile-vaadin"/>
    </feature>
    <category-def name="lunifera-mobile-vaadin" label="Lunifera Vaadin Mobile Addons"/>

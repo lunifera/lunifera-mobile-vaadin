@@ -161,7 +161,7 @@
 				<configuration>
 					<filesets>
 						<fileset>
-							<directory>/gwt-unitCache</directory>
+							<directory>VAADIN/gwt-unitCache</directory>
 						</fileset>
 					</filesets>
 				</configuration>

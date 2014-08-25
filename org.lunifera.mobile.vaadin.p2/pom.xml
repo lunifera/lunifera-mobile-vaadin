@@ -25,27 +25,8 @@
 	<packaging>eclipse-repository</packaging>
 
 	<properties>
-		<!-- <lunifera.deployment.p2.label>mobile-vaadin</lunifera.deployment.p2.label> -->
-		<ecview.repository.url>http://lun.lunifera.org/downloads/p2/ecview/nightly/</ecview.repository.url>
+		<lunifera.deployment.p2.label>lunifera-mobile-vaadin</lunifera.deployment.p2.label>
 	</properties>
-
-	<repositories>
-		<repository>
-			<id>ecview</id>
-			<url>${ecview.repository.url}</url>
-			<layout>p2</layout>
-		</repository>
-		<repository>
-			<id>xtext-releases</id>
-			<url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
-			<layout>p2</layout>
-		</repository>
-		<!-- <repository> -->
-		<!-- <id>lunifera</id> -->
-		<!-- <layout>p2</layout> -->
-		<!-- <url>http://lun.lunifera.org/downloads/p2/lunifera/kepler/latest/</url> -->
-		<!-- </repository> -->
-	</repositories>
 
 	<build>
 		<plugins>
@@ -86,12 +67,15 @@
 		<profile>
 			<id>build.p2</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<property>
+					<name>lunifera.build.p2</name>
+				</property>
 			</activation>
 			<properties>
-				<ecfview-p2>http://lun.lunifera.org/downloads/p2/ecview/nightly/</ecfview-p2>
+				<xtext-p2>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</xtext-p2>
+				<ecview-p2>http://lun.lunifera.org/downloads/p2/ecview/nightly/</ecview-p2>
 				<lunifera.deployment.p2.origin.dir>${project.build.directory}/repository</lunifera.deployment.p2.origin.dir>
-				<associate.p2>${lunifera.build.eclipse.platform.p2.url},${orbit-site},${ecfview-p2}</associate.p2>
+				<associate.p2>${lunifera.build.eclipse.platform.p2.url},${orbit-site},${ecview-p2},${xtext-p2},${lunifera.build.remote.federated.p2.url}</associate.p2>
 			</properties>
 			<build>
 				<plugins>

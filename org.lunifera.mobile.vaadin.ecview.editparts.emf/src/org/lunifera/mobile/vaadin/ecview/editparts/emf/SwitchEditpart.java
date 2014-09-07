@@ -10,7 +10,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts.emf;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.FieldEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.FieldEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.ISwitchEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;

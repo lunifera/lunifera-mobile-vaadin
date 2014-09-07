@@ -2,7 +2,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
+import org.lunifera.ecview.core.common.model.core.YElement;
 
 /**
  * <!-- begin-user-doc -->

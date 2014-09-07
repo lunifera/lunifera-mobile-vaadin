@@ -10,7 +10,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.IFieldEditpart;
+import org.lunifera.ecview.core.common.editpart.IFieldEditpart;
 
 public interface ISwitchEditpart extends IFieldEditpart {
 

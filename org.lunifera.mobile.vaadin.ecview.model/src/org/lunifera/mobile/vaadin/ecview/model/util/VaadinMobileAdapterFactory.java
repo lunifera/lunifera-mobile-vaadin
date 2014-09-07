@@ -9,17 +9,17 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.YAction;
-import org.eclipse.emf.ecp.ecview.common.model.core.YCommand;
-import org.eclipse.emf.ecp.ecview.common.model.core.YCssAble;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEditable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEnable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YField;
-import org.eclipse.emf.ecp.ecview.common.model.core.YLayout;
-import org.eclipse.emf.ecp.ecview.common.model.core.YVisibilityProcessable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YVisibleable;
+import org.lunifera.ecview.core.common.model.core.YAction;
+import org.lunifera.ecview.core.common.model.core.YCommand;
+import org.lunifera.ecview.core.common.model.core.YCssAble;
+import org.lunifera.ecview.core.common.model.core.YEditable;
+import org.lunifera.ecview.core.common.model.core.YElement;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YEnable;
+import org.lunifera.ecview.core.common.model.core.YField;
+import org.lunifera.ecview.core.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
+import org.lunifera.ecview.core.common.model.core.YVisibleable;
 
 import org.lunifera.mobile.vaadin.ecview.model.*;
 
@@ -306,13 +306,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YElement <em>YElement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YElement <em>YElement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YElement
+	 * @see org.lunifera.ecview.core.common.model.core.YElement
 	 * @generated
 	 */
 	public Adapter createYElementAdapter() {
@@ -320,13 +320,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YCssAble <em>YCss Able</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YCssAble <em>YCss Able</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YCssAble
+	 * @see org.lunifera.ecview.core.common.model.core.YCssAble
 	 * @generated
 	 */
 	public Adapter createYCssAbleAdapter() {
@@ -334,13 +334,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YVisibleable <em>YVisibleable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YVisibleable <em>YVisibleable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YVisibleable
+	 * @see org.lunifera.ecview.core.common.model.core.YVisibleable
 	 * @generated
 	 */
 	public Adapter createYVisibleableAdapter() {
@@ -348,13 +348,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YVisibilityProcessable <em>YVisibility Processable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YVisibilityProcessable <em>YVisibility Processable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YVisibilityProcessable
+	 * @see org.lunifera.ecview.core.common.model.core.YVisibilityProcessable
 	 * @generated
 	 */
 	public Adapter createYVisibilityProcessableAdapter() {
@@ -362,13 +362,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable <em>YEmbeddable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YEmbeddable <em>YEmbeddable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable
+	 * @see org.lunifera.ecview.core.common.model.core.YEmbeddable
 	 * @generated
 	 */
 	public Adapter createYEmbeddableAdapter() {
@@ -376,13 +376,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YLayout <em>YLayout</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YLayout <em>YLayout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YLayout
+	 * @see org.lunifera.ecview.core.common.model.core.YLayout
 	 * @generated
 	 */
 	public Adapter createYLayoutAdapter() {
@@ -390,13 +390,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YEditable <em>YEditable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YEditable <em>YEditable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YEditable
+	 * @see org.lunifera.ecview.core.common.model.core.YEditable
 	 * @generated
 	 */
 	public Adapter createYEditableAdapter() {
@@ -404,13 +404,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YEnable <em>YEnable</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YEnable <em>YEnable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YEnable
+	 * @see org.lunifera.ecview.core.common.model.core.YEnable
 	 * @generated
 	 */
 	public Adapter createYEnableAdapter() {
@@ -418,13 +418,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YField <em>YField</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YField <em>YField</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YField
+	 * @see org.lunifera.ecview.core.common.model.core.YField
 	 * @generated
 	 */
 	public Adapter createYFieldAdapter() {
@@ -432,13 +432,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YAction <em>YAction</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YAction <em>YAction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YAction
+	 * @see org.lunifera.ecview.core.common.model.core.YAction
 	 * @generated
 	 */
 	public Adapter createYActionAdapter() {
@@ -446,13 +446,13 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.emf.ecp.ecview.common.model.core.YCommand <em>YCommand</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YCommand <em>YCommand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.emf.ecp.ecview.common.model.core.YCommand
+	 * @see org.lunifera.ecview.core.common.model.core.YCommand
 	 * @generated
 	 */
 	public Adapter createYCommandAdapter() {

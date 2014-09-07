@@ -10,10 +10,10 @@
  */
 package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 
-import org.eclipse.emf.ecp.ecview.common.context.IViewContext;
-import org.eclipse.emf.ecp.ecview.common.editpart.IElementEditpart;
-import org.eclipse.emf.ecp.ecview.common.presentation.IPresentationFactory;
-import org.eclipse.emf.ecp.ecview.common.presentation.IWidgetPresentation;
+import org.lunifera.ecview.core.common.context.IViewContext;
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.presentation.IPresentationFactory;
+import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.IHorizontalButtonGroupEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
@@ -21,7 +21,7 @@ import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.ISwitchEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IVerticalComponentGroupEditpart;
-import org.lunifera.mobile.vaadin.ecview.presentation.VaadinRenderer;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.VaadinRenderer;
 
 /**
  * The presenter factory.

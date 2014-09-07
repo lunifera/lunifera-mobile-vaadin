@@ -12,7 +12,7 @@ package org.lunifera.mobile.vaadin.ecview.editparts;
 
 import java.util.List;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.IEmbeddableEditpart;
+import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 
 /**
  * The abstraction for a tab sheet.

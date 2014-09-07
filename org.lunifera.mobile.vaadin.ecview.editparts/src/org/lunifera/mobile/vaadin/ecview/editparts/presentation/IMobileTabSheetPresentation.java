@@ -12,7 +12,7 @@ package org.lunifera.mobile.vaadin.ecview.editparts.presentation;
 
 import java.util.List;
 
-import org.eclipse.emf.ecp.ecview.common.presentation.IWidgetPresentation;
+import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 
 /**

@@ -10,9 +10,9 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.IElementEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.IViewEditpart;
-import org.eclipse.emf.ecp.ecview.common.presentation.IWidgetPresentation;
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.editpart.IViewEditpart;
+import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabPresentation;
 
 /**

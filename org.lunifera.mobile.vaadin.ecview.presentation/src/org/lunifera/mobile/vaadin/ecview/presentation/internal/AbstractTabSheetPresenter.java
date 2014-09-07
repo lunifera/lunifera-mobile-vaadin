@@ -14,8 +14,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.eclipse.emf.ecp.ecview.common.context.IViewContext;
-import org.eclipse.emf.ecp.ecview.common.presentation.ILayoutPresentation;
+import org.lunifera.ecview.core.common.context.IViewContext;
+import org.lunifera.ecview.core.common.presentation.ILayoutPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabSheetPresentation;

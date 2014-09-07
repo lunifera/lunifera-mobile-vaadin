@@ -3,7 +3,7 @@
     modelDirectory="/org.lunifera.mobile.vaadin.ecview.model/src" modelPluginID="org.lunifera.mobile.vaadin.ecview.model"
     modelName="Vaadinmobile" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    usedGenPackages="../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//binding ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//core ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//validation ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//datatypes ../../org.eclipse.emf.ecp.ecview.common.model/model/core.genmodel#//visibility"
+    usedGenPackages="../../org.lunifera.ecview.core.common.model/model/core.genmodel#//binding ../../org.lunifera.ecview.core.common.model/model/core.genmodel#//core ../../org.lunifera.ecview.core.common.model/model/core.genmodel#//validation ../../org.lunifera.ecview.core.common.model/model/core.genmodel#//datatypes ../../org.lunifera.ecview.core.common.model/model/core.genmodel#//visibility"
     importOrganizing="true">
   <foreignModel>vaadinmobile.ecore</foreignModel>
   <genPackages prefix="VaadinMobile" basePackage="org.lunifera.mobile.vaadin.ecview"

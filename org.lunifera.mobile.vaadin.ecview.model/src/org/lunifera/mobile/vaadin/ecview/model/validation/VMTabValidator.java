@@ -4,9 +4,9 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model.validation;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 
-import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
 

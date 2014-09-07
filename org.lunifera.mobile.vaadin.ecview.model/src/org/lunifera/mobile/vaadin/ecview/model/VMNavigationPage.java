@@ -2,8 +2,8 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
-import org.eclipse.emf.ecp.ecview.common.model.binding.YECViewModelValueBindingEndpoint;
-import org.eclipse.emf.ecp.ecview.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YLayout;
 
 /**
  * <!-- begin-user-doc -->

@@ -4,7 +4,7 @@ package org.lunifera.mobile.vaadin.ecview.model;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 
 /**
  * <!-- begin-user-doc -->

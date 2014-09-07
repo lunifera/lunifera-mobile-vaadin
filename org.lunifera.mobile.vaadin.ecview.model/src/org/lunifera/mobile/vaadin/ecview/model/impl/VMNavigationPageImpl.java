@@ -6,8 +6,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecp.ecview.common.model.binding.YECViewModelValueBindingEndpoint;
-import org.eclipse.emf.ecp.ecview.common.model.core.impl.YLayoutImpl;
+import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl;
 
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;

@@ -13,7 +13,7 @@ package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 import java.util.Iterator;
 import java.util.Locale;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabSheetPresentation;
@@ -236,7 +236,7 @@ public class MobileTabSheetPresentation extends
 
 		/**
 		 * @return
-		 * @see org.eclipse.emf.ecp.ecview.ui.core.model.core.YCssAble#getCssClass()
+		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssClass()
 		 */
 		public String getCssClass() {
 			return yLayout.getCssClass();
@@ -253,7 +253,7 @@ public class MobileTabSheetPresentation extends
 
 		/**
 		 * @return
-		 * @see org.eclipse.emf.ecp.ecview.ui.core.model.core.YCssAble#getCssID()
+		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssID()
 		 */
 		public String getCssID() {
 			return yLayout.getCssID();

@@ -17,13 +17,13 @@ import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFObservables;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecp.ecview.common.binding.IECViewBindingManager;
-import org.eclipse.emf.ecp.ecview.common.editpart.IElementEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.IEmbeddableEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.ILayoutEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableEndpointEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableValueEndpointEditpart;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.binding.IECViewBindingManager;
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
+import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEditpart;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.INavigationPagePresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
@@ -327,7 +327,7 @@ public class NavigationPagePresentation extends
 
 		/**
 		 * @return
-		 * @see org.eclipse.emf.ecp.ecview.ui.core.model.core.YCssAble#getCssClass()
+		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssClass()
 		 */
 		public String getCssClass() {
 			return yLayout.getCssClass();
@@ -344,7 +344,7 @@ public class NavigationPagePresentation extends
 
 		/**
 		 * @return
-		 * @see org.eclipse.emf.ecp.ecview.ui.core.model.core.YCssAble#getCssID()
+		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssID()
 		 */
 		public String getCssID() {
 			return yLayout.getCssID();

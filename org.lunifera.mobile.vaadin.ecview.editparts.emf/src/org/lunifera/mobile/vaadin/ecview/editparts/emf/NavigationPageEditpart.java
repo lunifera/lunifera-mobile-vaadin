@@ -11,8 +11,8 @@
 package org.lunifera.mobile.vaadin.ecview.editparts.emf;
 
 import org.eclipse.core.databinding.Binding;
-import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableEndpointEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.LayoutEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.LayoutEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.INavigationPagePresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;

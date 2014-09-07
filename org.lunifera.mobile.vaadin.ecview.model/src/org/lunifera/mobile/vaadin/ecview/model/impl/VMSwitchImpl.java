@@ -6,8 +6,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecp.ecview.common.model.core.impl.YFieldImpl;
-import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+import org.lunifera.ecview.core.common.model.core.impl.YFieldImpl;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 

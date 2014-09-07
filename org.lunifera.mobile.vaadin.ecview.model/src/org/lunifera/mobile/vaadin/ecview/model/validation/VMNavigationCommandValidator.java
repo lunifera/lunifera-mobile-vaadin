@@ -4,7 +4,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model.validation;
 
-import org.eclipse.emf.ecp.ecview.common.model.binding.YECViewModelValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;

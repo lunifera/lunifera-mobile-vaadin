@@ -2,11 +2,11 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.YCssAble;
-import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YView;
-import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+import org.lunifera.ecview.core.common.model.core.YCssAble;
+import org.lunifera.ecview.core.common.model.core.YElement;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
  * <!-- begin-user-doc -->

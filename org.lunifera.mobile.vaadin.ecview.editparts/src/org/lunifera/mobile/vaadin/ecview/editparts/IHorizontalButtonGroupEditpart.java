@@ -10,7 +10,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.ILayoutEditpart;
+import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 
 /**
  * The abstraction for a mobile horizontal layout.

@@ -10,7 +10,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts.presentation;
 
-import org.eclipse.emf.ecp.ecview.common.presentation.IWidgetPresentation;
+import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 
 /**
  * TabSheetPresentations are an abstraction above a tab an are responsible to

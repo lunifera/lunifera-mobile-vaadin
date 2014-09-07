@@ -10,7 +10,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.IActionEditpart;
+import org.lunifera.ecview.core.common.editpart.IActionEditpart;
 
 /**
  * The abstraction for a mobile navigation button.

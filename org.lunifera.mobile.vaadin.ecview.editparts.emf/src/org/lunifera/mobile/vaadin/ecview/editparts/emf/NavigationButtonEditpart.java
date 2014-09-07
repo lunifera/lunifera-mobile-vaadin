@@ -10,7 +10,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts.emf;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.ActionEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.ActionEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;

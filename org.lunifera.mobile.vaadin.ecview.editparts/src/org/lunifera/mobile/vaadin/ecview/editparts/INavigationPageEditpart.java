@@ -10,8 +10,8 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.ILayoutEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableEndpointEditpart;
+import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 
 /**
  * The abstraction for a mobile navigation page.

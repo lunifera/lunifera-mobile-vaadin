@@ -11,10 +11,10 @@
 package org.lunifera.mobile.vaadin.ecview.editparts.emf;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecp.ecview.common.editpart.IElementEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.ElementEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.common.AbstractEditpartManager;
-import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
+import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.ElementEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.common.AbstractEditpartManager;
+import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.mobile.vaadin.ecview.editparts.IHorizontalButtonGroupEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;

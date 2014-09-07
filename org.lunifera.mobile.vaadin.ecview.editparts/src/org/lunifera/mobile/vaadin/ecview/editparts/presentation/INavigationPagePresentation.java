@@ -1,7 +1,7 @@
 package org.lunifera.mobile.vaadin.ecview.editparts.presentation;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableEndpointEditpart;
-import org.eclipse.emf.ecp.ecview.common.presentation.ILayoutPresentation;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
+import org.lunifera.ecview.core.common.presentation.ILayoutPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 
 public interface INavigationPagePresentation<C> extends ILayoutPresentation<C> {

@@ -15,10 +15,10 @@ import java.util.Collections;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.EmbeddableEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.LayoutEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.validation.IValidatorEditpart;
-import org.eclipse.emf.ecp.ecview.extension.model.extension.ExtensionModelPackage;
+import org.lunifera.ecview.core.common.editpart.emf.EmbeddableEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.LayoutEditpart;
+import org.lunifera.ecview.core.common.editpart.validation.IValidatorEditpart;
+import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabSheetPresentation;

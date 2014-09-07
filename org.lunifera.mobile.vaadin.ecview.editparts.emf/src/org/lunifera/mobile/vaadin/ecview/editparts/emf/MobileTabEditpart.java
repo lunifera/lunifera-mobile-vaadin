@@ -10,13 +10,13 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts.emf;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.IViewEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.ElementEditpart;
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.EmbeddableEditpart;
-import org.eclipse.emf.ecp.ecview.common.model.core.YView;
-import org.eclipse.emf.ecp.ecview.common.presentation.DelegatingPresenterFactory;
-import org.eclipse.emf.ecp.ecview.common.presentation.IWidgetPresentation;
-import org.eclipse.emf.ecp.ecview.ui.core.editparts.extension.presentation.ITabPresentation;
+import org.lunifera.ecview.core.common.editpart.IViewEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.ElementEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.EmbeddableEditpart;
+import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.presentation.DelegatingPresenterFactory;
+import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
+import org.lunifera.ecview.core.ui.core.editparts.extension.presentation.ITabPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabPresentation;

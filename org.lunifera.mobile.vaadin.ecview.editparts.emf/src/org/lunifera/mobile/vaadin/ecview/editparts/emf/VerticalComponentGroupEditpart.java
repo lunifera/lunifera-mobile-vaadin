@@ -10,7 +10,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts.emf;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.emf.LayoutEditpart;
+import org.lunifera.ecview.core.common.editpart.emf.LayoutEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IVerticalComponentGroupEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMVerticalComponentGroup;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;

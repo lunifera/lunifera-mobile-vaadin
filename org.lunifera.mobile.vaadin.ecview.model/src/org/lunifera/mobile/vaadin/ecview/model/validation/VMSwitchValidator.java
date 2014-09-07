@@ -4,7 +4,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model.validation;
 
-import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 
 /**

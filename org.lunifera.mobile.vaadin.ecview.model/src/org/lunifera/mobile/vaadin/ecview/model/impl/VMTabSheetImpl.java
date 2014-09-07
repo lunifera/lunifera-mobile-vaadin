@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.emf.ecp.ecview.common.model.core.impl.YEmbeddableImpl;
+import org.lunifera.ecview.core.common.model.core.impl.YEmbeddableImpl;
 import org.lunifera.mobile.vaadin.ecview.model.VMTab;
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;

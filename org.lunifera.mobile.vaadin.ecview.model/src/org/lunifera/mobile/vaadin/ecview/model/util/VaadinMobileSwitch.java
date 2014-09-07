@@ -7,17 +7,17 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.YAction;
-import org.eclipse.emf.ecp.ecview.common.model.core.YCommand;
-import org.eclipse.emf.ecp.ecview.common.model.core.YCssAble;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEditable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YElement;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEmbeddable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YEnable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YField;
-import org.eclipse.emf.ecp.ecview.common.model.core.YLayout;
-import org.eclipse.emf.ecp.ecview.common.model.core.YVisibilityProcessable;
-import org.eclipse.emf.ecp.ecview.common.model.core.YVisibleable;
+import org.lunifera.ecview.core.common.model.core.YAction;
+import org.lunifera.ecview.core.common.model.core.YCommand;
+import org.lunifera.ecview.core.common.model.core.YCssAble;
+import org.lunifera.ecview.core.common.model.core.YEditable;
+import org.lunifera.ecview.core.common.model.core.YElement;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
+import org.lunifera.ecview.core.common.model.core.YEnable;
+import org.lunifera.ecview.core.common.model.core.YField;
+import org.lunifera.ecview.core.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
+import org.lunifera.ecview.core.common.model.core.YVisibleable;
 
 import org.lunifera.mobile.vaadin.ecview.model.*;
 

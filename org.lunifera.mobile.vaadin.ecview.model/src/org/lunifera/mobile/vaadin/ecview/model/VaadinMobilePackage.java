@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecp.ecview.common.model.core.CoreModelPackage;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 
 /**
  * <!-- begin-user-doc -->

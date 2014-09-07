@@ -2,9 +2,9 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.YAction;
-import org.eclipse.emf.ecp.ecview.common.model.core.YView;
-import org.eclipse.emf.ecp.ecview.common.model.datatypes.YDatadescription;
+import org.lunifera.ecview.core.common.model.core.YAction;
+import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
  * <!-- begin-user-doc -->

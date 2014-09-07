@@ -4,7 +4,7 @@ package org.lunifera.mobile.vaadin.ecview.model.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecp.ecview.common.model.core.impl.YLayoutImpl;
+import org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl;
 
 import org.lunifera.mobile.vaadin.ecview.model.VMVerticalComponentGroup;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;

@@ -1,6 +1,6 @@
 package org.lunifera.mobile.vaadin.ecview.editparts;
 
-import org.eclipse.emf.ecp.ecview.common.editpart.binding.IBindableEndpointEditpart;
+import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 
 public interface INavigationHandler {
 

@@ -2,7 +2,7 @@
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="false" name="org.lunifera.mobile.vaadin.ecview.editparts.editpartmanager">
    <implementation class="org.lunifera.mobile.vaadin.ecview.editparts.emf.EditpartManager"/>
    <service>
-      <provide interface="org.eclipse.emf.ecp.ecview.common.editpart.IEditPartManager"/>
+      <provide interface="org.lunifera.ecview.core.common.editpart.IEditPartManager"/>
    </service>
 </scr:component> 
  

@@ -39,7 +39,7 @@ public interface VaadinMobilePackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://lunifera.org/vaadin/mobile/v1";
+	String eNS_URI = "http://lunifera.org/ecview/v1/vaadin/mobile";
 
 	/**
 	 * The package namespace name.

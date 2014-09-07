@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated vaadinmobile -->
       <package
-            uri="http://lunifera.org/vaadin/mobile/v1"
+            uri="http://lunifera.org/ecview/v1/vaadin/mobile"
             class="org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage"
             genModel="model/vaadinmobile.genmodel"/>
    </extension>

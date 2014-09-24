@@ -122,15 +122,6 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_HORIZONTAL_BUTTON_GROUP__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_HORIZONTAL_BUTTON_GROUP__VISIBILITY_PROCESSOR = CoreModelPackage.YLAYOUT__VISIBILITY_PROCESSOR;
-
-	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,15 +221,6 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_SWITCH__VISIBLE = CoreModelPackage.YFIELD__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_SWITCH__VISIBILITY_PROCESSOR = CoreModelPackage.YFIELD__VISIBILITY_PROCESSOR;
 
 	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
@@ -405,15 +387,6 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_VERTICAL_COMPONENT_GROUP__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_VERTICAL_COMPONENT_GROUP__VISIBILITY_PROCESSOR = CoreModelPackage.YLAYOUT__VISIBILITY_PROCESSOR;
-
-	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -512,15 +485,6 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_TAB_SHEET__VISIBLE = CoreModelPackage.YEMBEDDABLE__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_TAB_SHEET__VISIBILITY_PROCESSOR = CoreModelPackage.YEMBEDDABLE__VISIBILITY_PROCESSOR;
 
 	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
@@ -705,15 +669,6 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_PAGE__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_NAVIGATION_PAGE__VISIBILITY_PROCESSOR = CoreModelPackage.YLAYOUT__VISIBILITY_PROCESSOR;
-
-	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -848,15 +803,6 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_NAVIGATION_BUTTON__VISIBLE = CoreModelPackage.YACTION__VISIBLE;
-
-	/**
-	 * The feature id for the '<em><b>Visibility Processor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VM_NAVIGATION_BUTTON__VISIBILITY_PROCESSOR = CoreModelPackage.YACTION__VISIBILITY_PROCESSOR;
 
 	/**
 	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.

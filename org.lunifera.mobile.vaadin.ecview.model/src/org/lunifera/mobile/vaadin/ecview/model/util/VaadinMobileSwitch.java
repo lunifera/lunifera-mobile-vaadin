@@ -4,9 +4,7 @@ package org.lunifera.mobile.vaadin.ecview.model.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-
 import org.lunifera.ecview.core.common.model.core.YAction;
 import org.lunifera.ecview.core.common.model.core.YCommand;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
@@ -16,9 +14,7 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YLayout;
-import org.lunifera.ecview.core.common.model.core.YVisibilityProcessable;
 import org.lunifera.ecview.core.common.model.core.YVisibleable;
-
 import org.lunifera.mobile.vaadin.ecview.model.*;
 
 /**
@@ -86,7 +82,6 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(vmHorizontalButtonGroup);
 				if (result == null) result = caseYCssAble(vmHorizontalButtonGroup);
 				if (result == null) result = caseYVisibleable(vmHorizontalButtonGroup);
-				if (result == null) result = caseYVisibilityProcessable(vmHorizontalButtonGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -100,7 +95,6 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(vmSwitch);
 				if (result == null) result = caseYCssAble(vmSwitch);
 				if (result == null) result = caseYVisibleable(vmSwitch);
-				if (result == null) result = caseYVisibilityProcessable(vmSwitch);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,7 +106,6 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(vmVerticalComponentGroup);
 				if (result == null) result = caseYCssAble(vmVerticalComponentGroup);
 				if (result == null) result = caseYVisibleable(vmVerticalComponentGroup);
-				if (result == null) result = caseYVisibilityProcessable(vmVerticalComponentGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -123,7 +116,6 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(vmTabSheet);
 				if (result == null) result = caseYCssAble(vmTabSheet);
 				if (result == null) result = caseYVisibleable(vmTabSheet);
-				if (result == null) result = caseYVisibilityProcessable(vmTabSheet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -145,7 +137,6 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(vmNavigationPage);
 				if (result == null) result = caseYCssAble(vmNavigationPage);
 				if (result == null) result = caseYVisibleable(vmNavigationPage);
-				if (result == null) result = caseYVisibilityProcessable(vmNavigationPage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -158,7 +149,6 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYElement(vmNavigationButton);
 				if (result == null) result = caseYCssAble(vmNavigationButton);
 				if (result == null) result = caseYVisibleable(vmNavigationButton);
-				if (result == null) result = caseYVisibilityProcessable(vmNavigationButton);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -358,21 +348,6 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYVisibleable(YVisibleable object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>YVisibility Processable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>YVisibility Processable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseYVisibilityProcessable(YVisibilityProcessable object) {
 		return null;
 	}
 

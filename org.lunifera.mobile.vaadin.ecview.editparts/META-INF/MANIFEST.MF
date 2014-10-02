@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Editparts API for extension model
 Bundle-SymbolicName: org.lunifera.mobile.vaadin.ecview.editparts
-Bundle-Version: 0.7.4
+Bundle-Version: 0.7.5.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.osgi.service.component;version="1.2.0",
  org.slf4j

@@ -26,10 +26,11 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.TabSheet.Tab;
- 
+
 /**
  * This presenter is responsible to render a tab sheet on the given layout.
  */
+@SuppressWarnings("restriction")
 public class MobileTabPresentation extends AbstractTabPresenter<Component>
 		implements IMobileTabPresentation<Component> {
 
@@ -54,7 +55,6 @@ public class MobileTabPresentation extends AbstractTabPresenter<Component>
 		TabBarView tabSheet = (TabBarView) parent;
 
 		VMTab yTab = (VMTab) getModel();
-		@SuppressWarnings("restriction")
 		IEmbeddableEditpart childEditpart = ElementEditpart.getEditpart(yTab
 				.getEmbeddable());
 
@@ -73,7 +73,7 @@ public class MobileTabPresentation extends AbstractTabPresenter<Component>
 				tab.setCaption(modelAccess.getLabel());
 			}
 		}
-		
+
 		applyCaptions();
 
 		return null;
@@ -127,7 +127,6 @@ public class MobileTabPresentation extends AbstractTabPresenter<Component>
 			unbind();
 
 			VMTab yTab = (VMTab) getModel();
-			@SuppressWarnings("restriction")
 			IEmbeddableEditpart editpart = ElementEditpart.getEditpart(yTab
 					.getEmbeddable());
 
@@ -161,6 +160,7 @@ public class MobileTabPresentation extends AbstractTabPresenter<Component>
 		 * 
 		 * @return
 		 */
+		@SuppressWarnings("unused")
 		public boolean isCssClassValid() {
 			return getCssClass() != null && !getCssClass().equals("");
 		}
@@ -178,6 +178,7 @@ public class MobileTabPresentation extends AbstractTabPresenter<Component>
 		 * 
 		 * @return
 		 */
+		@SuppressWarnings("unused")
 		public boolean isCssIdValid() {
 			return getCssID() != null && !getCssID().equals("");
 		}

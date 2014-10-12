@@ -23,7 +23,6 @@ import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEditpart;
-import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.INavigationPagePresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
@@ -42,24 +41,23 @@ import com.vaadin.server.ClientConnector.AttachEvent;
 import com.vaadin.ui.AbstractComponent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.VerticalLayout;
 
 /**
  * This presenter is responsible to render a text field on the given layout.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings({ "restriction", "serial" })
 public class NavigationPagePresentation extends
 		AbstractLayoutPresenter<ComponentContainer> implements
 		INavigationPagePresentation<ComponentContainer>, NavigationListener {
 
+	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(NavigationPagePresentation.class);
 
 	private NavigationView navigationView;
 	private VerticalLayout content;
 	private ModelAccess modelAccess;
-	private CssLayout fillerLayout;
 
 	// the input data if navigation page is triggered by table selection,...
 	private IBindableEndpointEditpart inputDataBindingEndpoint;
@@ -125,6 +123,12 @@ public class NavigationPagePresentation extends
 
 			associateWidget(navigationView, modelAccess.yLayout);
 
+			if (modelAccess.isCssIdValid()) {
+				navigationView.setId(modelAccess.getCssID());
+			} else {
+				navigationView.setId(getEditpart().getId());
+			}
+
 			if (modelAccess.isCssClassValid()) {
 				navigationView.addStyleName(modelAccess.getCssClass());
 			} else {
@@ -150,7 +154,6 @@ public class NavigationPagePresentation extends
 		return navigationView;
 	}
 
-	@SuppressWarnings("serial")
 	protected void createBindings(VMNavigationPage yPage,
 			AbstractComponent widget, AbstractComponent container) {
 
@@ -170,14 +173,17 @@ public class NavigationPagePresentation extends
 							UpdateValueStrategy.POLICY_NEVER),
 					new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE));
 			registerBinding(currentActiveNextNavPageBinding);
-			
-			navigationView.addAttachListener(new ClientConnector.AttachListener() {
-				@Override
-				public void attach(AttachEvent event) {
-					navigationView.getNavigationManager().addNavigationListener(NavigationPagePresentation.this);
-				}
-			});
-			
+
+			navigationView
+					.addAttachListener(new ClientConnector.AttachListener() {
+						@Override
+						public void attach(AttachEvent event) {
+							navigationView.getNavigationManager()
+									.addNavigationListener(
+											NavigationPagePresentation.this);
+						}
+					});
+
 		}
 
 		super.createBindings(yPage, widget, container);
@@ -268,7 +274,6 @@ public class NavigationPagePresentation extends
 
 	@Override
 	protected void internalAdd(IEmbeddableEditpart editpart) {
-		YEmbeddable yChild = (YEmbeddable) editpart.getModel();
 		addChild(editpart);
 	}
 

@@ -15,22 +15,20 @@ import java.util.Locale;
 import org.eclipse.core.databinding.observable.IObservable;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.databinding.EMFObservables;
-import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YEmbeddableValueEndpoint;
 import org.lunifera.ecview.core.extension.model.extension.ExtensionModelPackage;
-import org.lunifera.ecview.core.ui.core.editparts.extension.ICheckboxEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.ISwitchEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractFieldWidgetPresenter;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.util.Util;
 
 import com.vaadin.addon.touchkit.ui.Switch;
 import com.vaadin.data.util.ObjectProperty;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.Field;
 
 /**
@@ -40,7 +38,6 @@ import com.vaadin.ui.Field;
 public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> {
 
 	private final ModelAccess modelAccess;
-	private CssLayout componentBase;
 	private Switch xswitch;
 	private ObjectProperty<Boolean> property;
 
@@ -60,30 +57,25 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 	 */
 	@Override
 	public Component doCreateWidget(Object parent) {
-		if (componentBase == null) {
-			componentBase = new CssLayout();
-			componentBase.addStyleName(CSS_CLASS_CONTROL_BASE);
-			if (modelAccess.isCssIdValid()) {
-				componentBase.setId(modelAccess.getCssID());
-			} else {
-				componentBase.setId(getEditpart().getId());
-			}
- 
-			associateWidget(componentBase, modelAccess.ySwitch);
+		if (xswitch == null) {
 
 			xswitch = new Switch();
 			xswitch.addStyleName(CSS_CLASS_CONTROL);
 			xswitch.setImmediate(true);
 
-			associateWidget(xswitch, modelAccess.ySwitch);
+			if (modelAccess.isCssIdValid()) {
+				xswitch.setId(modelAccess.getCssID());
+			} else {
+				xswitch.setId(getEditpart().getId());
+			}
+
+			associateWidget(xswitch, modelAccess.yField);
 
 			property = new ObjectProperty<Boolean>(false, Boolean.class);
 			xswitch.setPropertyDataSource(property);
 
 			// creates the binding for the field
-			createBindings(modelAccess.ySwitch, xswitch);
-
-			componentBase.addComponent(xswitch);
+			createBindings(modelAccess.yField, xswitch);
 
 			if (modelAccess.isCssClassValid()) {
 				xswitch.addStyleName(modelAccess.getCssClass());
@@ -93,7 +85,7 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 
 			initializeField(xswitch);
 		}
-		return componentBase;
+		return xswitch;
 	}
 
 	@Override
@@ -109,15 +101,8 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 	 * Applies the labels to the widgets.
 	 */
 	protected void applyCaptions() {
-		II18nService service = getI18nService();
-		if (service != null && modelAccess.isLabelI18nKeyValid()) {
-			componentBase.setCaption(service.getValue(
-					modelAccess.getLabelI18nKey(), getLocale()));
-		} else {
-			if (modelAccess.isLabelValid()) {
-				componentBase.setCaption(modelAccess.getLabel());
-			}
-		}
+		Util.applyCaptions(getI18nService(), modelAccess.getLabel(),
+				modelAccess.getLabelI18nKey(), getLocale(), xswitch);
 	}
 
 	@Override
@@ -162,17 +147,17 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 		registerBinding(createBindings_Value(castEObject(getModel()),
 				VaadinMobilePackage.Literals.VM_SWITCH__VALUE, field));
 
-		super.createBindings(yField, field, componentBase);
+		super.createBindings(yField, field, null);
 	}
 
 	@Override
 	public Component getWidget() {
-		return componentBase;
+		return xswitch;
 	}
 
 	@Override
 	public boolean isRendered() {
-		return componentBase != null;
+		return xswitch != null;
 	}
 
 	/**
@@ -180,22 +165,20 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 	 */
 	@Override
 	public void doUnrender() {
-		if (componentBase != null) {
+		if (xswitch != null) {
 
 			// unbind all active bindings
 			unbind();
 
-			ComponentContainer parent = ((ComponentContainer) componentBase
+			ComponentContainer parent = ((ComponentContainer) xswitch
 					.getParent());
 			if (parent != null) {
-				parent.removeComponent(componentBase);
+				parent.removeComponent(xswitch);
 			}
 
 			// remove assocations
-			unassociateWidget(componentBase);
 			unassociateWidget(xswitch);
 
-			componentBase = null;
 			xswitch = null;
 		}
 	}
@@ -216,11 +199,11 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 	 * A helper class.
 	 */
 	private static class ModelAccess {
-		private final VMSwitch ySwitch;
+		private final VMSwitch yField;
 
-		public ModelAccess(VMSwitch ySwitch) {
+		public ModelAccess(VMSwitch yField) {
 			super();
-			this.ySwitch = ySwitch;
+			this.yField = yField;
 		}
 
 		/**
@@ -228,7 +211,7 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssClass()
 		 */
 		public String getCssClass() {
-			return ySwitch.getCssClass();
+			return yField.getCssClass();
 		}
 
 		/**
@@ -245,7 +228,7 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssID()
 		 */
 		public String getCssID() {
-			return ySwitch.getCssID();
+			return yField.getCssID();
 		}
 
 		/**
@@ -258,32 +241,13 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 		}
 
 		/**
-		 * Returns true, if the label is valid.
-		 * 
-		 * @return
-		 */
-		public boolean isLabelValid() {
-			return ySwitch.getDatadescription() != null
-					&& ySwitch.getDatadescription().getLabel() != null;
-		}
-
-		/**
 		 * Returns the label.
 		 * 
 		 * @return
 		 */
 		public String getLabel() {
-			return ySwitch.getDatadescription().getLabel();
-		}
-
-		/**
-		 * Returns true, if the label is valid.
-		 * 
-		 * @return
-		 */
-		public boolean isLabelI18nKeyValid() {
-			return ySwitch.getDatadescription() != null
-					&& ySwitch.getDatadescription().getLabelI18nKey() != null;
+			return yField.getDatadescription() != null ? yField
+					.getDatadescription().getLabel() : null;
 		}
 
 		/**
@@ -292,7 +256,8 @@ public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> 
 		 * @return
 		 */
 		public String getLabelI18nKey() {
-			return ySwitch.getDatadescription().getLabelI18nKey();
+			return yField.getDatadescription() != null ? yField
+					.getDatadescription().getLabelI18nKey() : null;
 		}
 	}
 }

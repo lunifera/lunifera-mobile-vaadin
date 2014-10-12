@@ -10,18 +10,16 @@ package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 
 import java.util.Locale;
 
-import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
-import org.lunifera.ecview.core.ui.core.editparts.extension.IButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractVaadinWidgetPresenter;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.util.Util;
 
 import com.vaadin.addon.touchkit.ui.NavigationButton;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.CssLayout;
 
 /**
  * This presenter is responsible to render a text field on the given layout.
@@ -31,7 +29,6 @@ public class NavigationButtonPresentation extends
 		AbstractVaadinWidgetPresenter<Component> {
 
 	private final ModelAccess modelAccess;
-	private CssLayout componentBase;
 	private NavigationButton button;
 
 	/**
@@ -52,16 +49,7 @@ public class NavigationButtonPresentation extends
 	@SuppressWarnings("serial")
 	@Override
 	public Component doCreateWidget(Object parent) {
-		if (componentBase == null) {
-			componentBase = new CssLayout();
-			componentBase.addStyleName(CSS_CLASS_CONTROL_BASE);
-			if (modelAccess.isCssIdValid()) {
-				componentBase.setId(modelAccess.getCssID());
-			} else {
-				componentBase.setId(getEditpart().getId());
-			}
-
-			associateWidget(componentBase, modelAccess.vmNavigationButton);
+		if (button == null) {
 			button = new NavigationButton() {
 				public void click() {
 					// lazy loading of target view
@@ -74,15 +62,19 @@ public class NavigationButtonPresentation extends
 					}
 				}
 			};
+			if (modelAccess.isCssIdValid()) {
+				button.setId(modelAccess.getCssID());
+			} else {
+				button.setId(getEditpart().getId());
+			}
+
 			button.addStyleName(CSS_CLASS_CONTROL);
 			button.setImmediate(true);
 
-			associateWidget(button, modelAccess.vmNavigationButton);
+			associateWidget(button, modelAccess.vmField);
 
 			// creates the binding for the field
-			createBindings(modelAccess.vmNavigationButton, button);
-
-			componentBase.addComponent(button);
+			createBindings(modelAccess.vmField, button);
 
 			if (modelAccess.isCssClassValid()) {
 				button.addStyleName(modelAccess.getCssClass());
@@ -91,7 +83,7 @@ public class NavigationButtonPresentation extends
 			applyCaptions();
 
 		}
-		return componentBase;
+		return button;
 	}
 
 	/**
@@ -126,36 +118,29 @@ public class NavigationButtonPresentation extends
 	 * Applies the labels to the widgets.
 	 */
 	protected void applyCaptions() {
-		II18nService service = getI18nService();
-		if (service != null && modelAccess.isLabelI18nKeyValid()) {
-			button.setCaption(service.getValue(modelAccess.getLabelI18nKey(),
-					getLocale()));
-		} else {
-			if (modelAccess.isLabelValid()) {
-				button.setCaption(modelAccess.getLabel());
-			}
-		}
+		Util.applyCaptions(getI18nService(), modelAccess.getLabel(),
+				modelAccess.getLabelI18nKey(), getLocale(), button);
 	}
 
 	/**
 	 * Creates the bindings for the given values.
 	 * 
-	 * @param vmNavigationButton
+	 * @param vmField
 	 * @param button
 	 */
-	protected void createBindings(final VMNavigationButton vmNavigationButton,
+	protected void createBindings(final VMNavigationButton vmField,
 			NavigationButton button) {
-		super.createBindings(vmNavigationButton, button, componentBase);
+		super.createBindings(vmField, button, null);
 	}
 
 	@Override
 	public Component getWidget() {
-		return componentBase;
+		return button;
 	}
 
 	@Override
 	public boolean isRendered() {
-		return componentBase != null;
+		return button != null;
 	}
 
 	/**
@@ -163,22 +148,20 @@ public class NavigationButtonPresentation extends
 	 */
 	@Override
 	public void doUnrender() {
-		if (componentBase != null) {
+		if (button != null) {
 
 			// unbind all active bindings
 			unbind();
 
-			ComponentContainer parent = ((ComponentContainer) componentBase
+			ComponentContainer parent = ((ComponentContainer) button
 					.getParent());
 			if (parent != null) {
-				parent.removeComponent(componentBase);
+				parent.removeComponent(button);
 			}
 
 			// remove assocations
-			unassociateWidget(componentBase);
 			unassociateWidget(button);
 
-			componentBase = null;
 			button = null;
 		}
 	}
@@ -199,11 +182,11 @@ public class NavigationButtonPresentation extends
 	 * A helper class.
 	 */
 	private static class ModelAccess {
-		private final VMNavigationButton vmNavigationButton;
+		private final VMNavigationButton vmField;
 
-		public ModelAccess(VMNavigationButton vmNavigationButton) {
+		public ModelAccess(VMNavigationButton vmField) {
 			super();
-			this.vmNavigationButton = vmNavigationButton;
+			this.vmField = vmField;
 		}
 
 		/**
@@ -211,7 +194,7 @@ public class NavigationButtonPresentation extends
 		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssClass()
 		 */
 		public String getCssClass() {
-			return vmNavigationButton.getCssClass();
+			return vmField.getCssClass();
 		}
 
 		/**
@@ -228,7 +211,7 @@ public class NavigationButtonPresentation extends
 		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssID()
 		 */
 		public String getCssID() {
-			return vmNavigationButton.getCssID();
+			return vmField.getCssID();
 		}
 
 		/**
@@ -241,33 +224,13 @@ public class NavigationButtonPresentation extends
 		}
 
 		/**
-		 * Returns true, if the label is valid.
-		 * 
-		 * @return
-		 */
-		public boolean isLabelValid() {
-			return vmNavigationButton.getDatadescription() != null
-					&& vmNavigationButton.getDatadescription().getLabel() != null;
-		}
-
-		/**
 		 * Returns the label.
 		 * 
 		 * @return
 		 */
 		public String getLabel() {
-			return vmNavigationButton.getDatadescription().getLabel();
-		}
-
-		/**
-		 * Returns true, if the label is valid.
-		 * 
-		 * @return
-		 */
-		public boolean isLabelI18nKeyValid() {
-			return vmNavigationButton.getDatadescription() != null
-					&& vmNavigationButton.getDatadescription()
-							.getLabelI18nKey() != null;
+			return vmField.getDatadescription() != null ? vmField
+					.getDatadescription().getLabel() : null;
 		}
 
 		/**
@@ -276,7 +239,8 @@ public class NavigationButtonPresentation extends
 		 * @return
 		 */
 		public String getLabelI18nKey() {
-			return vmNavigationButton.getDatadescription().getLabelI18nKey();
+			return vmField.getDatadescription() != null ? vmField
+					.getDatadescription().getLabelI18nKey() : null;
 		}
 	}
 }

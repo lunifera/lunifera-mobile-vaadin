@@ -63,9 +63,9 @@
 						</executions>
 						<configuration>
 							<newVersion>${next-release}</newVersion>
-							<artifacts>org.lunifera.mobile.aggregator,
-								org.lunifera.mobile.parent,
-								org.lunifera.mobile.p2
+							<artifacts>org.lunifera.mobile.vaadin.aggregator,
+								org.lunifera.mobile.vaadin.parent,
+								org.lunifera.mobile.vaadin.p2
 							</artifacts>
 						</configuration>
 					</plugin>
@@ -99,4 +99,5 @@
 			</modules>
 		</profile>
 	</profiles>
+<version>0.7.5-SNAPSHOT</version>
 </project>

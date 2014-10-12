@@ -1,5 +1,5 @@
 
-Lists of 66 third-party dependencies.
+Lists of 65 third-party dependencies.
      (The Apache Software License, Version 2.0) ant (ant:ant:1.6.5 - http://www.apache.org/ant/)
      (Apache License 2.0) ant-launcher (ant:ant-launcher:1.6.5 - no url defined)
      (Eclipse Public License - v 1.0) (GNU Lesser General Public License) Logback Classic Module (ch.qos.logback:logback-classic:1.0.13 - http://logback.qos.ch)
@@ -34,7 +34,6 @@ Lists of 66 third-party dependencies.
      (Apache License) Apache HttpCore (org.apache.httpcomponents:httpcore:4.3 - http://hc.apache.org/httpcomponents-core-ga)
      (Apache License) Apache HttpClient Mime (org.apache.httpcomponents:httpmime:4.3.1 - http://hc.apache.org/httpcomponents-client)
      (Apache License, Version 2.0) Apache JAMES Mime4j (org.apache.james:apache-mime4j:0.6 - http://james.apache.org/mime4j)
-     (GNU LGPL 3) SonarQube Java :: JaCoCo Listeners (org.codehaus.sonar-plugins.java:sonar-jacoco-listeners:2.3 - http://sonar-plugins.codehaus.org/java/sonar-jacoco-listeners)
      (Apache Software License - Version 2.0) (Eclipse Public License - Version 1.0) Jetty :: Servlet Annotations (org.eclipse.jetty:jetty-annotations:8.1.12.v20130726 - http://www.eclipse.org/jetty)
      (Apache Software License - Version 2.0) (Eclipse Public License - Version 1.0) Jetty :: Asynchronous HTTP Client (org.eclipse.jetty:jetty-client:8.1.12.v20130726 - http://www.eclipse.org/jetty)
      (Apache Software License - Version 2.0) (Eclipse Public License - Version 1.0) Jetty :: Continuation (org.eclipse.jetty:jetty-continuation:8.1.12.v20130726 - http://www.eclipse.org/jetty)

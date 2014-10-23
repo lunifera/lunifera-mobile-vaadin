@@ -23,12 +23,12 @@ import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEditpart;
+import org.lunifera.ecview.core.vaadin.databinding.VaadinObservables;
+import org.lunifera.ecview.core.vaadin.presentation.internal.AbstractLayoutPresenter;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.INavigationPagePresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
-import org.lunifera.runtime.web.vaadin.databinding.VaadinObservables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

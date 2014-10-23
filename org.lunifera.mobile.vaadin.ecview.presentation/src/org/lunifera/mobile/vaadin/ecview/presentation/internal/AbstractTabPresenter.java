@@ -30,8 +30,8 @@ import org.lunifera.ecview.core.common.notification.ILifecycleService;
 import org.lunifera.ecview.core.common.notification.LifecycleEvent;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.ecview.core.common.visibility.IVisibilityHandler;
+import org.lunifera.ecview.core.vaadin.presentation.IConstants;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.IConstants;
 
 import com.vaadin.ui.Component;
 

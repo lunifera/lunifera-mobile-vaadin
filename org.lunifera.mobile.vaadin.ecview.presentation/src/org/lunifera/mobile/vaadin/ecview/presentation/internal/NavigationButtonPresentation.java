@@ -11,11 +11,11 @@ package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 import java.util.Locale;
 
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
+import org.lunifera.ecview.core.vaadin.presentation.internal.AbstractVaadinWidgetPresenter;
+import org.lunifera.ecview.core.vaadin.presentation.internal.util.Util;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractVaadinWidgetPresenter;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.util.Util;
 
 import com.vaadin.addon.touchkit.ui.NavigationButton;
 import com.vaadin.ui.Component;

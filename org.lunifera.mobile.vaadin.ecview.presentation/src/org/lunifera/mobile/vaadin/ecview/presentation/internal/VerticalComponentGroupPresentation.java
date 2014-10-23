@@ -15,8 +15,8 @@ import java.util.Locale;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
+import org.lunifera.ecview.core.vaadin.presentation.internal.AbstractLayoutPresenter;
 import org.lunifera.mobile.vaadin.ecview.model.VMVerticalComponentGroup;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

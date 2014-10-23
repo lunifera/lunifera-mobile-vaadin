@@ -16,11 +16,11 @@ import java.util.List;
 
 import org.lunifera.ecview.core.common.context.IViewContext;
 import org.lunifera.ecview.core.common.presentation.ILayoutPresentation;
+import org.lunifera.ecview.core.vaadin.presentation.internal.AbstractVaadinWidgetPresenter;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabSheetPresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractVaadinWidgetPresenter;
 
 import com.vaadin.ui.ComponentContainer;
 

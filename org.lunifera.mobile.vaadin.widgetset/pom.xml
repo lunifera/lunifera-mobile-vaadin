@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.lunifera.mobile.vaadin</groupId>
 		<artifactId>org.lunifera.mobile.vaadin.parent</artifactId>
-		<version>0.7.4</version>
+		<version>0.8.0</version>
 		<relativePath>../org.lunifera.mobile.vaadin.parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>org.lunifera.mobile.vaadin.widgetset</artifactId>
@@ -47,12 +47,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
-			<artifactId>vaadin-shared-deps</artifactId>
-			<scope>provided</scope>
-			<version>1.0.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-client-compiler</artifactId>
 			<scope>provided</scope>
 			<version>${vaadin-version}</version>
@@ -75,7 +69,7 @@
 		<!-- <dependency> -->
 		<!-- <groupId>com.vaadin</groupId> -->
 		<!-- <artifactId>vaadin-testbench</artifactId> -->
-		<!-- <version>3.0.4</version> -->
+		<!-- <version>0.8.0</version> -->
 		<!-- <scope>test</scope> -->
 		<!-- </dependency> -->
 		<dependency>

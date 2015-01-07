@@ -2,28 +2,18 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Vaadin Components
 Bundle-SymbolicName: org.lunifera.mobile.vaadin.widgetset
-Bundle-Version: 0.7.4
+Bundle-Version: 0.8.0
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: Lunifera.org
-Import-Package: com.vaadin.data;version="7.0.0",
- com.vaadin.data.util.converter;version="7.0.0",
- com.vaadin.data.validator;version="7.0.0",
- com.vaadin.event;version="7.0.0",
- com.vaadin.server;version="7.0.0",
- com.vaadin.shared;version="7.0.0",
- com.vaadin.shared.communication;version="7.0.1.nightly-faf98c84bd260b2a8315dc1cc62a1f932dfd2f37-366",
- com.vaadin.shared.ui;version="7.0.0",
- com.vaadin.ui;version="7.0.0",
- org.json;version="0.0.20080701"
-Require-Bundle: com.vaadin.client;bundle-version="7.1.9",
- com.vaadin.server,
- com.vaadin.shared;bundle-version="7.1.9",
- com.vaadin.shared.deps;bundle-version="1.0.2",
+Require-Bundle: com.vaadin.client;bundle-version="[7.3.7,7.4.0)",
+ com.vaadin.server;bundle-version="[7.3.7,7.4.0)",
+ com.vaadin.shared;bundle-version="[7.3.7,7.4.0)",
  com.google.guava;bundle-version="15.0.0",
  org.eclipse.core.databinding;bundle-version="1.4.1",
  org.eclipse.core.databinding.beans;bundle-version="1.2.200",
  org.eclipse.core.databinding.observable;bundle-version="1.4.1",
  org.eclipse.core.databinding.property;bundle-version="1.4.200",
- org.lunifera.runtime.web.vaadin.databinding;bundle-version="0.0.1"
+ org.lunifera.runtime.web.vaadin.databinding;bundle-version="[0.8.0,0.9.0)",
+ org.json;bundle-version="0.0.20131108"
 Export-Package: org.lunifera.mobile.vaadin.widgetset

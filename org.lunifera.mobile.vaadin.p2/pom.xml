@@ -15,13 +15,13 @@
 	<parent>
 		<groupId>org.lunifera.releng.maven</groupId>
 		<artifactId>lunifera-releng-maven-parent-tycho</artifactId>
-		<version>0.10.1-SNAPSHOT</version>
+		<version>0.12.5-SNAPSHOT</version>
 		<relativePath> </relativePath>
 	</parent>
 
 	<groupId>org.lunifera.mobile.vaadin</groupId>
 	<artifactId>org.lunifera.mobile.vaadin.p2</artifactId>
-	<version>0.7.4</version>
+	<version>0.8.0</version>
 	<packaging>eclipse-repository</packaging>
 
 	<properties>
@@ -134,14 +134,14 @@
 	<!-- <dependency> -->
 	<!-- <groupId>org.lunifera.mobile.vaadin</groupId> -->
 	<!-- <artifactId>org.lunifera.mobile.vaadin.parent</artifactId> -->
-	<!-- <version>0.0.1-SNAPSHOT</version> -->
+	<!-- <version>0.8.0</version> -->
 	<!-- <type>pom</type> -->
 	<!-- <scope>import</scope> -->
 	<!-- </dependency> -->
 	<!-- <dependency> -->
 	<!-- <groupId>org.lunifera.mobile.vaadin</groupId> -->
 	<!-- <artifactId>org.lunifera.mobile.vaadin.presentation.vaadin</artifactId> -->
-	<!-- <version>0.0.1-SNAPSHOT</version> -->
+	<!-- <version>0.8.0</version> -->
 	<!-- </dependency> -->
 	<!-- </dependencies> -->
 	<!-- </dependencyManagement> -->

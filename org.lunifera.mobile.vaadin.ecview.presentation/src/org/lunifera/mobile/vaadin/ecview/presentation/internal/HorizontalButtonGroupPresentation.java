@@ -15,7 +15,6 @@ import java.util.Locale;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
-import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
 import org.slf4j.Logger;
@@ -33,13 +32,13 @@ import com.vaadin.ui.CssLayout;
 public class HorizontalButtonGroupPresentation extends
 		AbstractLayoutPresenter<ComponentContainer> {
 
+	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(HorizontalButtonGroupPresentation.class);
 
 	private CssLayout componentBase;
 	private HorizontalButtonGroup horizontalLayout;
 	private ModelAccess modelAccess;
-	private CssLayout fillerLayout;
 
 	/**
 	 * The constructor.
@@ -78,7 +77,6 @@ public class HorizontalButtonGroupPresentation extends
 		// iterate all elements and build the child element
 		//
 		for (IEmbeddableEditpart child : getChildren()) {
-			YEmbeddable yChild = (YEmbeddable) child.getModel();
 			addChild(child);
 		}
 
@@ -190,7 +188,6 @@ public class HorizontalButtonGroupPresentation extends
 
 	@Override
 	protected void internalAdd(IEmbeddableEditpart editpart) {
-		YEmbeddable yChild = (YEmbeddable) editpart.getModel();
 		addChild(editpart);
 	}
 

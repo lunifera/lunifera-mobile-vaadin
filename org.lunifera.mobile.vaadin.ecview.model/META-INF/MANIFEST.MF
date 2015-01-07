@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.lunifera.mobile.vaadin.ecview.model;singleton:=true
-Bundle-Version: 0.7.4
+Bundle-Version: 0.8.0
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
@@ -12,6 +12,6 @@ Export-Package: org.lunifera.mobile.vaadin.ecview.model,
  org.lunifera.mobile.vaadin.ecview.model.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.lunifera.ecview.core.common.model;bundle-version="[0.7.0,0.8.0)";visibility:=reexport,
- org.lunifera.ecview.core.extension.model;bundle-version="[0.7.0,0.8.0)"
+ org.lunifera.ecview.core.common.model;bundle-version="[0.8.0,0.9.0)";visibility:=reexport,
+ org.lunifera.ecview.core.extension.model;bundle-version="[0.8.0,0.9.0)"
 Bundle-ActivationPolicy: lazy

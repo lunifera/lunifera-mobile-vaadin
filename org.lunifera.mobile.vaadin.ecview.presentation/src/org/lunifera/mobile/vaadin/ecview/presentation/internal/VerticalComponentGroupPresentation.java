@@ -12,11 +12,9 @@ package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 
 import java.util.Locale;
 
-import org.lunifera.ecview.core.common.context.II18nService;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
-import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.mobile.vaadin.ecview.model.VMVerticalComponentGroup;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
 import org.slf4j.Logger;
@@ -25,7 +23,6 @@ import org.slf4j.LoggerFactory;
 import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.CssLayout;
 
 /**
  * This presenter is responsible to render a text field on the given layout.
@@ -34,13 +31,12 @@ import com.vaadin.ui.CssLayout;
 public class VerticalComponentGroupPresentation extends
 		AbstractLayoutPresenter<ComponentContainer> {
 
+	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(VerticalComponentGroupPresentation.class);
 
-	private CssLayout componentBase;
 	private VerticalComponentGroup verticalLayout;
 	private ModelAccess modelAccess;
-	private CssLayout fillerLayout;
 
 	/**
 	 * The constructor.
@@ -81,7 +77,6 @@ public class VerticalComponentGroupPresentation extends
 		// iterate all elements and build the child element
 		//
 		for (IEmbeddableEditpart child : getChildren()) {
-			YEmbeddable yChild = (YEmbeddable) child.getModel();
 			addChild(child);
 		}
 
@@ -104,23 +99,17 @@ public class VerticalComponentGroupPresentation extends
 
 	@Override
 	public ComponentContainer doCreateWidget(Object parent) {
-		if (componentBase == null) {
-			componentBase = new CssLayout();
-			componentBase.addStyleName(CSS_CLASS_CONTROL_BASE);
-			componentBase.setImmediate(true);
-
-			if (modelAccess.isCssIdValid()) {
-				componentBase.setId(modelAccess.getCssID());
-			} else {
-				componentBase.setId(getEditpart().getId());
-			}
-
-			associateWidget(componentBase, modelAccess.yLayout);
+		if (verticalLayout == null) {
 
 			verticalLayout = new VerticalComponentGroup();
-			componentBase.addComponent(verticalLayout);
 
 			associateWidget(verticalLayout, modelAccess.yLayout);
+
+			if (modelAccess.isCssIdValid()) {
+				verticalLayout.setId(modelAccess.getCssID());
+			} else {
+				verticalLayout.setId(getEditpart().getId());
+			}
 
 			if (modelAccess.isCssClassValid()) {
 				verticalLayout.addStyleName(modelAccess.getCssClass());
@@ -129,9 +118,9 @@ public class VerticalComponentGroupPresentation extends
 			}
 
 			applyCaptions();
-			
+
 			// creates the binding for the field
-			createBindings(modelAccess.yLayout, verticalLayout, componentBase);
+			createBindings(modelAccess.yLayout, verticalLayout, null);
 
 			// initialize all children
 			initializeChildren();
@@ -140,7 +129,7 @@ public class VerticalComponentGroupPresentation extends
 			renderChildren(false);
 		}
 
-		return componentBase;
+		return verticalLayout;
 	}
 
 	/**
@@ -159,12 +148,12 @@ public class VerticalComponentGroupPresentation extends
 
 	@Override
 	public ComponentContainer getWidget() {
-		return componentBase;
+		return verticalLayout;
 	}
 
 	@Override
 	public boolean isRendered() {
-		return componentBase != null;
+		return verticalLayout != null;
 	}
 
 	@Override
@@ -178,24 +167,21 @@ public class VerticalComponentGroupPresentation extends
 
 	@Override
 	public void doUnrender() {
-		if (componentBase != null) {
+		if (verticalLayout != null) {
 
 			// unbind all active bindings
 			unbind();
 
 			// remove assocations
-			unassociateWidget(componentBase);
 			unassociateWidget(verticalLayout);
 
 			verticalLayout.removeAllComponents();
-			componentBase = null;
 			verticalLayout = null;
 		}
 	}
 
 	@Override
 	protected void internalAdd(IEmbeddableEditpart editpart) {
-		YEmbeddable yChild = (YEmbeddable) editpart.getModel();
 		addChild(editpart);
 	}
 

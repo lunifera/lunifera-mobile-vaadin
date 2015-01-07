@@ -23,7 +23,6 @@ import com.vaadin.addon.touchkit.ui.TabBarView;
 import com.vaadin.addon.touchkit.ui.Toolbar;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.CssLayout;
 
 /**
  * This presenter is responsible to render a tab sheet on the given layout.
@@ -33,7 +32,6 @@ public class MobileTabSheetPresentation extends
 		AbstractTabSheetPresenter<ComponentContainer> implements
 		IMobileTabSheetPresentation<ComponentContainer> {
 
-	private CssLayout componentBase;
 	private TabBarView tabSheet;
 	private ModelAccess modelAccess;
 
@@ -59,7 +57,7 @@ public class MobileTabSheetPresentation extends
 	public void remove(IMobileTabEditpart editpart) {
 		super.remove(editpart);
 
-//		tabSheet.removeComponent((Component) editpart.getWidget());
+		// tabSheet.removeComponent((Component) editpart.getWidget());
 	}
 
 	@Override
@@ -127,20 +125,14 @@ public class MobileTabSheetPresentation extends
 
 	@Override
 	public ComponentContainer doCreateWidget(Object parent) {
-		if (componentBase == null) {
-			componentBase = new CssLayout();
-			componentBase.setSizeFull();
-			componentBase.addStyleName(CSS_CLASS_CONTROL_BASE);
-			if (modelAccess.isCssIdValid()) {
-				componentBase.setId(modelAccess.getCssID());
-			} else {
-				componentBase.setId(getEditpart().getId());
-			}
-
-			associateWidget(componentBase, modelAccess.yLayout);
+		if (tabSheet == null) {
 
 			tabSheet = new TabBarView();
-			componentBase.addComponent(tabSheet);
+			if (modelAccess.isCssIdValid()) {
+				tabSheet.setId(modelAccess.getCssID());
+			} else {
+				tabSheet.setId(getEditpart().getId());
+			}
 
 			associateWidget(tabSheet, modelAccess.yLayout);
 
@@ -153,17 +145,17 @@ public class MobileTabSheetPresentation extends
 			renderTabs(false);
 		}
 
-		return componentBase;
+		return tabSheet;
 	}
 
 	@Override
 	public ComponentContainer getWidget() {
-		return componentBase;
+		return tabSheet;
 	}
 
 	@Override
 	public boolean isRendered() {
-		return componentBase != null;
+		return tabSheet != null;
 	}
 
 	@Override
@@ -177,22 +169,20 @@ public class MobileTabSheetPresentation extends
 
 	@Override
 	public void doUnrender() {
-		if (componentBase != null) {
+		if (tabSheet != null) {
 
 			// unbind all active bindings
 			unbind();
 
-			ComponentContainer parent = ((ComponentContainer) componentBase
+			ComponentContainer parent = ((ComponentContainer) tabSheet
 					.getParent());
 			if (parent != null) {
-				parent.removeComponent(componentBase);
+				parent.removeComponent(tabSheet);
 			}
 
 			// remove assocations
-			unassociateWidget(componentBase);
 			unassociateWidget(tabSheet);
 
-			componentBase = null;
 			tabSheet = null;
 
 			// unrender the tabs

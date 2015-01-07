@@ -1,0 +1,8 @@
+com.vaadin;min=7.3.7;7.4.0
+org.eclipse.xtext;min=2.7.3;max=2.8.0
+org.lunifera.dsl;min=0.8.0;max=0.9.0
+org.lunifera.ecview.core;min=0.8.0;max=0.9.0
+org.lunifera.ecview;min=0.8.0;max=0.9.0
+org.lunifera.xtext.builder;min=0.8.6;max=0.9.0
+org.lunifera.mobile.vaadin;min=0.8.0;max=0.9.0
+org.lunifera.runtime;min=0.8.0;max=0.9.0

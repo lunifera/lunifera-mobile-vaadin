@@ -64,6 +64,9 @@ public class VaadinMobileFactoryImpl extends EFactoryImpl implements VaadinMobil
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE: return createVMNavigationPage();
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON: return createVMNavigationButton();
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND: return createVMNavigationCommand();
+			case VaadinMobilePackage.VM_SEARCH_PANEL: return createVMSearchPanel();
+			case VaadinMobilePackage.VM_NAVIGATION_ROOT: return createVMNavigationRoot();
+			case VaadinMobilePackage.VM_NAVIGATION_BAR_BUTTON: return createVMNavigationBarButton();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -147,6 +150,36 @@ public class VaadinMobileFactoryImpl extends EFactoryImpl implements VaadinMobil
 	public VMNavigationCommand createVMNavigationCommand() {
 		VMNavigationCommandImpl vmNavigationCommand = new VMNavigationCommandImpl();
 		return vmNavigationCommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VMSearchPanel createVMSearchPanel() {
+		VMSearchPanelImpl vmSearchPanel = new VMSearchPanelImpl();
+		return vmSearchPanel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VMNavigationRoot createVMNavigationRoot() {
+		VMNavigationRootImpl vmNavigationRoot = new VMNavigationRootImpl();
+		return vmNavigationRoot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VMNavigationBarButton createVMNavigationBarButton() {
+		VMNavigationBarButtonImpl vmNavigationBarButton = new VMNavigationBarButtonImpl();
+		return vmNavigationBarButton;
 	}
 
 	/**

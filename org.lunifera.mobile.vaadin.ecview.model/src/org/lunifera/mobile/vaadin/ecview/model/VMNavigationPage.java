@@ -2,6 +2,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
+import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 
@@ -17,6 +18,7 @@ import org.lunifera.ecview.core.common.model.core.YLayout;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getValue <em>Value</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getBarActions <em>Bar Actions</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,6 +131,22 @@ public interface VMNavigationPage extends YLayout, VMNavigationHandler {
 	 * @generated
 	 */
 	void setValue(Object value);
+
+	/**
+	 * Returns the value of the '<em><b>Bar Actions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bar Actions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bar Actions</em>' containment reference list.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_BarActions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VMNavigationBarButton> getBarActions();
 
 	/**
 	 * <!-- begin-user-doc -->

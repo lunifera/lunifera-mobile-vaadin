@@ -140,6 +140,42 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_HORIZONTAL_BUTTON_GROUP__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_HORIZONTAL_BUTTON_GROUP__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_HORIZONTAL_BUTTON_GROUP__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_HORIZONTAL_BUTTON_GROUP__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_HORIZONTAL_BUTTON_GROUP__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,6 +439,42 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_VERTICAL_COMPONENT_GROUP__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_VERTICAL_COMPONENT_GROUP__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_VERTICAL_COMPONENT_GROUP__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_VERTICAL_COMPONENT_GROUP__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_VERTICAL_COMPONENT_GROUP__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
 
 	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -687,6 +759,42 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_PAGE__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
 	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -732,13 +840,22 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_PAGE__VALUE = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Bar Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__BAR_ACTIONS = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>VM Navigation Page</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
@@ -969,6 +1086,486 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_HANDLER_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMSearchPanelImpl <em>VM Search Panel</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMSearchPanelImpl
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMSearchPanel()
+	 * @generated
+	 */
+	int VM_SEARCH_PANEL = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__ID = CoreModelPackage.YLAYOUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__CSS_CLASS = CoreModelPackage.YLAYOUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__CSS_ID = CoreModelPackage.YLAYOUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__INITIAL_VISIBLE = CoreModelPackage.YLAYOUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__ORPHAN_DATATYPES = CoreModelPackage.YLAYOUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__ELEMENTS = CoreModelPackage.YLAYOUT__ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Spacing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__SPACING = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__MARGIN = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__TYPE = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Emf Ns URI</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__EMF_NS_URI = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Type Qualified Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__TYPE_QUALIFIED_NAME = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Apply Filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__APPLY_FILTER = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__FILTER = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of structural features of the '<em>VM Search Panel</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationRootImpl <em>VM Navigation Root</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationRootImpl
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationRoot()
+	 * @generated
+	 */
+	int VM_NAVIGATION_ROOT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__ID = CoreModelPackage.YLAYOUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__NAME = CoreModelPackage.YLAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__CSS_CLASS = CoreModelPackage.YLAYOUT__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__CSS_ID = CoreModelPackage.YLAYOUT__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__INITIAL_VISIBLE = CoreModelPackage.YLAYOUT__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__VISIBLE = CoreModelPackage.YLAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__ORPHAN_DATATYPES = CoreModelPackage.YLAYOUT__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YLAYOUT__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__INITIAL_EDITABLE = CoreModelPackage.YLAYOUT__INITIAL_EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__EDITABLE = CoreModelPackage.YLAYOUT__EDITABLE;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__INITIAL_ENABLED = CoreModelPackage.YLAYOUT__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__ENABLED = CoreModelPackage.YLAYOUT__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__ELEMENTS = CoreModelPackage.YLAYOUT__ELEMENTS;
+
+	/**
+	 * The number of structural features of the '<em>VM Navigation Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationBarButtonImpl <em>VM Navigation Bar Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationBarButtonImpl
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationBarButton()
+	 * @generated
+	 */
+	int VM_NAVIGATION_BAR_BUTTON = 11;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__ID = CoreModelPackage.YACTION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__NAME = CoreModelPackage.YACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__CSS_CLASS = CoreModelPackage.YACTION__CSS_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Css ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__CSS_ID = CoreModelPackage.YACTION__CSS_ID;
+
+	/**
+	 * The feature id for the '<em><b>Initial Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__INITIAL_VISIBLE = CoreModelPackage.YACTION__INITIAL_VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__VISIBLE = CoreModelPackage.YACTION__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datatypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__ORPHAN_DATATYPES = CoreModelPackage.YACTION__ORPHAN_DATATYPES;
+
+	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YACTION__ORPHAN_DATADESCRIPTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Initial Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__INITIAL_ENABLED = CoreModelPackage.YACTION__INITIAL_ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Enabled</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__ENABLED = CoreModelPackage.YACTION__ENABLED;
+
+	/**
+	 * The feature id for the '<em><b>Initial Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__INITIAL_EDITABLE = CoreModelPackage.YACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Editable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__EDITABLE = CoreModelPackage.YACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__DATADESCRIPTION = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Last Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__LAST_CLICK_TIME = CoreModelPackage.YACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>VM Navigation Bar Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 4;
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup <em>VM Horizontal Button Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1139,6 +1736,17 @@ public interface VaadinMobilePackage extends EPackage {
 	EAttribute getVMNavigationPage_Value();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getBarActions <em>Bar Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Bar Actions</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getBarActions()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EReference getVMNavigationPage_BarActions();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton <em>VM Navigation Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1222,6 +1830,113 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVMNavigationHandler();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel <em>VM Search Panel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VM Search Panel</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel
+	 * @generated
+	 */
+	EClass getVMSearchPanel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getType()
+	 * @see #getVMSearchPanel()
+	 * @generated
+	 */
+	EAttribute getVMSearchPanel_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getEmfNsURI <em>Emf Ns URI</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Emf Ns URI</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getEmfNsURI()
+	 * @see #getVMSearchPanel()
+	 * @generated
+	 */
+	EAttribute getVMSearchPanel_EmfNsURI();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getTypeQualifiedName <em>Type Qualified Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Qualified Name</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getTypeQualifiedName()
+	 * @see #getVMSearchPanel()
+	 * @generated
+	 */
+	EAttribute getVMSearchPanel_TypeQualifiedName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getApplyFilter <em>Apply Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Apply Filter</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getApplyFilter()
+	 * @see #getVMSearchPanel()
+	 * @generated
+	 */
+	EAttribute getVMSearchPanel_ApplyFilter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getFilter <em>Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filter</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel#getFilter()
+	 * @see #getVMSearchPanel()
+	 * @generated
+	 */
+	EAttribute getVMSearchPanel_Filter();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot <em>VM Navigation Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VM Navigation Root</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot
+	 * @generated
+	 */
+	EClass getVMNavigationRoot();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton <em>VM Navigation Bar Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VM Navigation Bar Button</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton
+	 * @generated
+	 */
+	EClass getVMNavigationBarButton();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton#getDatadescription()
+	 * @see #getVMNavigationBarButton()
+	 * @generated
+	 */
+	EReference getVMNavigationBarButton_Datadescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton#getLastClickTime <em>Last Click Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Click Time</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton#getLastClickTime()
+	 * @see #getVMNavigationBarButton()
+	 * @generated
+	 */
+	EAttribute getVMNavigationBarButton_LastClickTime();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1370,6 +2085,13 @@ public interface VaadinMobilePackage extends EPackage {
 		 */
 		EAttribute VM_NAVIGATION_PAGE__VALUE = eINSTANCE.getVMNavigationPage_Value();
 		/**
+		 * The meta object literal for the '<em><b>Bar Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_NAVIGATION_PAGE__BAR_ACTIONS = eINSTANCE.getVMNavigationPage_BarActions();
+		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1431,6 +2153,82 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EClass VM_NAVIGATION_HANDLER = eINSTANCE.getVMNavigationHandler();
+		/**
+		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMSearchPanelImpl <em>VM Search Panel</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMSearchPanelImpl
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMSearchPanel()
+		 * @generated
+		 */
+		EClass VM_SEARCH_PANEL = eINSTANCE.getVMSearchPanel();
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_SEARCH_PANEL__TYPE = eINSTANCE.getVMSearchPanel_Type();
+		/**
+		 * The meta object literal for the '<em><b>Emf Ns URI</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_SEARCH_PANEL__EMF_NS_URI = eINSTANCE.getVMSearchPanel_EmfNsURI();
+		/**
+		 * The meta object literal for the '<em><b>Type Qualified Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_SEARCH_PANEL__TYPE_QUALIFIED_NAME = eINSTANCE.getVMSearchPanel_TypeQualifiedName();
+		/**
+		 * The meta object literal for the '<em><b>Apply Filter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_SEARCH_PANEL__APPLY_FILTER = eINSTANCE.getVMSearchPanel_ApplyFilter();
+		/**
+		 * The meta object literal for the '<em><b>Filter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_SEARCH_PANEL__FILTER = eINSTANCE.getVMSearchPanel_Filter();
+		/**
+		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationRootImpl <em>VM Navigation Root</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationRootImpl
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationRoot()
+		 * @generated
+		 */
+		EClass VM_NAVIGATION_ROOT = eINSTANCE.getVMNavigationRoot();
+		/**
+		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationBarButtonImpl <em>VM Navigation Bar Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationBarButtonImpl
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationBarButton()
+		 * @generated
+		 */
+		EClass VM_NAVIGATION_BAR_BUTTON = eINSTANCE.getVMNavigationBarButton();
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_NAVIGATION_BAR_BUTTON__DATADESCRIPTION = eINSTANCE.getVMNavigationBarButton_Datadescription();
+		/**
+		 * The meta object literal for the '<em><b>Last Click Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_BAR_BUTTON__LAST_CLICK_TIME = eINSTANCE.getVMNavigationBarButton_LastClickTime();
 
 	}
 

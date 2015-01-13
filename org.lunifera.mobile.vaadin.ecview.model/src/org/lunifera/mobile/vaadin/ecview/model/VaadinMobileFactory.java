@@ -94,6 +94,33 @@ public interface VaadinMobileFactory extends EFactory {
 	VMNavigationCommand createVMNavigationCommand();
 
 	/**
+	 * Returns a new object of class '<em>VM Search Panel</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VM Search Panel</em>'.
+	 * @generated
+	 */
+	VMSearchPanel createVMSearchPanel();
+
+	/**
+	 * Returns a new object of class '<em>VM Navigation Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VM Navigation Root</em>'.
+	 * @generated
+	 */
+	VMNavigationRoot createVMNavigationRoot();
+
+	/**
+	 * Returns a new object of class '<em>VM Navigation Bar Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VM Navigation Bar Button</em>'.
+	 * @generated
+	 */
+	VMNavigationBarButton createVMNavigationBarButton();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

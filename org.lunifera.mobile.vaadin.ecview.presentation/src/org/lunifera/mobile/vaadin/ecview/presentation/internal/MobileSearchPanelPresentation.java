@@ -10,35 +10,45 @@
  */
 package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
 
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
-import org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup;
+import org.lunifera.ecview.core.common.filter.IFilterProvidingPresentation;
+import org.lunifera.ecview.core.ui.core.editparts.extension.ISearchFieldEditpart;
+import org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.IConstants;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
+import org.lunifera.runtime.web.vaadin.common.data.filter.Filters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vaadin.addon.touchkit.ui.HorizontalButtonGroup;
+import com.vaadin.data.Container.Filter;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.CssLayout;
+import com.vaadin.ui.FormLayout;
+import com.vaadin.ui.HorizontalLayout;
 
 /**
  * This presenter is responsible to render a text field on the given layout.
  */
 @SuppressWarnings("restriction")
-public class HorizontalButtonGroupPresentation extends
-		AbstractLayoutPresenter<ComponentContainer> {
+public class MobileSearchPanelPresentation extends
+		AbstractLayoutPresenter<ComponentContainer> implements
+		IFilterProvidingPresentation {
 
-	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(HorizontalButtonGroupPresentation.class);
+			.getLogger(MobileSearchPanelPresentation.class);
 
-	private CssLayout componentBase;
-	private HorizontalButtonGroup horizontalLayout;
+	private HorizontalLayout horizontalLayout;
+	private FormLayout leftForm;
+	private FormLayout rightForm;
 	private ModelAccess modelAccess;
+
+	private int currentChildIndex;
 
 	/**
 	 * The constructor.
@@ -46,10 +56,9 @@ public class HorizontalButtonGroupPresentation extends
 	 * @param editpart
 	 *            The editpart of that editpart.
 	 */
-	public HorizontalButtonGroupPresentation(IElementEditpart editpart) {
+	public MobileSearchPanelPresentation(IElementEditpart editpart) {
 		super((ILayoutEditpart) editpart);
-		this.modelAccess = new ModelAccess(
-				(VMHorizontalButtonGroup) editpart.getModel());
+		this.modelAccess = new ModelAccess((VMSearchPanel) editpart.getModel());
 	}
 
 	@Override
@@ -72,59 +81,71 @@ public class HorizontalButtonGroupPresentation extends
 	 * and added to it again afterwards.
 	 */
 	protected void refreshUI() {
-		horizontalLayout.removeAllComponents();
+		leftForm.removeAllComponents();
+		rightForm.removeAllComponents();
 
 		// iterate all elements and build the child element
 		//
+		currentChildIndex = 0;
 		for (IEmbeddableEditpart child : getChildren()) {
 			addChild(child);
 		}
-
 	}
 
-	/**
-	 * Is called to create the child component and apply layouting defaults to
-	 * it.
-	 * 
-	 * @param editpart
-	 * @param yStyle
-	 * @return
-	 */
-	protected void addChild(IEmbeddableEditpart editpart) {
-
-		Component child = (Component) editpart.render(horizontalLayout);
-
-		horizontalLayout.addComponent(child);
+	private void addChild(IEmbeddableEditpart child) {
+		currentChildIndex++;
+		if (currentChildIndex % 2 == 1) {
+			leftForm.addComponent((Component) child.render(leftForm));
+		} else {
+			rightForm.addComponent((Component) child.render(rightForm));
+		}
 	}
 
 	@Override
 	public ComponentContainer doCreateWidget(Object parent) {
-		if (componentBase == null) {
-			componentBase = new CssLayout();
-			componentBase.addStyleName(CSS_CLASS_CONTROL_BASE);
-			componentBase.setImmediate(true);
+		if (horizontalLayout == null) {
 
-			if (modelAccess.isCssIdValid()) {
-				componentBase.setId(modelAccess.getCssID());
-			} else {
-				componentBase.setId(getEditpart().getId());
-			}
-
-			associateWidget(componentBase, modelAccess.yLayout);
-
-			horizontalLayout = new HorizontalButtonGroup();
-			componentBase.addComponent(horizontalLayout);
+			horizontalLayout = new HorizontalLayout();
+			setupComponent(horizontalLayout, getCastedModel());
 
 			associateWidget(horizontalLayout, modelAccess.yLayout);
+
+			if (modelAccess.isCssIdValid()) {
+				horizontalLayout.setId(modelAccess.getCssID());
+			} else {
+				horizontalLayout.setId(getEditpart().getId());
+			}
+
+			if (modelAccess.isMargin()) {
+				horizontalLayout.addStyleName(IConstants.CSS_CLASS_MARGIN);
+				horizontalLayout.setMargin(true);
+			}
+
+			if (!modelAccess.isSpacing()) {
+				horizontalLayout.setSpacing(false);
+			} else {
+				horizontalLayout.setData(IConstants.CSS_CLASS_SPACING);
+				horizontalLayout.setSpacing(true);
+			}
 
 			if (modelAccess.isCssClassValid()) {
 				horizontalLayout.addStyleName(modelAccess.getCssClass());
 			} else {
 				horizontalLayout.addStyleName(CSS_CLASS_CONTROL);
 			}
+			horizontalLayout
+					.addStyleName(IConstants.CSS_CLASS_HORIZONTALLAYOUT);
+
+			leftForm = new FormLayout();
+			leftForm.setSizeFull();
+			horizontalLayout.addComponent(leftForm);
+
+			rightForm = new FormLayout();
+			rightForm.setSizeFull();
+			horizontalLayout.addComponent(rightForm);
 
 			// creates the binding for the field
-			createBindings(modelAccess.yLayout, horizontalLayout, componentBase);
+			createBindings(modelAccess.yLayout, horizontalLayout, null);
 
 			// initialize all children
 			initializeChildren();
@@ -133,7 +154,27 @@ public class HorizontalButtonGroupPresentation extends
 			renderChildren(false);
 		}
 
-		return componentBase;
+		return horizontalLayout;
+	}
+
+	@Override
+	public Object getFilter() {
+
+		Set<Filter> filters = new HashSet<Filter>();
+		for (IEmbeddableEditpart editpart : getChildren()) {
+			ISearchFieldEditpart temp = (ISearchFieldEditpart) editpart;
+			Filter filter = (Filter) temp.getFilter();
+			if (filter != null) {
+				filters.add(filter);
+			}
+		}
+
+		if (filters.size() > 0) {
+			return new Filters()
+					.and(filters.toArray(new Filter[filters.size()]));
+		} else {
+			return null;
+		}
 	}
 
 	/**
@@ -152,12 +193,12 @@ public class HorizontalButtonGroupPresentation extends
 
 	@Override
 	public ComponentContainer getWidget() {
-		return componentBase;
+		return horizontalLayout;
 	}
 
 	@Override
 	public boolean isRendered() {
-		return componentBase != null;
+		return horizontalLayout != null;
 	}
 
 	@Override
@@ -171,21 +212,20 @@ public class HorizontalButtonGroupPresentation extends
 
 	@Override
 	public void doUnrender() {
-		if (componentBase != null) {
+		if (horizontalLayout != null) {
 
 			// unbind all active bindings
 			unbind();
 
-			// unrender the children
-			unrenderChildren();
-
 			// remove assocations
-			unassociateWidget(componentBase);
 			unassociateWidget(horizontalLayout);
 
 			horizontalLayout.removeAllComponents();
-			componentBase = null;
 			horizontalLayout = null;
+			leftForm.removeAllComponents();
+			leftForm = null;
+			rightForm.removeAllComponents();
+			rightForm = null;
 		}
 	}
 
@@ -239,9 +279,9 @@ public class HorizontalButtonGroupPresentation extends
 	 * An internal helper class.
 	 */
 	private static class ModelAccess {
-		private final VMHorizontalButtonGroup yLayout;
+		private final VMSearchPanel yLayout;
 
-		public ModelAccess(VMHorizontalButtonGroup yLayout) {
+		public ModelAccess(VMSearchPanel yLayout) {
 			super();
 			this.yLayout = yLayout;
 		}
@@ -265,6 +305,14 @@ public class HorizontalButtonGroupPresentation extends
 
 		/**
 		 * @return
+		 * @see org.lunifera.ecview.core.ui.core.model.extension.VMSearchPanel#isSpacing()
+		 */
+		public boolean isSpacing() {
+			return yLayout.isSpacing();
+		}
+
+		/**
+		 * @return
 		 * @see org.lunifera.ecview.core.ui.core.model.core.YCssAble#getCssID()
 		 */
 		public String getCssID() {
@@ -278,6 +326,14 @@ public class HorizontalButtonGroupPresentation extends
 		 */
 		public boolean isCssIdValid() {
 			return getCssID() != null && !getCssID().equals("");
+		}
+
+		/**
+		 * @return
+		 * @see org.lunifera.ecview.core.ui.core.model.extension.VMSearchPanel#isMargin()
+		 */
+		public boolean isMargin() {
+			return yLayout.isMargin();
 		}
 
 	}

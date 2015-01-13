@@ -14,10 +14,13 @@ import org.lunifera.ecview.core.common.model.datatypes.DatatypesPackage;
 import org.lunifera.ecview.core.common.model.validation.ValidationPackage;
 import org.lunifera.ecview.core.common.model.visibility.VisibilityPackage;
 import org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot;
+import org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
 import org.lunifera.mobile.vaadin.ecview.model.VMTab;
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
@@ -86,6 +89,24 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * @generated
 	 */
 	private EClass vmNavigationHandlerEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vmSearchPanelEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vmNavigationRootEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vmNavigationBarButtonEClass = null;
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
@@ -303,6 +324,15 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVMNavigationPage_BarActions() {
+		return (EReference)vmNavigationPageEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVMNavigationButton() {
 		return vmNavigationButtonEClass;
 	}
@@ -375,6 +405,96 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVMSearchPanel() {
+		return vmSearchPanelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMSearchPanel_Type() {
+		return (EAttribute)vmSearchPanelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMSearchPanel_EmfNsURI() {
+		return (EAttribute)vmSearchPanelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMSearchPanel_TypeQualifiedName() {
+		return (EAttribute)vmSearchPanelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMSearchPanel_ApplyFilter() {
+		return (EAttribute)vmSearchPanelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMSearchPanel_Filter() {
+		return (EAttribute)vmSearchPanelEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVMNavigationRoot() {
+		return vmNavigationRootEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVMNavigationBarButton() {
+		return vmNavigationBarButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVMNavigationBarButton_Datadescription() {
+		return (EReference)vmNavigationBarButtonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMNavigationBarButton_LastClickTime() {
+		return (EAttribute)vmNavigationBarButtonEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VaadinMobileFactory getVaadinMobileFactory() {
 		return (VaadinMobileFactory)getEFactoryInstance();
 	}
@@ -419,6 +539,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__EMF_NS_URI);
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__TYPE_QUALIFIED_NAME);
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__VALUE);
+		createEReference(vmNavigationPageEClass, VM_NAVIGATION_PAGE__BAR_ACTIONS);
 
 		vmNavigationButtonEClass = createEClass(VM_NAVIGATION_BUTTON);
 		createEReference(vmNavigationButtonEClass, VM_NAVIGATION_BUTTON__PAGE);
@@ -430,6 +551,19 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		createEAttribute(vmNavigationCommandEClass, VM_NAVIGATION_COMMAND__VALUE);
 
 		vmNavigationHandlerEClass = createEClass(VM_NAVIGATION_HANDLER);
+
+		vmSearchPanelEClass = createEClass(VM_SEARCH_PANEL);
+		createEAttribute(vmSearchPanelEClass, VM_SEARCH_PANEL__TYPE);
+		createEAttribute(vmSearchPanelEClass, VM_SEARCH_PANEL__EMF_NS_URI);
+		createEAttribute(vmSearchPanelEClass, VM_SEARCH_PANEL__TYPE_QUALIFIED_NAME);
+		createEAttribute(vmSearchPanelEClass, VM_SEARCH_PANEL__APPLY_FILTER);
+		createEAttribute(vmSearchPanelEClass, VM_SEARCH_PANEL__FILTER);
+
+		vmNavigationRootEClass = createEClass(VM_NAVIGATION_ROOT);
+
+		vmNavigationBarButtonEClass = createEClass(VM_NAVIGATION_BAR_BUTTON);
+		createEReference(vmNavigationBarButtonEClass, VM_NAVIGATION_BAR_BUTTON__DATADESCRIPTION);
+		createEAttribute(vmNavigationBarButtonEClass, VM_NAVIGATION_BAR_BUTTON__LAST_CLICK_TIME);
 	}
 
 	/**
@@ -477,6 +611,15 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		vmNavigationButtonEClass.getESuperTypes().add(theCoreModelPackage.getYAction());
 		vmNavigationCommandEClass.getESuperTypes().add(theCoreModelPackage.getYCommand());
 		vmNavigationHandlerEClass.getESuperTypes().add(theCoreModelPackage.getYElement());
+		vmSearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
+		vmSearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYSpacingable());
+		vmSearchPanelEClass.getESuperTypes().add(theCoreModelPackage.getYMarginable());
+		vmNavigationRootEClass.getESuperTypes().add(theCoreModelPackage.getYLayout());
+		vmNavigationRootEClass.getESuperTypes().add(this.getVMNavigationHandler());
+		vmNavigationBarButtonEClass.getESuperTypes().add(theCoreModelPackage.getYAction());
+		vmNavigationBarButtonEClass.getESuperTypes().add(theCoreModelPackage.getYVisibleable());
+		vmNavigationBarButtonEClass.getESuperTypes().add(theCoreModelPackage.getYEditable());
+		vmNavigationBarButtonEClass.getESuperTypes().add(theCoreModelPackage.getYEnable());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(vmHorizontalButtonGroupEClass, VMHorizontalButtonGroup.class, "VMHorizontalButtonGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -505,6 +648,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		initEAttribute(getVMNavigationPage_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVMNavigationPage_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVMNavigationPage_Value(), ecorePackage.getEJavaObject(), "value", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVMNavigationPage_BarActions(), this.getVMNavigationBarButton(), null, "barActions", null, 0, -1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(vmNavigationPageEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createValueEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -522,6 +666,24 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		addEOperation(vmNavigationCommandEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createNavigationValueEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(vmNavigationHandlerEClass, VMNavigationHandler.class, "VMNavigationHandler", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(vmSearchPanelEClass, VMSearchPanel.class, "VMSearchPanel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		g1 = createEGenericType(ecorePackage.getEJavaClass());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEAttribute(getVMSearchPanel_Type(), g1, "type", null, 0, 1, VMSearchPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVMSearchPanel_EmfNsURI(), ecorePackage.getEString(), "emfNsURI", null, 0, 1, VMSearchPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVMSearchPanel_TypeQualifiedName(), ecorePackage.getEString(), "typeQualifiedName", null, 0, 1, VMSearchPanel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVMSearchPanel_ApplyFilter(), ecorePackage.getEJavaObject(), "applyFilter", null, 0, 1, VMSearchPanel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVMSearchPanel_Filter(), ecorePackage.getEJavaObject(), "filter", null, 0, 1, VMSearchPanel.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vmNavigationRootEClass, VMNavigationRoot.class, "VMNavigationRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(vmNavigationBarButtonEClass, VMNavigationBarButton.class, "VMNavigationBarButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVMNavigationBarButton_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, VMNavigationBarButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVMNavigationBarButton_LastClickTime(), ecorePackage.getELong(), "lastClickTime", null, 0, 1, VMNavigationBarButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(vmNavigationBarButtonEClass, theCoreModelPackage.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

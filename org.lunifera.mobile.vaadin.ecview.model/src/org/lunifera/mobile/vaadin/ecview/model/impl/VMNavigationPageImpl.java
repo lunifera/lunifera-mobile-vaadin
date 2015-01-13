@@ -2,13 +2,20 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.impl.YLayoutImpl;
 
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 
@@ -23,6 +30,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getBarActions <em>Bar Actions</em>}</li>
  * </ul>
  * </p>
  *
@@ -93,6 +101,16 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 	 * @ordered
 	 */
 	protected Object value = VALUE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getBarActions() <em>Bar Actions</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBarActions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VMNavigationBarButton> barActions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,10 +220,36 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<VMNavigationBarButton> getBarActions() {
+		if (barActions == null) {
+			barActions = new EObjectContainmentEList<VMNavigationBarButton>(VMNavigationBarButton.class, this, VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS);
+		}
+		return barActions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YECViewModelValueBindingEndpoint createValueEndpoint() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
+				return ((InternalEList<?>)getBarActions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -224,6 +268,8 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 				return getTypeQualifiedName();
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE__VALUE:
 				return getValue();
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
+				return getBarActions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -233,6 +279,7 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -247,6 +294,10 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 				return;
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE__VALUE:
 				setValue(newValue);
+				return;
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
+				getBarActions().clear();
+				getBarActions().addAll((Collection<? extends VMNavigationBarButton>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -272,6 +323,9 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
+				getBarActions().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -292,6 +346,8 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 				return TYPE_QUALIFIED_NAME_EDEFAULT == null ? typeQualifiedName != null : !TYPE_QUALIFIED_NAME_EDEFAULT.equals(typeQualifiedName);
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
+				return barActions != null && !barActions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

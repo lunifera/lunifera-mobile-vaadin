@@ -23,6 +23,8 @@ import org.lunifera.mobile.vaadin.ecview.editparts.INavigationHandler;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * The implementation of the IHorizontalButtonGroupEditpart.
@@ -31,6 +33,8 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
 public class NavigationCommandEditpart extends
 		CommandEditpart<VMNavigationCommand> implements
 		INavigationCommandEditpart {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(NavigationCommandEditpart.class);
 
 	private Binding binding;
 	private boolean activated;
@@ -96,6 +100,10 @@ public class NavigationCommandEditpart extends
 		IBindableEndpointEditpart bindableEndpoint = getEditpart(model
 				.createNavigationValueEndpoint());
 
-		navHandler.navigateTo(targetEditpart, bindableEndpoint);
+		try {
+			navHandler.navigateTo(targetEditpart, bindableEndpoint);
+		} catch (Exception e) {
+			LOGGER.error("{}", e);
+		}
 	}
 }

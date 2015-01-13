@@ -29,6 +29,7 @@ Package model <http://lunifera.org/ecview/v1/vaadin/mobile>
     Attribute emfNsURI : EString
     Attribute typeQualifiedName : EString
     Attribute value : EJavaObject
+    Reference barActions : VMNavigationBarButton<<0..*>>
     Operation createValueEndpoint() : YECViewModelValueBindingEndpoint
 
   Class VMNavigationButton -> YAction
@@ -43,3 +44,17 @@ Package model <http://lunifera.org/ecview/v1/vaadin/mobile>
     Operation createNavigationValueEndpoint() : YECViewModelValueBindingEndpoint
 
   Class VMNavigationHandler -> YElement
+
+  Class VMSearchPanel -> YLayout, YSpacingable, YMarginable
+    Attribute type : EJavaClass
+    Attribute emfNsURI : EString
+    Attribute typeQualifiedName : EString
+    Attribute applyFilter : EJavaObject
+    Attribute filter : EJavaObject
+
+  Class VMNavigationRoot -> YLayout, VMNavigationHandler
+
+  Class VMNavigationBarButton -> YAction, YVisibleable, YEditable, YEnable
+    Reference datadescription : YDatadescription
+    Attribute lastClickTime : ELong
+    Operation getView() : YView

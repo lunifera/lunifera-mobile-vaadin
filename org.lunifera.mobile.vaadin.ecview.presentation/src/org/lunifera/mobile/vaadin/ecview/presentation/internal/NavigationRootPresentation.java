@@ -15,29 +15,27 @@ import java.util.Locale;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
-import org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vaadin.addon.touchkit.ui.HorizontalButtonGroup;
+import com.vaadin.addon.touchkit.ui.NavigationView;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
-import com.vaadin.ui.CssLayout;
 
 /**
  * This presenter is responsible to render a text field on the given layout.
  */
 @SuppressWarnings("restriction")
-public class HorizontalButtonGroupPresentation extends
+public class NavigationRootPresentation extends
 		AbstractLayoutPresenter<ComponentContainer> {
 
 	@SuppressWarnings("unused")
 	private static final Logger LOGGER = LoggerFactory
-			.getLogger(HorizontalButtonGroupPresentation.class);
+			.getLogger(NavigationRootPresentation.class);
 
-	private CssLayout componentBase;
-	private HorizontalButtonGroup horizontalLayout;
+	private SwipingNavigationManager navManager;
 	private ModelAccess modelAccess;
 
 	/**
@@ -46,10 +44,10 @@ public class HorizontalButtonGroupPresentation extends
 	 * @param editpart
 	 *            The editpart of that editpart.
 	 */
-	public HorizontalButtonGroupPresentation(IElementEditpart editpart) {
+	public NavigationRootPresentation(IElementEditpart editpart) {
 		super((ILayoutEditpart) editpart);
 		this.modelAccess = new ModelAccess(
-				(VMHorizontalButtonGroup) editpart.getModel());
+				(VMNavigationRoot) editpart.getModel());
 	}
 
 	@Override
@@ -65,6 +63,8 @@ public class HorizontalButtonGroupPresentation extends
 	 * Applies the labels to the widgets.
 	 */
 	protected void applyCaptions() {
+		// TODO for later
+		navManager.setCaption(modelAccess.yLayout.getName());
 	}
 
 	/**
@@ -72,14 +72,13 @@ public class HorizontalButtonGroupPresentation extends
 	 * and added to it again afterwards.
 	 */
 	protected void refreshUI() {
-		horizontalLayout.removeAllComponents();
+		navManager.removeAllComponents();
 
 		// iterate all elements and build the child element
 		//
 		for (IEmbeddableEditpart child : getChildren()) {
 			addChild(child);
 		}
-
 	}
 
 	/**
@@ -92,39 +91,39 @@ public class HorizontalButtonGroupPresentation extends
 	 */
 	protected void addChild(IEmbeddableEditpart editpart) {
 
-		Component child = (Component) editpart.render(horizontalLayout);
+		Component child = (Component) editpart.render(navManager);
 
-		horizontalLayout.addComponent(child);
+		navManager.addComponent(child);
+		if (child instanceof NavigationView) {
+			navManager.setCurrentComponent(child);
+		}
 	}
 
 	@Override
 	public ComponentContainer doCreateWidget(Object parent) {
-		if (componentBase == null) {
-			componentBase = new CssLayout();
-			componentBase.addStyleName(CSS_CLASS_CONTROL_BASE);
-			componentBase.setImmediate(true);
+		if (navManager == null) {
+
+			navManager = new SwipingNavigationManager();
+			navManager.setSizeFull();
+
+			associateWidget(navManager, modelAccess.yLayout);
 
 			if (modelAccess.isCssIdValid()) {
-				componentBase.setId(modelAccess.getCssID());
+				navManager.setId(modelAccess.getCssID());
 			} else {
-				componentBase.setId(getEditpart().getId());
+				navManager.setId(getEditpart().getId());
 			}
-
-			associateWidget(componentBase, modelAccess.yLayout);
-
-			horizontalLayout = new HorizontalButtonGroup();
-			componentBase.addComponent(horizontalLayout);
-
-			associateWidget(horizontalLayout, modelAccess.yLayout);
 
 			if (modelAccess.isCssClassValid()) {
-				horizontalLayout.addStyleName(modelAccess.getCssClass());
+				navManager.addStyleName(modelAccess.getCssClass());
 			} else {
-				horizontalLayout.addStyleName(CSS_CLASS_CONTROL);
+				navManager.addStyleName(CSS_CLASS_CONTROL);
 			}
 
+			applyCaptions();
+
 			// creates the binding for the field
-			createBindings(modelAccess.yLayout, horizontalLayout, componentBase);
+			createBindings(modelAccess.yLayout, navManager, null);
 
 			// initialize all children
 			initializeChildren();
@@ -133,7 +132,7 @@ public class HorizontalButtonGroupPresentation extends
 			renderChildren(false);
 		}
 
-		return componentBase;
+		return navManager;
 	}
 
 	/**
@@ -152,12 +151,12 @@ public class HorizontalButtonGroupPresentation extends
 
 	@Override
 	public ComponentContainer getWidget() {
-		return componentBase;
+		return navManager;
 	}
 
 	@Override
 	public boolean isRendered() {
-		return componentBase != null;
+		return navManager != null;
 	}
 
 	@Override
@@ -171,21 +170,16 @@ public class HorizontalButtonGroupPresentation extends
 
 	@Override
 	public void doUnrender() {
-		if (componentBase != null) {
+		if (navManager != null) {
 
 			// unbind all active bindings
 			unbind();
 
-			// unrender the children
-			unrenderChildren();
-
 			// remove assocations
-			unassociateWidget(componentBase);
-			unassociateWidget(horizontalLayout);
+			unassociateWidget(navManager);
 
-			horizontalLayout.removeAllComponents();
-			componentBase = null;
-			horizontalLayout = null;
+			navManager.removeAllComponents();
+			navManager = null;
 		}
 	}
 
@@ -196,9 +190,9 @@ public class HorizontalButtonGroupPresentation extends
 
 	@Override
 	protected void internalRemove(IEmbeddableEditpart child) {
-		if (horizontalLayout != null && child.isRendered()) {
+		if (navManager != null && child.isRendered()) {
 			// will happen during disposal since children already disposed.
-			horizontalLayout.removeComponent((Component) child.getWidget());
+			navManager.removeComponent((Component) child.getWidget());
 		}
 
 		child.unrender();
@@ -239,9 +233,9 @@ public class HorizontalButtonGroupPresentation extends
 	 * An internal helper class.
 	 */
 	private static class ModelAccess {
-		private final VMHorizontalButtonGroup yLayout;
+		private final VMNavigationRoot yLayout;
 
-		public ModelAccess(VMHorizontalButtonGroup yLayout) {
+		public ModelAccess(VMNavigationRoot yLayout) {
 			super();
 			this.yLayout = yLayout;
 		}

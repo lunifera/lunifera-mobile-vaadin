@@ -10,6 +10,9 @@
  */
 package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Locale;
 
 import org.eclipse.core.databinding.Binding;
@@ -23,6 +26,7 @@ import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableValueEndpointEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationBarButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.INavigationPagePresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
@@ -41,6 +45,7 @@ import com.vaadin.server.ClientConnector.AttachEvent;
 import com.vaadin.ui.AbstractComponent;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.ComponentContainer;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.VerticalLayout;
 
 /**
@@ -55,12 +60,16 @@ public class NavigationPagePresentation extends
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(NavigationPagePresentation.class);
 
+	private List<INavigationBarButtonEditpart> barActions;
+
 	private NavigationView navigationView;
 	private VerticalLayout content;
 	private ModelAccess modelAccess;
 
 	// the input data if navigation page is triggered by table selection,...
 	private IBindableEndpointEditpart inputDataBindingEndpoint;
+
+	private HorizontalLayout rightBarComponent;
 
 	/**
 	 * The constructor.
@@ -95,10 +104,15 @@ public class NavigationPagePresentation extends
 	 * and added to it again afterwards.
 	 */
 	protected void refreshUI() {
+
+		for (INavigationBarButtonEditpart editpart : getBarActions()) {
+			addBarActionComponent(editpart);
+		}
+
 		// iterate all elements and build the child element
 		//
 		for (IEmbeddableEditpart child : getChildren()) {
-			addChild(child);
+			addChildComponent(child);
 		}
 	}
 
@@ -110,9 +124,21 @@ public class NavigationPagePresentation extends
 	 * @param yStyle
 	 * @return
 	 */
-	protected void addChild(IEmbeddableEditpart editpart) {
+	protected void addChildComponent(IEmbeddableEditpart editpart) {
 		Component child = (Component) editpart.render(content);
+		child.setWidth("100%");
 		content.addComponent(child);
+	}
+
+	protected void addBarActionComponent(INavigationBarButtonEditpart editpart) {
+		if (rightBarComponent == null) {
+			rightBarComponent = new HorizontalLayout();
+			navigationView.getNavigationBar().setRightComponent(
+					rightBarComponent);
+		}
+
+		Component child = (Component) editpart.render(content);
+		rightBarComponent.addComponent(child);
 	}
 
 	@Override
@@ -189,6 +215,10 @@ public class NavigationPagePresentation extends
 		super.createBindings(yPage, widget, container);
 	}
 
+	protected INavigationPageEditpart getEditpart() {
+		return (INavigationPageEditpart) super.getEditpart();
+	}
+
 	/**
 	 * Adds the children to the superclass and prevents rendering.
 	 */
@@ -198,6 +228,12 @@ public class NavigationPagePresentation extends
 			for (IEmbeddableEditpart editPart : getEditpart().getElements()) {
 				super.add(editPart);
 			}
+
+			for (INavigationBarButtonEditpart editPart : getEditpart()
+					.getBarButtons()) {
+				addBarAction(editPart);
+			}
+
 		} finally {
 			setRenderLock(false);
 		}
@@ -252,6 +288,10 @@ public class NavigationPagePresentation extends
 		try {
 			unrender();
 		} finally {
+			if (barActions != null) {
+				barActions.clear();
+				barActions = null;
+			}
 			super.internalDispose();
 		}
 	}
@@ -263,18 +303,22 @@ public class NavigationPagePresentation extends
 			// unbind all active bindings
 			unbind();
 
+			// unrender the children
+			unrenderChildren();
+
 			// remove assocations
 			unassociateWidget(navigationView);
 			unassociateWidget(content);
 
 			navigationView = null;
 			content = null;
+			rightBarComponent = null;
 		}
 	}
 
 	@Override
 	protected void internalAdd(IEmbeddableEditpart editpart) {
-		addChild(editpart);
+		addChildComponent(editpart);
 	}
 
 	@Override
@@ -312,10 +356,96 @@ public class NavigationPagePresentation extends
 	 * Will unrender all children.
 	 */
 	protected void unrenderChildren() {
+
+		for (INavigationBarButtonEditpart editpart : getBarActions()) {
+			if (editpart.isRendered()) {
+				editpart.unrender();
+			}
+		}
+
 		for (IEmbeddableEditpart editpart : getChildren()) {
 			if (editpart.isRendered()) {
 				editpart.unrender();
 			}
+		}
+	}
+
+	public List<INavigationBarButtonEditpart> getBarActions() {
+		return barActions != null ? Collections.unmodifiableList(barActions)
+				: Collections.<INavigationBarButtonEditpart> emptyList();
+	}
+
+	/**
+	 * Ensures, that the children collection exists.
+	 */
+	protected void ensureBarActions() {
+		if (barActions == null) {
+			barActions = new ArrayList<INavigationBarButtonEditpart>();
+		}
+	}
+
+	@Override
+	public void addBarAction(INavigationBarButtonEditpart editPart) {
+		ensureBarActions();
+
+		if (!barActions.contains(editPart)) {
+			barActions.add(editPart);
+
+			if (!isRenderLock()) {
+				refreshUI();
+			}
+		}
+	}
+
+	@Override
+	public void insertBarAction(INavigationBarButtonEditpart editPart, int index) {
+		ensureBarActions();
+
+		int currentIndex = barActions.indexOf(editPart);
+		if (currentIndex > -1 && currentIndex != index) {
+			throw new RuntimeException(
+					String.format(
+							"Insert at index %d not possible since presentation already contained at index %d",
+							index, currentIndex));
+		}
+
+		barActions.add(index, editPart);
+		if (!isRenderLock()) {
+			refreshUI();
+		}
+	}
+
+	@Override
+	public void moveBarAction(INavigationBarButtonEditpart editPart, int index) {
+		if (barActions == null) {
+			throw new RuntimeException(
+					"Move not possible. No children present.");
+		}
+
+		if (!barActions.contains(editPart)) {
+			throw new RuntimeException(
+					String.format(
+							"Move to index %d not possible since presentation not added yet!",
+							index));
+		}
+
+		// int currentIndex = barActions.indexOf(editPart);
+		barActions.remove(editPart);
+		barActions.add(index, editPart);
+
+		if (!isRenderLock()) {
+			refreshUI();
+		}
+	}
+
+	@Override
+	public void removeBarAction(INavigationBarButtonEditpart editPart) {
+		if (barActions == null) {
+			return;
+		}
+
+		if (barActions.remove(editPart) && !isRenderLock()) {
+			refreshUI();
 		}
 	}
 

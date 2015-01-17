@@ -351,6 +351,15 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVMNavigationPage_Datadescription() {
+		return (EReference)vmNavigationPageEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVMNavigationButton() {
 		return vmNavigationButtonEClass;
 	}
@@ -560,6 +569,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		createEReference(vmNavigationPageEClass, VM_NAVIGATION_PAGE__BAR_ACTIONS);
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__NAVIGATE_BACK);
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK);
+		createEReference(vmNavigationPageEClass, VM_NAVIGATION_PAGE__DATADESCRIPTION);
 
 		vmNavigationButtonEClass = createEClass(VM_NAVIGATION_BUTTON);
 		createEReference(vmNavigationButtonEClass, VM_NAVIGATION_BUTTON__PAGE);
@@ -671,6 +681,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		initEReference(getVMNavigationPage_BarActions(), this.getVMNavigationBarButton(), null, "barActions", null, 0, -1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVMNavigationPage_NavigateBack(), ecorePackage.getEJavaObject(), "navigateBack", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVMNavigationPage_OnNavigateBack(), ecorePackage.getELong(), "onNavigateBack", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVMNavigationPage_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(vmNavigationPageEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createValueEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 

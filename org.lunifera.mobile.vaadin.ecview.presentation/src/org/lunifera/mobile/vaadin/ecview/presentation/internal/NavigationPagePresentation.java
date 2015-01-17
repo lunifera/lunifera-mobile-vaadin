@@ -33,6 +33,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 import org.lunifera.runtime.common.metric.TimeLogger;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.util.Util;
 import org.lunifera.runtime.web.vaadin.databinding.VaadinObservables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -97,7 +98,8 @@ public class NavigationPagePresentation extends
 	 * Applies the labels to the widgets.
 	 */
 	protected void applyCaptions() {
-		navigationView.setCaption(modelAccess.yLayout.getName());
+		Util.applyCaptions(getI18nService(), modelAccess.getLabel(),
+				modelAccess.getLabelI18nKey(), getLocale(), navigationView);
 	}
 
 	/**
@@ -507,6 +509,26 @@ public class NavigationPagePresentation extends
 		 */
 		public boolean isCssIdValid() {
 			return getCssID() != null && !getCssID().equals("");
+		}
+
+		/**
+		 * Returns the label.
+		 * 
+		 * @return
+		 */
+		public String getLabel() {
+			return yLayout.getDatadescription() != null ? yLayout
+					.getDatadescription().getLabel() : null;
+		}
+
+		/**
+		 * Returns the label.
+		 * 
+		 * @return
+		 */
+		public String getLabelI18nKey() {
+			return yLayout.getDatadescription() != null ? yLayout
+					.getDatadescription().getLabelI18nKey() : null;
 		}
 
 	}

@@ -32,6 +32,7 @@ Package model <http://lunifera.org/ecview/v1/vaadin/mobile>
     Reference barActions : VMNavigationBarButton<<0..*>>
     Attribute navigateBack : EJavaObject
     Attribute onNavigateBack : ELong
+    Reference datadescription : YDatadescription
     Operation createValueEndpoint() : YECViewModelValueBindingEndpoint
 
   Class VMNavigationButton -> YAction

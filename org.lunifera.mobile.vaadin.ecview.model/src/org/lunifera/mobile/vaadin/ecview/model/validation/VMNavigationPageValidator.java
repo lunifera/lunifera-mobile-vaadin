@@ -5,6 +5,7 @@
 package org.lunifera.mobile.vaadin.ecview.model.validation;
 
 import org.eclipse.emf.common.util.EList;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton;
 
 
@@ -30,6 +31,8 @@ public interface VMNavigationPageValidator {
 	boolean validateNavigateBack(Object value);
 
 	boolean validateOnNavigateBack(long value);
+
+	boolean validateDatadescription(YDatadescription value);
 
 	boolean validateOnNavigateBack(Object value);
 

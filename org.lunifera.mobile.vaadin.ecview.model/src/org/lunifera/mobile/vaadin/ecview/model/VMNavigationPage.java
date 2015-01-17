@@ -5,6 +5,7 @@ package org.lunifera.mobile.vaadin.ecview.model;
 import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
 import org.lunifera.ecview.core.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,6 +22,7 @@ import org.lunifera.ecview.core.common.model.core.YLayout;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getBarActions <em>Bar Actions</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack <em>Navigate Back</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack <em>On Navigate Back</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getDatadescription <em>Datadescription</em>}</li>
  * </ul>
  * </p>
  *
@@ -201,6 +203,32 @@ public interface VMNavigationPage extends YLayout, VMNavigationHandler {
 	 * @generated
 	 */
 	void setOnNavigateBack(long value);
+
+	/**
+	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Datadescription</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Datadescription</em>' reference.
+	 * @see #setDatadescription(YDatadescription)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_Datadescription()
+	 * @model
+	 * @generated
+	 */
+	YDatadescription getDatadescription();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getDatadescription <em>Datadescription</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Datadescription</em>' reference.
+	 * @see #getDatadescription()
+	 * @generated
+	 */
+	void setDatadescription(YDatadescription value);
 
 	/**
 	 * <!-- begin-user-doc -->

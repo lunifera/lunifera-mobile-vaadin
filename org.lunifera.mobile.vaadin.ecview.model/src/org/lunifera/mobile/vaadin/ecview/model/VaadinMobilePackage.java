@@ -867,13 +867,22 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__DATADESCRIPTION = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>VM Navigation Page</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 7;
+	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
@@ -1787,6 +1796,17 @@ public interface VaadinMobilePackage extends EPackage {
 	EAttribute getVMNavigationPage_OnNavigateBack();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getDatadescription <em>Datadescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Datadescription</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getDatadescription()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EReference getVMNavigationPage_Datadescription();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton <em>VM Navigation Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2145,6 +2165,13 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK = eINSTANCE.getVMNavigationPage_OnNavigateBack();
+		/**
+		 * The meta object literal for the '<em><b>Datadescription</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_NAVIGATION_PAGE__DATADESCRIPTION = eINSTANCE.getVMNavigationPage_Datadescription();
 		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
 		 * <!-- begin-user-doc -->

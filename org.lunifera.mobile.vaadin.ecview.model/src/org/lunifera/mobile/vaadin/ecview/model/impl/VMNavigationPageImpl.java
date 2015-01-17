@@ -31,6 +31,8 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getBarActions <em>Bar Actions</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getNavigateBack <em>Navigate Back</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl#getOnNavigateBack <em>On Navigate Back</em>}</li>
  * </ul>
  * </p>
  *
@@ -112,6 +114,42 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 	 */
 	protected EList<VMNavigationBarButton> barActions;
 
+	/**
+	 * The default value of the '{@link #getNavigateBack() <em>Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavigateBack()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Object NAVIGATE_BACK_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNavigateBack() <em>Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavigateBack()
+	 * @generated
+	 * @ordered
+	 */
+	protected Object navigateBack = NAVIGATE_BACK_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getOnNavigateBack() <em>On Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOnNavigateBack()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long ON_NAVIGATE_BACK_EDEFAULT = 0L;
+	/**
+	 * The cached value of the '{@link #getOnNavigateBack() <em>On Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOnNavigateBack()
+	 * @generated
+	 * @ordered
+	 */
+	protected long onNavigateBack = ON_NAVIGATE_BACK_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -232,6 +270,48 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Object getNavigateBack() {
+		return navigateBack;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNavigateBack(Object newNavigateBack) {
+		Object oldNavigateBack = navigateBack;
+		navigateBack = newNavigateBack;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VaadinMobilePackage.VM_NAVIGATION_PAGE__NAVIGATE_BACK, oldNavigateBack, navigateBack));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public long getOnNavigateBack() {
+		return onNavigateBack;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOnNavigateBack(long newOnNavigateBack) {
+		long oldOnNavigateBack = onNavigateBack;
+		onNavigateBack = newOnNavigateBack;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VaadinMobilePackage.VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK, oldOnNavigateBack, onNavigateBack));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public YECViewModelValueBindingEndpoint createValueEndpoint() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -270,6 +350,10 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 				return getValue();
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
 				return getBarActions();
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__NAVIGATE_BACK:
+				return getNavigateBack();
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK:
+				return getOnNavigateBack();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -299,6 +383,12 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 				getBarActions().clear();
 				getBarActions().addAll((Collection<? extends VMNavigationBarButton>)newValue);
 				return;
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__NAVIGATE_BACK:
+				setNavigateBack(newValue);
+				return;
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK:
+				setOnNavigateBack((Long)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -326,6 +416,12 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
 				getBarActions().clear();
 				return;
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__NAVIGATE_BACK:
+				setNavigateBack(NAVIGATE_BACK_EDEFAULT);
+				return;
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK:
+				setOnNavigateBack(ON_NAVIGATE_BACK_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -348,6 +444,10 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE__BAR_ACTIONS:
 				return barActions != null && !barActions.isEmpty();
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__NAVIGATE_BACK:
+				return NAVIGATE_BACK_EDEFAULT == null ? navigateBack != null : !NAVIGATE_BACK_EDEFAULT.equals(navigateBack);
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK:
+				return onNavigateBack != ON_NAVIGATE_BACK_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -370,6 +470,10 @@ public class VMNavigationPageImpl extends YLayoutImpl implements VMNavigationPag
 		result.append(typeQualifiedName);
 		result.append(", value: ");
 		result.append(value);
+		result.append(", navigateBack: ");
+		result.append(navigateBack);
+		result.append(", onNavigateBack: ");
+		result.append(onNavigateBack);
 		result.append(')');
 		return result.toString();
 	}

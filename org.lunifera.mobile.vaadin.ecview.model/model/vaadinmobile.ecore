@@ -32,6 +32,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="barActions" upperBound="-1"
         eType="#//VMNavigationBarButton" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navigateBack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="onNavigateBack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VMNavigationButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction">
     <eOperations name="getView" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YView"/>

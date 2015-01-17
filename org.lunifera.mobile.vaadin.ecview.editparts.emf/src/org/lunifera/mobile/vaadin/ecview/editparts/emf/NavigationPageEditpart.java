@@ -12,6 +12,7 @@ package org.lunifera.mobile.vaadin.ecview.editparts.emf;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.core.databinding.Binding;
@@ -25,6 +26,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
+import org.lunifera.runtime.common.metric.TimeLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -66,9 +68,27 @@ public class NavigationPageEditpart extends LayoutEditpart<VMNavigationPage>
 			IBindableEndpointEditpart bindingEndpoint) {
 		checkDisposed();
 
+		TimeLogger log = TimeLogger.start(getClass());
 		// navigate to the target
 		INavigationPagePresentation<?> presentation = (INavigationPagePresentation<?>) getPresentation();
 		presentation.navigateTo(targetPage, bindingEndpoint);
+		log.stop("Navigation took ");
+	}
+
+	@Override
+	public void navigateBack() {
+		checkDisposed();
+
+		if (isPresentationPresent()) {
+			// navigate back
+			INavigationPagePresentation<?> presentation = (INavigationPagePresentation<?>) getPresentation();
+			presentation.navigateBack();
+		}
+	}
+
+	@Override
+	public void notifyBackNavigation() {
+		getModel().setOnNavigateBack(new Date().getTime());
 	}
 
 	public List<INavigationBarButtonEditpart> getBarButtons() {
@@ -163,6 +183,19 @@ public class NavigationPageEditpart extends LayoutEditpart<VMNavigationPage>
 				INavigationPagePresentation<?> presenter = (INavigationPagePresentation<?>) getPresentation();
 				presenter.moveBarAction(editPart, notification.getPosition());
 			}
+			break;
+		default:
+			super.handleModelMove(featureId, notification);
+		}
+	}
+
+	@Override
+	protected void handleModelSet(int featureId, Notification notification) {
+		checkDisposed();
+
+		switch (featureId) {
+		case VaadinMobilePackage.VM_NAVIGATION_PAGE__NAVIGATE_BACK:
+			navigateBack();
 			break;
 		default:
 			super.handleModelMove(featureId, notification);

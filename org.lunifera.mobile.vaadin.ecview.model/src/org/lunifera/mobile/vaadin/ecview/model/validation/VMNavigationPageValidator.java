@@ -27,4 +27,12 @@ public interface VMNavigationPageValidator {
 
 	boolean validateBarActions(EList<VMNavigationBarButton> value);
 
+	boolean validateNavigateBack(Object value);
+
+	boolean validateOnNavigateBack(long value);
+
+	boolean validateOnNavigateBack(Object value);
+
+	boolean validateBack(Object value);
+
 }

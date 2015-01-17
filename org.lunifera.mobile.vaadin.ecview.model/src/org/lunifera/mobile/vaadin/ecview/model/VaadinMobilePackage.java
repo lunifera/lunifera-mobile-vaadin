@@ -849,13 +849,31 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_PAGE__BAR_ACTIONS = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Navigate Back</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__NAVIGATE_BACK = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>On Navigate Back</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>VM Navigation Page</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 5;
+	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
@@ -1747,6 +1765,28 @@ public interface VaadinMobilePackage extends EPackage {
 	EReference getVMNavigationPage_BarActions();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack <em>Navigate Back</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Navigate Back</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EAttribute getVMNavigationPage_NavigateBack();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack <em>On Navigate Back</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>On Navigate Back</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EAttribute getVMNavigationPage_OnNavigateBack();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton <em>VM Navigation Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2091,6 +2131,20 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference VM_NAVIGATION_PAGE__BAR_ACTIONS = eINSTANCE.getVMNavigationPage_BarActions();
+		/**
+		 * The meta object literal for the '<em><b>Navigate Back</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_PAGE__NAVIGATE_BACK = eINSTANCE.getVMNavigationPage_NavigateBack();
+		/**
+		 * The meta object literal for the '<em><b>On Navigate Back</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK = eINSTANCE.getVMNavigationPage_OnNavigateBack();
 		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
 		 * <!-- begin-user-doc -->

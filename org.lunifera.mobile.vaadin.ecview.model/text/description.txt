@@ -30,6 +30,8 @@ Package model <http://lunifera.org/ecview/v1/vaadin/mobile>
     Attribute typeQualifiedName : EString
     Attribute value : EJavaObject
     Reference barActions : VMNavigationBarButton<<0..*>>
+    Attribute navigateBack : EJavaObject
+    Attribute onNavigateBack : ELong
     Operation createValueEndpoint() : YECViewModelValueBindingEndpoint
 
   Class VMNavigationButton -> YAction

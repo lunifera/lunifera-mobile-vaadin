@@ -19,6 +19,8 @@ import org.lunifera.ecview.core.common.model.core.YLayout;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getValue <em>Value</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getBarActions <em>Bar Actions</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack <em>Navigate Back</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack <em>On Navigate Back</em>}</li>
  * </ul>
  * </p>
  *
@@ -147,6 +149,58 @@ public interface VMNavigationPage extends YLayout, VMNavigationHandler {
 	 * @generated
 	 */
 	EList<VMNavigationBarButton> getBarActions();
+
+	/**
+	 * Returns the value of the '<em><b>Navigate Back</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Navigate Back</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Navigate Back</em>' attribute.
+	 * @see #setNavigateBack(Object)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_NavigateBack()
+	 * @model
+	 * @generated
+	 */
+	Object getNavigateBack();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack <em>Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Navigate Back</em>' attribute.
+	 * @see #getNavigateBack()
+	 * @generated
+	 */
+	void setNavigateBack(Object value);
+
+	/**
+	 * Returns the value of the '<em><b>On Navigate Back</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>On Navigate Back</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>On Navigate Back</em>' attribute.
+	 * @see #setOnNavigateBack(long)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_OnNavigateBack()
+	 * @model
+	 * @generated
+	 */
+	long getOnNavigateBack();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack <em>On Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>On Navigate Back</em>' attribute.
+	 * @see #getOnNavigateBack()
+	 * @generated
+	 */
+	void setOnNavigateBack(long value);
 
 	/**
 	 * <!-- begin-user-doc -->

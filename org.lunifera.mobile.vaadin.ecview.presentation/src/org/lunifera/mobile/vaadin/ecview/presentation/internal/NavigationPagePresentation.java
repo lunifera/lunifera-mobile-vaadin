@@ -31,6 +31,7 @@ import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.INavigationPagePresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
+import org.lunifera.runtime.common.metric.TimeLogger;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
 import org.lunifera.runtime.web.vaadin.databinding.VaadinObservables;
 import org.slf4j.Logger;
@@ -254,10 +255,16 @@ public class NavigationPagePresentation extends
 			VaadinObservables.activateRealm(navigationView.getUI());
 			// set the input data to the child nav page
 			targetPageEditpart.setInputDataBindingEndpoint(bindingEndpoint);
+
+			TimeLogger log = TimeLogger.start(getClass());
 			Component currentActiveNextNavPage = (Component) targetPageEditpart
 					.render(null);
+			log.stop("Rendering of target navigation page took");
+
+			log = TimeLogger.start(getClass());
 			navigationView.getNavigationManager().navigateTo(
 					currentActiveNextNavPage);
+			log.stop("Raw navigationManager call took");
 		}
 	}
 
@@ -274,8 +281,16 @@ public class NavigationPagePresentation extends
 			if (mgr.getNextComponent() == navigationView) {
 				navigationView.getNavigationManager().removeListener(this);
 				getEditpart().requestUnrender();
+
+				// notify listeners about the back navigation
+				getEditpart().notifyBackNavigation();
 			}
 		}
+	}
+
+	@Override
+	public void navigateBack() {
+		navigationView.getNavigationManager().navigateBack();
 	}
 
 	@Override

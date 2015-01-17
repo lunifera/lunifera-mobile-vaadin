@@ -27,6 +27,11 @@ public interface INavigationPagePresentation<C> extends ILayoutPresentation<C> {
 			IBindableEndpointEditpart bindingEndpoint);
 
 	/**
+	 * Tells the navigation page to navigate back.
+	 */
+	void navigateBack();
+
+	/**
 	 * Sets the input binding endpoint. Fields of the navigation page needs to
 	 * be bound against the object at the end of the binding endpoint. For
 	 * instance, if a table row triggers binding, it will pass a binding

@@ -13,7 +13,17 @@ public interface INavigationHandler {
 	 *            this object contains information about the input data of the
 	 *            target navigation page.
 	 */
-	public abstract void navigateTo(INavigationPageEditpart targetPage,
+	void navigateTo(INavigationPageEditpart targetPage,
 			IBindableEndpointEditpart bindable);
+
+	/**
+	 * Tells the navigation page to navigate back.
+	 */
+	void navigateBack();
+
+	/**
+	 * Notifies listeners about the back navigation event.
+	 */
+	void notifyBackNavigation();
 
 }

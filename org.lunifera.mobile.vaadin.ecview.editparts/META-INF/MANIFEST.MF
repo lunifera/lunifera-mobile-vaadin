@@ -6,7 +6,6 @@ Bundle-Version: 0.8.1.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.osgi.service.component;version="1.2.0",
  org.slf4j
-Service-Component: OSGI-INF/editPartManager.xml, OSGI-INF/presenterFactory.xml 
 Bundle-ActivationPolicy: lazy
 Export-Package: org.lunifera.mobile.vaadin.ecview.editparts,
  org.lunifera.mobile.vaadin.ecview.editparts.presentation

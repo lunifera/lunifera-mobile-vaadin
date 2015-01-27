@@ -1003,13 +1003,22 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_BUTTON__DATADESCRIPTION = CoreModelPackage.YACTION_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Last Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BUTTON__LAST_CLICK_TIME = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>VM Navigation Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_NAVIGATION_BUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 2;
+	int VM_NAVIGATION_BUTTON_FEATURE_COUNT = CoreModelPackage.YACTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl <em>VM Navigation Command</em>}' class.
@@ -1839,6 +1848,17 @@ public interface VaadinMobilePackage extends EPackage {
 	EReference getVMNavigationButton_Datadescription();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton#getLastClickTime <em>Last Click Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Click Time</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton#getLastClickTime()
+	 * @see #getVMNavigationButton()
+	 * @generated
+	 */
+	EAttribute getVMNavigationButton_LastClickTime();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand <em>VM Navigation Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2195,6 +2215,13 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference VM_NAVIGATION_BUTTON__DATADESCRIPTION = eINSTANCE.getVMNavigationButton_Datadescription();
+		/**
+		 * The meta object literal for the '<em><b>Last Click Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_BUTTON__LAST_CLICK_TIME = eINSTANCE.getVMNavigationButton_LastClickTime();
 		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl <em>VM Navigation Command</em>}' class.
 		 * <!-- begin-user-doc -->

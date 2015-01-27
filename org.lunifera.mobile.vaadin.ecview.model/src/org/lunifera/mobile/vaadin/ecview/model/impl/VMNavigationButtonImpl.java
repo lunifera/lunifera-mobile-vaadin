@@ -23,6 +23,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
  * <ul>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl#getPage <em>Page</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl#getLastClickTime <em>Last Click Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,6 +49,26 @@ public class VMNavigationButtonImpl extends YActionImpl implements VMNavigationB
 	 * @ordered
 	 */
 	protected YDatadescription datadescription;
+
+	/**
+	 * The default value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final long LAST_CLICK_TIME_EDEFAULT = 0L;
+
+	/**
+	 * The cached value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastClickTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected long lastClickTime = LAST_CLICK_TIME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,6 +175,27 @@ public class VMNavigationButtonImpl extends YActionImpl implements VMNavigationB
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public long getLastClickTime() {
+		return lastClickTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastClickTime(long newLastClickTime) {
+		long oldLastClickTime = lastClickTime;
+		lastClickTime = newLastClickTime;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, VaadinMobilePackage.VM_NAVIGATION_BUTTON__LAST_CLICK_TIME, oldLastClickTime, lastClickTime));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -176,6 +218,8 @@ public class VMNavigationButtonImpl extends YActionImpl implements VMNavigationB
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__DATADESCRIPTION:
 				if (resolve) return getDatadescription();
 				return basicGetDatadescription();
+			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__LAST_CLICK_TIME:
+				return getLastClickTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -193,6 +237,9 @@ public class VMNavigationButtonImpl extends YActionImpl implements VMNavigationB
 				return;
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__DATADESCRIPTION:
 				setDatadescription((YDatadescription)newValue);
+				return;
+			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__LAST_CLICK_TIME:
+				setLastClickTime((Long)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -212,6 +259,9 @@ public class VMNavigationButtonImpl extends YActionImpl implements VMNavigationB
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__DATADESCRIPTION:
 				setDatadescription((YDatadescription)null);
 				return;
+			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__LAST_CLICK_TIME:
+				setLastClickTime(LAST_CLICK_TIME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -228,10 +278,28 @@ public class VMNavigationButtonImpl extends YActionImpl implements VMNavigationB
 				return page != null;
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__DATADESCRIPTION:
 				return datadescription != null;
+			case VaadinMobilePackage.VM_NAVIGATION_BUTTON__LAST_CLICK_TIME:
+				return lastClickTime != LAST_CLICK_TIME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (lastClickTime: ");
+		result.append(lastClickTime);
+		result.append(')');
+		return result.toString();
+	}
+
 	/**
 	 * Sets the label by creating a new datadescription.
 	 * 

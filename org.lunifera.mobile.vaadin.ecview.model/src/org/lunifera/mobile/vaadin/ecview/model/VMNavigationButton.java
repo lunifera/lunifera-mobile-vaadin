@@ -16,6 +16,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  * <ul>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton#getPage <em>Page</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton#getLastClickTime <em>Last Click Time</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,6 +76,32 @@ public interface VMNavigationButton extends YAction {
 	 * @generated
 	 */
 	void setDatadescription(YDatadescription value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Click Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Last Click Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Click Time</em>' attribute.
+	 * @see #setLastClickTime(long)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationButton_LastClickTime()
+	 * @model
+	 * @generated
+	 */
+	long getLastClickTime();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton#getLastClickTime <em>Last Click Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Click Time</em>' attribute.
+	 * @see #getLastClickTime()
+	 * @generated
+	 */
+	void setLastClickTime(long value);
 
 	/**
 	 * <!-- begin-user-doc -->

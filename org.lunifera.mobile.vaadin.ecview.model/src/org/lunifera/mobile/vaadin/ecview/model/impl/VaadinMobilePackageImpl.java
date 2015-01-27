@@ -387,6 +387,15 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVMNavigationButton_LastClickTime() {
+		return (EAttribute)vmNavigationButtonEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVMNavigationCommand() {
 		return vmNavigationCommandEClass;
 	}
@@ -574,6 +583,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		vmNavigationButtonEClass = createEClass(VM_NAVIGATION_BUTTON);
 		createEReference(vmNavigationButtonEClass, VM_NAVIGATION_BUTTON__PAGE);
 		createEReference(vmNavigationButtonEClass, VM_NAVIGATION_BUTTON__DATADESCRIPTION);
+		createEAttribute(vmNavigationButtonEClass, VM_NAVIGATION_BUTTON__LAST_CLICK_TIME);
 
 		vmNavigationCommandEClass = createEClass(VM_NAVIGATION_COMMAND);
 		createEReference(vmNavigationCommandEClass, VM_NAVIGATION_COMMAND__NAVIGATION_HANDLER);
@@ -688,6 +698,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		initEClass(vmNavigationButtonEClass, VMNavigationButton.class, "VMNavigationButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVMNavigationButton_Page(), this.getVMNavigationPage(), null, "page", null, 0, 1, VMNavigationButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVMNavigationButton_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, VMNavigationButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVMNavigationButton_LastClickTime(), ecorePackage.getELong(), "lastClickTime", null, 0, 1, VMNavigationButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(vmNavigationButtonEClass, theCoreModelPackage.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 

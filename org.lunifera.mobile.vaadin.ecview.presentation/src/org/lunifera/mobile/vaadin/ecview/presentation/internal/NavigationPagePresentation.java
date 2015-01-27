@@ -280,7 +280,7 @@ public class NavigationPagePresentation extends
 	public void navigate(NavigationEvent event) {
 		if (event.getDirection() == NavigationEvent.Direction.BACK) {
 			NavigationManager mgr = (NavigationManager) event.getSource();
-			if (mgr.getNextComponent() == navigationView) {
+			if (mgr.getPreviousComponent() == navigationView) {
 				navigationView.getNavigationManager().removeListener(this);
 				getEditpart().requestUnrender();
 

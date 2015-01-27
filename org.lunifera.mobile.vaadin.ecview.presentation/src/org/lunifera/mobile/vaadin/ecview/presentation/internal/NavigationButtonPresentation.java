@@ -8,12 +8,16 @@
  */
 package org.lunifera.mobile.vaadin.ecview.presentation.internal;
 
+import java.util.Date;
 import java.util.Locale;
 
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.emf.databinding.EMFObservables;
 import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;
+import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractVaadinWidgetPresenter;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.util.Util;
 
@@ -30,6 +34,7 @@ public class NavigationButtonPresentation extends
 
 	private final ModelAccess modelAccess;
 	private NavigationButton button;
+	private IObservableValue clickObservable;
 
 	/**
 	 * Constructor.
@@ -59,6 +64,9 @@ public class NavigationButtonPresentation extends
 							getNavigationManager().navigateTo(targetView);
 						}
 						fireClick();
+
+						// fire click event to databinding
+						clickObservable.setValue(new Date().getTime());
 					}
 				}
 			};
@@ -130,6 +138,12 @@ public class NavigationButtonPresentation extends
 	 */
 	protected void createBindings(final VMNavigationButton vmField,
 			NavigationButton button) {
+
+		clickObservable = EMFObservables
+				.observeValue(
+						vmField,
+						VaadinMobilePackage.Literals.VM_NAVIGATION_BUTTON__LAST_CLICK_TIME);
+
 		super.createBindings(vmField, button, null);
 	}
 
@@ -152,6 +166,8 @@ public class NavigationButtonPresentation extends
 
 			// unbind all active bindings
 			unbind();
+			clickObservable.dispose();
+			clickObservable = null;
 
 			ComponentContainer parent = ((ComponentContainer) button
 					.getParent());

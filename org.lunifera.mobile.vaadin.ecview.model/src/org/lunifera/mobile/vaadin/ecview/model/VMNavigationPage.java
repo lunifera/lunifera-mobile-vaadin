@@ -4,6 +4,7 @@ package org.lunifera.mobile.vaadin.ecview.model;
 
 import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
@@ -23,6 +24,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack <em>Navigate Back</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack <em>On Navigate Back</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getCellStyles <em>Cell Styles</em>}</li>
  * </ul>
  * </p>
  *
@@ -231,10 +233,44 @@ public interface VMNavigationPage extends YLayout, VMNavigationHandler {
 	void setDatadescription(YDatadescription value);
 
 	/**
+	 * Returns the value of the '<em><b>Cell Styles</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cell Styles</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cell Styles</em>' containment reference list.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_CellStyles()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VMNavigationPageCellStyle> getCellStyles();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
 	 * @generated
 	 */
 	YECViewModelValueBindingEndpoint createValueEndpoint();
+	
+	
+	/**
+	 * Returns the cell style for the given element.
+	 * 
+	 * @param element
+	 * @return
+	 */
+	VMNavigationPageCellStyle getCellStyle(YEmbeddable element);
+
+	/**
+	 * Adds a new cell style to the internal list of cell styles.
+	 * 
+	 * @param element
+	 * @return
+	 */
+	VMNavigationPageCellStyle addCellStyle(YEmbeddable element);
+	
 } // VMNavigationPage

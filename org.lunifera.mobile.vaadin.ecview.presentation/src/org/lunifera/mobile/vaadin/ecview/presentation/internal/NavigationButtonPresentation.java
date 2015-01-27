@@ -61,6 +61,7 @@ public class NavigationButtonPresentation extends
 					if (isEnabled() && !isReadOnly()) {
 						Component targetView = loadTargetPage();
 						if (targetView != null) {
+							setTargetView(targetView);
 							getNavigationManager().navigateTo(targetView);
 						}
 						fireClick();

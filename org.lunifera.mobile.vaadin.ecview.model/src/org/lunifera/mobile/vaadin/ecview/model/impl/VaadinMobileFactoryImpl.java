@@ -62,6 +62,7 @@ public class VaadinMobileFactoryImpl extends EFactoryImpl implements VaadinMobil
 			case VaadinMobilePackage.VM_TAB_SHEET: return createVMTabSheet();
 			case VaadinMobilePackage.VM_TAB: return createVMTab();
 			case VaadinMobilePackage.VM_NAVIGATION_PAGE: return createVMNavigationPage();
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE_CELL_STYLE: return createVMNavigationPageCellStyle();
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON: return createVMNavigationButton();
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND: return createVMNavigationCommand();
 			case VaadinMobilePackage.VM_SEARCH_PANEL: return createVMSearchPanel();
@@ -130,6 +131,16 @@ public class VaadinMobileFactoryImpl extends EFactoryImpl implements VaadinMobil
 	public VMNavigationPage createVMNavigationPage() {
 		VMNavigationPageImpl vmNavigationPage = new VMNavigationPageImpl();
 		return vmNavigationPage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VMNavigationPageCellStyle createVMNavigationPageCellStyle() {
+		VMNavigationPageCellStyleImpl vmNavigationPageCellStyle = new VMNavigationPageCellStyleImpl();
+		return vmNavigationPageCellStyle;
 	}
 
 	/**

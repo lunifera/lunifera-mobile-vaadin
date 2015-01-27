@@ -876,13 +876,59 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_PAGE__DATADESCRIPTION = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Cell Styles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__CELL_STYLES = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>VM Navigation Page</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 8;
+	int VM_NAVIGATION_PAGE_FEATURE_COUNT = CoreModelPackage.YLAYOUT_FEATURE_COUNT + 9;
+
+	/**
+	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageCellStyleImpl <em>VM Navigation Page Cell Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageCellStyleImpl
+	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationPageCellStyle()
+	 * @generated
+	 */
+	int VM_NAVIGATION_PAGE_CELL_STYLE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE_CELL_STYLE__TARGET = 0;
+
+	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE_CELL_STYLE__ALIGNMENT = 1;
+
+	/**
+	 * The number of structural features of the '<em>VM Navigation Page Cell Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE_CELL_STYLE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
@@ -892,7 +938,7 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationButton()
 	 * @generated
 	 */
-	int VM_NAVIGATION_BUTTON = 6;
+	int VM_NAVIGATION_BUTTON = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1028,7 +1074,7 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationCommand()
 	 * @generated
 	 */
-	int VM_NAVIGATION_COMMAND = 7;
+	int VM_NAVIGATION_COMMAND = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1092,7 +1138,7 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationHandler()
 	 * @generated
 	 */
-	int VM_NAVIGATION_HANDLER = 8;
+	int VM_NAVIGATION_HANDLER = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1129,7 +1175,7 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMSearchPanel()
 	 * @generated
 	 */
-	int VM_SEARCH_PANEL = 9;
+	int VM_SEARCH_PANEL = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1328,7 +1374,7 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationRoot()
 	 * @generated
 	 */
-	int VM_NAVIGATION_ROOT = 10;
+	int VM_NAVIGATION_ROOT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1464,7 +1510,7 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationBarButton()
 	 * @generated
 	 */
-	int VM_NAVIGATION_BAR_BUTTON = 11;
+	int VM_NAVIGATION_BAR_BUTTON = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1814,6 +1860,49 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVMNavigationPage_Datadescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getCellStyles <em>Cell Styles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cell Styles</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getCellStyles()
+	 * @see #getVMNavigationPage()
+	 * @generated
+	 */
+	EReference getVMNavigationPage_CellStyles();
+
+	/**
+	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle <em>VM Navigation Page Cell Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VM Navigation Page Cell Style</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle
+	 * @generated
+	 */
+	EClass getVMNavigationPageCellStyle();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle#getTarget()
+	 * @see #getVMNavigationPageCellStyle()
+	 * @generated
+	 */
+	EReference getVMNavigationPageCellStyle_Target();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle#getAlignment <em>Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alignment</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle#getAlignment()
+	 * @see #getVMNavigationPageCellStyle()
+	 * @generated
+	 */
+	EAttribute getVMNavigationPageCellStyle_Alignment();
 
 	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton <em>VM Navigation Button</em>}'.
@@ -2192,6 +2281,36 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference VM_NAVIGATION_PAGE__DATADESCRIPTION = eINSTANCE.getVMNavigationPage_Datadescription();
+		/**
+		 * The meta object literal for the '<em><b>Cell Styles</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_NAVIGATION_PAGE__CELL_STYLES = eINSTANCE.getVMNavigationPage_CellStyles();
+		/**
+		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageCellStyleImpl <em>VM Navigation Page Cell Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageCellStyleImpl
+		 * @see org.lunifera.mobile.vaadin.ecview.model.impl.VaadinMobilePackageImpl#getVMNavigationPageCellStyle()
+		 * @generated
+		 */
+		EClass VM_NAVIGATION_PAGE_CELL_STYLE = eINSTANCE.getVMNavigationPageCellStyle();
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_NAVIGATION_PAGE_CELL_STYLE__TARGET = eINSTANCE.getVMNavigationPageCellStyle_Target();
+		/**
+		 * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VM_NAVIGATION_PAGE_CELL_STYLE__ALIGNMENT = eINSTANCE.getVMNavigationPageCellStyle_Alignment();
 		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationButtonImpl <em>VM Navigation Button</em>}' class.
 		 * <!-- begin-user-doc -->

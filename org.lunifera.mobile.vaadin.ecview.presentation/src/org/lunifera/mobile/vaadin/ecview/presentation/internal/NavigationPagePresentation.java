@@ -203,17 +203,14 @@ public class NavigationPagePresentation extends
 					new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE));
 			registerBinding(currentActiveNextNavPageBinding);
 
-			navigationView
-					.addAttachListener(new ClientConnector.AttachListener() {
-						@Override
-						public void attach(AttachEvent event) {
-							navigationView.getNavigationManager()
-									.addNavigationListener(
-											NavigationPagePresentation.this);
-						}
-					});
-
 		}
+		navigationView.addAttachListener(new ClientConnector.AttachListener() {
+			@Override
+			public void attach(AttachEvent event) {
+				navigationView.getNavigationManager().addNavigationListener(
+						NavigationPagePresentation.this);
+			}
+		});
 
 		super.createBindings(yPage, widget, container);
 	}
@@ -280,7 +277,7 @@ public class NavigationPagePresentation extends
 	public void navigate(NavigationEvent event) {
 		if (event.getDirection() == NavigationEvent.Direction.BACK) {
 			NavigationManager mgr = (NavigationManager) event.getSource();
-			if (mgr.getPreviousComponent() == navigationView) {
+			if (mgr.getNextComponent() == navigationView) {
 				navigationView.getNavigationManager().removeListener(this);
 				getEditpart().requestUnrender();
 

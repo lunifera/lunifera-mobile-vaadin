@@ -19,6 +19,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot;
 import org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
@@ -71,6 +72,12 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * @generated
 	 */
 	private EClass vmNavigationPageEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vmNavigationPageCellStyleEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -360,6 +367,42 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVMNavigationPage_CellStyles() {
+		return (EReference)vmNavigationPageEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVMNavigationPageCellStyle() {
+		return vmNavigationPageCellStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVMNavigationPageCellStyle_Target() {
+		return (EReference)vmNavigationPageCellStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVMNavigationPageCellStyle_Alignment() {
+		return (EAttribute)vmNavigationPageCellStyleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVMNavigationButton() {
 		return vmNavigationButtonEClass;
 	}
@@ -579,6 +622,11 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__NAVIGATE_BACK);
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__ON_NAVIGATE_BACK);
 		createEReference(vmNavigationPageEClass, VM_NAVIGATION_PAGE__DATADESCRIPTION);
+		createEReference(vmNavigationPageEClass, VM_NAVIGATION_PAGE__CELL_STYLES);
+
+		vmNavigationPageCellStyleEClass = createEClass(VM_NAVIGATION_PAGE_CELL_STYLE);
+		createEReference(vmNavigationPageCellStyleEClass, VM_NAVIGATION_PAGE_CELL_STYLE__TARGET);
+		createEAttribute(vmNavigationPageCellStyleEClass, VM_NAVIGATION_PAGE_CELL_STYLE__ALIGNMENT);
 
 		vmNavigationButtonEClass = createEClass(VM_NAVIGATION_BUTTON);
 		createEReference(vmNavigationButtonEClass, VM_NAVIGATION_BUTTON__PAGE);
@@ -692,8 +740,13 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		initEAttribute(getVMNavigationPage_NavigateBack(), ecorePackage.getEJavaObject(), "navigateBack", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVMNavigationPage_OnNavigateBack(), ecorePackage.getELong(), "onNavigateBack", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVMNavigationPage_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVMNavigationPage_CellStyles(), this.getVMNavigationPageCellStyle(), null, "cellStyles", null, 0, -1, VMNavigationPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(vmNavigationPageEClass, theBindingPackage.getYECViewModelValueBindingEndpoint(), "createValueEndpoint", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(vmNavigationPageCellStyleEClass, VMNavigationPageCellStyle.class, "VMNavigationPageCellStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVMNavigationPageCellStyle_Target(), theCoreModelPackage.getYEmbeddable(), null, "target", null, 1, 1, VMNavigationPageCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVMNavigationPageCellStyle_Alignment(), theCoreModelPackage.getYAlignment(), "alignment", "UNDEFINED", 0, 1, VMNavigationPageCellStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vmNavigationButtonEClass, VMNavigationButton.class, "VMNavigationButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVMNavigationButton_Page(), this.getVMNavigationPage(), null, "page", null, 0, 1, VMNavigationButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

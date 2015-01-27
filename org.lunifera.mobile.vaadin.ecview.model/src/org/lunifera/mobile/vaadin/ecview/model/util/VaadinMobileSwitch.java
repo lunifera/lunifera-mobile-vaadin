@@ -148,6 +148,12 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE_CELL_STYLE: {
+				VMNavigationPageCellStyle vmNavigationPageCellStyle = (VMNavigationPageCellStyle)theEObject;
+				T result = caseVMNavigationPageCellStyle(vmNavigationPageCellStyle);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case VaadinMobilePackage.VM_NAVIGATION_BUTTON: {
 				VMNavigationButton vmNavigationButton = (VMNavigationButton)theEObject;
 				T result = caseVMNavigationButton(vmNavigationButton);
@@ -308,6 +314,21 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVMNavigationPage(VMNavigationPage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Navigation Page Cell Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Navigation Page Cell Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMNavigationPageCellStyle(VMNavigationPageCellStyle object) {
 		return null;
 	}
 

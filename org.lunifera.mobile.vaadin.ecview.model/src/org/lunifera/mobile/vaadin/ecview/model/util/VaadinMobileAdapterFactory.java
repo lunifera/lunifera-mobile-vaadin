@@ -101,6 +101,10 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 				return createVMNavigationPageAdapter();
 			}
 			@Override
+			public Adapter caseVMNavigationPageCellStyle(VMNavigationPageCellStyle object) {
+				return createVMNavigationPageCellStyleAdapter();
+			}
+			@Override
 			public Adapter caseVMNavigationButton(VMNavigationButton object) {
 				return createVMNavigationButtonAdapter();
 			}
@@ -273,6 +277,20 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVMNavigationPageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle <em>VM Navigation Page Cell Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle
+	 * @generated
+	 */
+	public Adapter createVMNavigationPageCellStyleAdapter() {
 		return null;
 	}
 

@@ -76,6 +76,15 @@ public interface VaadinMobileFactory extends EFactory {
 	VMNavigationPage createVMNavigationPage();
 
 	/**
+	 * Returns a new object of class '<em>VM Navigation Page Cell Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VM Navigation Page Cell Style</em>'.
+	 * @generated
+	 */
+	VMNavigationPageCellStyle createVMNavigationPageCellStyle();
+
+	/**
 	 * Returns a new object of class '<em>VM Navigation Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

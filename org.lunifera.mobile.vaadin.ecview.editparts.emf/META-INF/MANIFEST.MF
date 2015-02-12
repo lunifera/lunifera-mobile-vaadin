@@ -22,4 +22,13 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.osgi.service.component;version="1.2.0",
  org.slf4j;version="1.6.4"
 Service-Component: OSGI-INF/editPartManager.xml
-Export-Package: org.lunifera.mobile.vaadin.ecview.editparts.emf
+Export-Package: org.lunifera.mobile.vaadin.ecview.editparts.emf;
+  uses:="org.lunifera.ecview.core.common.editpart.binding,
+   org.lunifera.mobile.vaadin.ecview.editparts,
+   org.lunifera.ecview.core.common.editpart.emf.common,
+   org.lunifera.ecview.core.common.editpart,
+   org.lunifera.mobile.vaadin.ecview.model,
+   org.lunifera.mobile.vaadin.ecview.editparts.presentation,
+   org.eclipse.emf.common.notify,
+   org.osgi.service.component,
+   org.lunifera.ecview.core.common.editpart.emf"

@@ -7,9 +7,29 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.lunifera.mobile.vaadin.ecview.model,
- org.lunifera.mobile.vaadin.ecview.model.impl,
- org.lunifera.mobile.vaadin.ecview.model.util
+Export-Package: org.lunifera.mobile.vaadin.ecview.model;
+  uses:="org.lunifera.ecview.core.common.model.binding,
+   org.eclipse.emf.ecore,
+   org.eclipse.emf.common.util,
+   org.lunifera.ecview.core.common.model.datatypes,
+   org.lunifera.ecview.core.common.model.core",
+ org.lunifera.mobile.vaadin.ecview.model.impl;
+  uses:="org.lunifera.ecview.core.common.model.binding,
+   org.eclipse.emf.ecore,
+   org.eclipse.emf.common.util,
+   org.lunifera.mobile.vaadin.ecview.model,
+   org.lunifera.ecview.core.common.model.datatypes,
+   org.lunifera.ecview.core.common.model.core,
+   org.eclipse.emf.common.notify,
+   org.eclipse.emf.ecore.impl,
+   org.lunifera.ecview.core.common.model.core.impl",
+ org.lunifera.mobile.vaadin.ecview.model.util;
+  uses:="org.eclipse.emf.ecore.util,
+   org.eclipse.emf.ecore,
+   org.eclipse.emf.common.notify.impl,
+   org.lunifera.mobile.vaadin.ecview.model,
+   org.lunifera.ecview.core.common.model.core,
+   org.eclipse.emf.common.notify"
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.lunifera.ecview.core.common.model;bundle-version="[0.8.0,0.9.0)";visibility:=reexport,

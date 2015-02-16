@@ -203,6 +203,7 @@ public class NavigationPagePresentation extends
 
 			verticalLayout = new VerticalLayout();
 			navigationView.setContent(verticalLayout);
+			verticalLayout.setSizeFull();
 			associateWidget(verticalLayout, modelAccess.yLayout);
 
 			applyCaptions();

@@ -33,11 +33,17 @@ Package model <http://lunifera.org/ecview/v1/vaadin/mobile>
     Attribute navigateBack : EJavaObject
     Attribute onNavigateBack : ELong
     Reference datadescription : YDatadescription
+    Reference cellStyles : VMNavigationPageCellStyle<<0..*>>
     Operation createValueEndpoint() : YECViewModelValueBindingEndpoint
+
+  Class VMNavigationPageCellStyle
+    Reference target : YEmbeddable<<1..1>>
+    Attribute alignment : YAlignment
 
   Class VMNavigationButton -> YAction
     Reference page : VMNavigationPage
     Reference datadescription : YDatadescription
+    Attribute lastClickTime : ELong
     Operation getView() : YView
 
   Class VMNavigationCommand -> YCommand

@@ -14,6 +14,8 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.core.YMarginable;
+import org.lunifera.ecview.core.common.model.core.YSpacingable;
 import org.lunifera.ecview.core.common.model.core.YVisibleable;
 import org.lunifera.mobile.vaadin.ecview.model.*;
 
@@ -79,6 +81,8 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				T result = caseVMHorizontalButtonGroup(vmHorizontalButtonGroup);
 				if (result == null) result = caseYLayout(vmHorizontalButtonGroup);
 				if (result == null) result = caseYEmbeddable(vmHorizontalButtonGroup);
+				if (result == null) result = caseYEditable(vmHorizontalButtonGroup);
+				if (result == null) result = caseYEnable(vmHorizontalButtonGroup);
 				if (result == null) result = caseYElement(vmHorizontalButtonGroup);
 				if (result == null) result = caseYCssAble(vmHorizontalButtonGroup);
 				if (result == null) result = caseYVisibleable(vmHorizontalButtonGroup);
@@ -103,6 +107,8 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				T result = caseVMVerticalComponentGroup(vmVerticalComponentGroup);
 				if (result == null) result = caseYLayout(vmVerticalComponentGroup);
 				if (result == null) result = caseYEmbeddable(vmVerticalComponentGroup);
+				if (result == null) result = caseYEditable(vmVerticalComponentGroup);
+				if (result == null) result = caseYEnable(vmVerticalComponentGroup);
 				if (result == null) result = caseYElement(vmVerticalComponentGroup);
 				if (result == null) result = caseYCssAble(vmVerticalComponentGroup);
 				if (result == null) result = caseYVisibleable(vmVerticalComponentGroup);
@@ -134,9 +140,17 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYLayout(vmNavigationPage);
 				if (result == null) result = caseVMNavigationHandler(vmNavigationPage);
 				if (result == null) result = caseYEmbeddable(vmNavigationPage);
+				if (result == null) result = caseYEditable(vmNavigationPage);
+				if (result == null) result = caseYEnable(vmNavigationPage);
 				if (result == null) result = caseYElement(vmNavigationPage);
 				if (result == null) result = caseYCssAble(vmNavigationPage);
 				if (result == null) result = caseYVisibleable(vmNavigationPage);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VaadinMobilePackage.VM_NAVIGATION_PAGE_CELL_STYLE: {
+				VMNavigationPageCellStyle vmNavigationPageCellStyle = (VMNavigationPageCellStyle)theEObject;
+				T result = caseVMNavigationPageCellStyle(vmNavigationPageCellStyle);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,6 +178,48 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				VMNavigationHandler vmNavigationHandler = (VMNavigationHandler)theEObject;
 				T result = caseVMNavigationHandler(vmNavigationHandler);
 				if (result == null) result = caseYElement(vmNavigationHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VaadinMobilePackage.VM_SEARCH_PANEL: {
+				VMSearchPanel vmSearchPanel = (VMSearchPanel)theEObject;
+				T result = caseVMSearchPanel(vmSearchPanel);
+				if (result == null) result = caseYLayout(vmSearchPanel);
+				if (result == null) result = caseYSpacingable(vmSearchPanel);
+				if (result == null) result = caseYMarginable(vmSearchPanel);
+				if (result == null) result = caseYEmbeddable(vmSearchPanel);
+				if (result == null) result = caseYEditable(vmSearchPanel);
+				if (result == null) result = caseYEnable(vmSearchPanel);
+				if (result == null) result = caseYElement(vmSearchPanel);
+				if (result == null) result = caseYCssAble(vmSearchPanel);
+				if (result == null) result = caseYVisibleable(vmSearchPanel);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VaadinMobilePackage.VM_NAVIGATION_ROOT: {
+				VMNavigationRoot vmNavigationRoot = (VMNavigationRoot)theEObject;
+				T result = caseVMNavigationRoot(vmNavigationRoot);
+				if (result == null) result = caseYLayout(vmNavigationRoot);
+				if (result == null) result = caseVMNavigationHandler(vmNavigationRoot);
+				if (result == null) result = caseYEmbeddable(vmNavigationRoot);
+				if (result == null) result = caseYEditable(vmNavigationRoot);
+				if (result == null) result = caseYEnable(vmNavigationRoot);
+				if (result == null) result = caseYElement(vmNavigationRoot);
+				if (result == null) result = caseYCssAble(vmNavigationRoot);
+				if (result == null) result = caseYVisibleable(vmNavigationRoot);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case VaadinMobilePackage.VM_NAVIGATION_BAR_BUTTON: {
+				VMNavigationBarButton vmNavigationBarButton = (VMNavigationBarButton)theEObject;
+				T result = caseVMNavigationBarButton(vmNavigationBarButton);
+				if (result == null) result = caseYAction(vmNavigationBarButton);
+				if (result == null) result = caseYEditable(vmNavigationBarButton);
+				if (result == null) result = caseYEmbeddable(vmNavigationBarButton);
+				if (result == null) result = caseYEnable(vmNavigationBarButton);
+				if (result == null) result = caseYElement(vmNavigationBarButton);
+				if (result == null) result = caseYCssAble(vmNavigationBarButton);
+				if (result == null) result = caseYVisibleable(vmNavigationBarButton);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -262,6 +318,21 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Navigation Page Cell Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Navigation Page Cell Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMNavigationPageCellStyle(VMNavigationPageCellStyle object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VM Navigation Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -303,6 +374,51 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVMNavigationHandler(VMNavigationHandler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Search Panel</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Search Panel</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMSearchPanel(VMSearchPanel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Navigation Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Navigation Root</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMNavigationRoot(VMNavigationRoot object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VM Navigation Bar Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VM Navigation Bar Button</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVMNavigationBarButton(VMNavigationBarButton object) {
 		return null;
 	}
 
@@ -453,6 +569,36 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYCommand(YCommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YSpacingable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YSpacingable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYSpacingable(YSpacingable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YMarginable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YMarginable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYMarginable(YMarginable object) {
 		return null;
 	}
 

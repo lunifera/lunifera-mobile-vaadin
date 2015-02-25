@@ -176,6 +176,9 @@ public class HorizontalButtonGroupPresentation extends
 			// unbind all active bindings
 			unbind();
 
+			// unrender the children
+			unrenderChildren();
+
 			// remove assocations
 			unassociateWidget(componentBase);
 			unassociateWidget(horizontalLayout);

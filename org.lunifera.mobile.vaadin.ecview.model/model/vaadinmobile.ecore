@@ -30,12 +30,30 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="barActions" upperBound="-1"
+        eType="#//VMNavigationBarButton" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navigateBack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="onNavigateBack" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cellStyles" upperBound="-1"
+        eType="#//VMNavigationPageCellStyle" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VMNavigationPageCellStyle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="ecore:EEnum ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAlignment"
+        defaultValueLiteral="UNDEFINED">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The alignment of the ui element relative to its grid cell."/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VMNavigationButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction">
     <eOperations name="getView" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YView"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="page" eType="#//VMNavigationPage"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastClickTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VMNavigationCommand" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YCommand">
     <eOperations name="createNavigationValueEndpoint" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/binding.ecore#//YECViewModelValueBindingEndpoint"/>
@@ -46,4 +64,23 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VMNavigationHandler" abstract="true"
       interface="true" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VMSearchPanel" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YSpacingable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YMarginable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emfNsURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeQualifiedName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applyFilter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VMNavigationRoot" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout #//VMNavigationHandler"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VMNavigationBarButton" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YAction ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YVisibleable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEditable ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEnable">
+    <eOperations name="getView" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YView"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastClickTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+  </eClassifiers>
 </ecore:EPackage>

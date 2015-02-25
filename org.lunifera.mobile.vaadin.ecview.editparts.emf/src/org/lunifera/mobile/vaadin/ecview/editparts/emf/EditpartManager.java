@@ -16,17 +16,23 @@ import org.lunifera.ecview.core.common.editpart.emf.ElementEditpart;
 import org.lunifera.ecview.core.common.editpart.emf.common.AbstractEditpartManager;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.mobile.vaadin.ecview.editparts.IHorizontalButtonGroupEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.IMobileSearchPanelEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationBarButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationCommandEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationRootEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.ISwitchEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IVerticalComponentGroupEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
+import org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot;
+import org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel;
 import org.lunifera.mobile.vaadin.ecview.model.VMSwitch;
 import org.lunifera.mobile.vaadin.ecview.model.VMTab;
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
@@ -88,6 +94,15 @@ public class EditpartManager extends AbstractEditpartManager {
 		} else if (editPartClazz
 				.isAssignableFrom(INavigationCommandEditpart.class)) {
 			result = createNewInstance(NavigationCommandEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(IMobileSearchPanelEditpart.class)) {
+			result = createNewInstance(MobileSearchPanelEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(INavigationRootEditpart.class)) {
+			result = createNewInstance(NavigationRootEditpart.class);
+		} else if (editPartClazz
+				.isAssignableFrom(INavigationBarButtonEditpart.class)) {
+			result = createNewInstance(NavigationBarButtonEditpart.class);
 		}
 
 		if (result != null) {
@@ -128,6 +143,12 @@ public class EditpartManager extends AbstractEditpartManager {
 			result = createNewInstance(NavigationButtonEditpart.class);
 		} else if (yElement instanceof VMNavigationCommand) {
 			result = createNewInstance(NavigationCommandEditpart.class);
+		} else if (yElement instanceof VMSearchPanel) {
+			result = createNewInstance(MobileSearchPanelEditpart.class);
+		} else if (yElement instanceof VMNavigationRoot) {
+			result = createNewInstance(NavigationRootEditpart.class);
+		} else if (yElement instanceof VMNavigationBarButton) {
+			result = createNewInstance(NavigationBarButtonEditpart.class);
 		}
 
 		if (result != null) {

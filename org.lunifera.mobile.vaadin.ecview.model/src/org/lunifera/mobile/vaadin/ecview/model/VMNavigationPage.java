@@ -2,8 +2,11 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
+import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,6 +20,11 @@ import org.lunifera.ecview.core.common.model.core.YLayout;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getEmfNsURI <em>Emf Ns URI</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getTypeQualifiedName <em>Type Qualified Name</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getValue <em>Value</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getBarActions <em>Bar Actions</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack <em>Navigate Back</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack <em>On Navigate Back</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getCellStyles <em>Cell Styles</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,10 +139,138 @@ public interface VMNavigationPage extends YLayout, VMNavigationHandler {
 	void setValue(Object value);
 
 	/**
+	 * Returns the value of the '<em><b>Bar Actions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bar Actions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bar Actions</em>' containment reference list.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_BarActions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VMNavigationBarButton> getBarActions();
+
+	/**
+	 * Returns the value of the '<em><b>Navigate Back</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Navigate Back</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Navigate Back</em>' attribute.
+	 * @see #setNavigateBack(Object)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_NavigateBack()
+	 * @model
+	 * @generated
+	 */
+	Object getNavigateBack();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getNavigateBack <em>Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Navigate Back</em>' attribute.
+	 * @see #getNavigateBack()
+	 * @generated
+	 */
+	void setNavigateBack(Object value);
+
+	/**
+	 * Returns the value of the '<em><b>On Navigate Back</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>On Navigate Back</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>On Navigate Back</em>' attribute.
+	 * @see #setOnNavigateBack(long)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_OnNavigateBack()
+	 * @model
+	 * @generated
+	 */
+	long getOnNavigateBack();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getOnNavigateBack <em>On Navigate Back</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>On Navigate Back</em>' attribute.
+	 * @see #getOnNavigateBack()
+	 * @generated
+	 */
+	void setOnNavigateBack(long value);
+
+	/**
+	 * Returns the value of the '<em><b>Datadescription</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Datadescription</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Datadescription</em>' reference.
+	 * @see #setDatadescription(YDatadescription)
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_Datadescription()
+	 * @model
+	 * @generated
+	 */
+	YDatadescription getDatadescription();
+
+	/**
+	 * Sets the value of the '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage#getDatadescription <em>Datadescription</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Datadescription</em>' reference.
+	 * @see #getDatadescription()
+	 * @generated
+	 */
+	void setDatadescription(YDatadescription value);
+
+	/**
+	 * Returns the value of the '<em><b>Cell Styles</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cell Styles</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cell Styles</em>' containment reference list.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMNavigationPage_CellStyles()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VMNavigationPageCellStyle> getCellStyles();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
 	 * @generated
 	 */
 	YECViewModelValueBindingEndpoint createValueEndpoint();
+	
+	
+	/**
+	 * Returns the cell style for the given element.
+	 * 
+	 * @param element
+	 * @return
+	 */
+	VMNavigationPageCellStyle getCellStyle(YEmbeddable element);
+
+	/**
+	 * Adds a new cell style to the internal list of cell styles.
+	 * 
+	 * @param element
+	 * @return
+	 */
+	VMNavigationPageCellStyle addCellStyle(YEmbeddable element);
+	
 } // VMNavigationPage

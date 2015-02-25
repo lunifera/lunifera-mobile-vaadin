@@ -15,6 +15,8 @@ import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
 import org.lunifera.ecview.core.common.model.core.YLayout;
+import org.lunifera.ecview.core.common.model.core.YMarginable;
+import org.lunifera.ecview.core.common.model.core.YSpacingable;
 import org.lunifera.ecview.core.common.model.core.YVisibleable;
 import org.lunifera.mobile.vaadin.ecview.model.*;
 
@@ -99,6 +101,10 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 				return createVMNavigationPageAdapter();
 			}
 			@Override
+			public Adapter caseVMNavigationPageCellStyle(VMNavigationPageCellStyle object) {
+				return createVMNavigationPageCellStyleAdapter();
+			}
+			@Override
 			public Adapter caseVMNavigationButton(VMNavigationButton object) {
 				return createVMNavigationButtonAdapter();
 			}
@@ -109,6 +115,18 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseVMNavigationHandler(VMNavigationHandler object) {
 				return createVMNavigationHandlerAdapter();
+			}
+			@Override
+			public Adapter caseVMSearchPanel(VMSearchPanel object) {
+				return createVMSearchPanelAdapter();
+			}
+			@Override
+			public Adapter caseVMNavigationRoot(VMNavigationRoot object) {
+				return createVMNavigationRootAdapter();
+			}
+			@Override
+			public Adapter caseVMNavigationBarButton(VMNavigationBarButton object) {
+				return createVMNavigationBarButtonAdapter();
 			}
 			@Override
 			public Adapter caseYElement(YElement object) {
@@ -127,16 +145,16 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 				return createYEmbeddableAdapter();
 			}
 			@Override
-			public Adapter caseYLayout(YLayout object) {
-				return createYLayoutAdapter();
-			}
-			@Override
 			public Adapter caseYEditable(YEditable object) {
 				return createYEditableAdapter();
 			}
 			@Override
 			public Adapter caseYEnable(YEnable object) {
 				return createYEnableAdapter();
+			}
+			@Override
+			public Adapter caseYLayout(YLayout object) {
+				return createYLayoutAdapter();
 			}
 			@Override
 			public Adapter caseYField(YField object) {
@@ -149,6 +167,14 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseYCommand(YCommand object) {
 				return createYCommandAdapter();
+			}
+			@Override
+			public Adapter caseYSpacingable(YSpacingable object) {
+				return createYSpacingableAdapter();
+			}
+			@Override
+			public Adapter caseYMarginable(YMarginable object) {
+				return createYMarginableAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -255,6 +281,20 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle <em>VM Navigation Page Cell Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationPageCellStyle
+	 * @generated
+	 */
+	public Adapter createVMNavigationPageCellStyleAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationButton <em>VM Navigation Button</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -293,6 +333,48 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVMNavigationHandlerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel <em>VM Search Panel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel
+	 * @generated
+	 */
+	public Adapter createVMSearchPanelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot <em>VM Navigation Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationRoot
+	 * @generated
+	 */
+	public Adapter createVMNavigationRootAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton <em>VM Navigation Bar Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton
+	 * @generated
+	 */
+	public Adapter createVMNavigationBarButtonAdapter() {
 		return null;
 	}
 
@@ -433,6 +515,34 @@ public class VaadinMobileAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createYCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YSpacingable <em>YSpacingable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YSpacingable
+	 * @generated
+	 */
+	public Adapter createYSpacingableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.lunifera.ecview.core.common.model.core.YMarginable <em>YMarginable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.lunifera.ecview.core.common.model.core.YMarginable
+	 * @generated
+	 */
+	public Adapter createYMarginableAdapter() {
 		return null;
 	}
 

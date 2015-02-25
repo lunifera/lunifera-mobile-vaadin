@@ -2,23 +2,33 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMF based editparts for extension model
 Bundle-SymbolicName: org.lunifera.mobile.vaadin.ecview.editparts.emf
-Bundle-Version: 0.8.0
+Bundle-Version: 0.9.0
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;bundle-version="2.8.0",
- org.lunifera.ecview.core.extension.editparts;bundle-version="[0.8.0,0.9.0)",
- org.lunifera.ecview.core.common.editparts.emf;bundle-version="[0.8.0,0.9.0)",
- org.lunifera.ecview.core.extension.model;bundle-version="[0.8.0,0.9.0)",
- org.lunifera.ecview.core.common;bundle-version="[0.8.0,0.9.0)",
- org.lunifera.ecview.core.common.model;bundle-version="[0.8.0,0.9.0)",
- org.lunifera.mobile.vaadin.ecview.model;bundle-version="[0.8.0,0.9.0)",
- org.lunifera.mobile.vaadin.ecview.editparts;bundle-version="[0.8.0,0.9.0)",
+ org.lunifera.ecview.core.extension.editparts;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.ecview.core.common.editparts.emf;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.ecview.core.extension.model;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.ecview.core.common;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.ecview.core.common.model;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.mobile.vaadin.ecview.model;bundle-version="[0.9.0,0.10.0)",
+ org.lunifera.mobile.vaadin.ecview.editparts;bundle-version="[0.9.0,0.10.0)",
  org.eclipse.core.databinding.observable,
  org.eclipse.core.databinding,
  org.eclipse.emf.databinding,
- org.eclipse.core.databinding.beans;bundle-version="1.2.200"
+ org.eclipse.core.databinding.beans;bundle-version="1.2.200",
+ org.lunifera.runtime.common;bundle-version="[0.9.0,0.10.0)"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.osgi.service.component;version="1.2.0",
  org.slf4j;version="1.6.4"
 Service-Component: OSGI-INF/editPartManager.xml
-Export-Package: org.lunifera.mobile.vaadin.ecview.editparts.emf
+Export-Package: org.lunifera.mobile.vaadin.ecview.editparts.emf;
+  uses:="org.lunifera.ecview.core.common.editpart.binding,
+   org.lunifera.mobile.vaadin.ecview.editparts,
+   org.lunifera.ecview.core.common.editpart.emf.common,
+   org.lunifera.ecview.core.common.editpart,
+   org.lunifera.mobile.vaadin.ecview.model,
+   org.lunifera.mobile.vaadin.ecview.editparts.presentation,
+   org.eclipse.emf.common.notify,
+   org.osgi.service.component,
+   org.lunifera.ecview.core.common.editpart.emf"

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Osgi
 Bundle-SymbolicName: org.lunifera.mobile.vaadin.touchkit.osgi
-Bundle-Version: 0.8.1.qualifier
+Bundle-Version: 0.9.1.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ClassPath: .,
  lib/vaadin-touchkit-cval-4.0.0.beta2.jar
@@ -122,12 +122,12 @@ Export-Package: com.vaadin.addon.touchkit.annotations,
    com.vaadin.server,
    com.vaadin.addon.touchkit.gwt.client.vcom.popover,
    com.vaadin.ui"
-Require-Bundle: com.vaadin.client-compiled;bundle-version="[7.3.7,7.4.0)",
- com.vaadin.external.atmosphere.runtime;bundle-version="2.1.2.vaadin6",
- com.vaadin.external.org.slf4j;bundle-version="1.6.1",
- com.vaadin.push;bundle-version="[7.3.7,7.4.0)",
- com.vaadin.server;bundle-version="[7.3.7,7.4.0)",
- com.vaadin.shared;bundle-version="[7.3.7,7.4.0)",
- com.vaadin.themes;bundle-version="[7.3.7,7.4.0)",
+Require-Bundle: com.vaadin.client-compiled;bundle-version="[7.3.8,7.3.9)",
+ com.vaadin.external.atmosphere.runtime;bundle-version="[2.1.2,2.1.3)",
+ com.vaadin.external.org.slf4j;bundle-version="[1.6.1,1.6.2)",
+ com.vaadin.push;bundle-version="[7.3.8,7.3.9)",
+ com.vaadin.server;bundle-version="[7.3.8,7.3.9)",
+ com.vaadin.shared;bundle-version="[7.3.8,7.3.9)",
+ com.vaadin.themes;bundle-version="[7.3.8,7.3.9)",
  org.jsoup;bundle-version="1.7.2",
  javax.servlet;bundle-version="3.0.0"

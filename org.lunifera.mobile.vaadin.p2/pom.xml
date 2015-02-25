@@ -21,7 +21,7 @@
 
 	<groupId>org.lunifera.mobile.vaadin</groupId>
 	<artifactId>org.lunifera.mobile.vaadin.p2</artifactId>
-	<version>0.8.1-SNAPSHOT</version>
+	<version>0.9.1-SNAPSHOT</version>
 	<packaging>eclipse-repository</packaging>
 
 	<properties>

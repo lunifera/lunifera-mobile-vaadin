@@ -2,12 +2,15 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
@@ -28,6 +31,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
  * <ul>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMTabImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMTabImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMTabImpl#getTags <em>Tags</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMTabImpl#getCssClass <em>Css Class</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMTabImpl#getCssID <em>Css ID</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMTabImpl#getParent <em>Parent</em>}</li>
@@ -76,6 +80,16 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTags() <em>Tags</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTags()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> tags;
 
 	/**
 	 * The default value of the '{@link #getCssClass() <em>Css Class</em>}' attribute.
@@ -185,6 +199,18 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, VaadinMobilePackage.VM_TAB__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getTags() {
+		if (tags == null) {
+			tags = new EDataTypeUniqueEList<String>(String.class, this, VaadinMobilePackage.VM_TAB__TAGS);
+		}
+		return tags;
 	}
 
 	/**
@@ -408,6 +434,8 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 				return getId();
 			case VaadinMobilePackage.VM_TAB__NAME:
 				return getName();
+			case VaadinMobilePackage.VM_TAB__TAGS:
+				return getTags();
 			case VaadinMobilePackage.VM_TAB__CSS_CLASS:
 				return getCssClass();
 			case VaadinMobilePackage.VM_TAB__CSS_ID:
@@ -427,6 +455,7 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -435,6 +464,10 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 				return;
 			case VaadinMobilePackage.VM_TAB__NAME:
 				setName((String)newValue);
+				return;
+			case VaadinMobilePackage.VM_TAB__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends String>)newValue);
 				return;
 			case VaadinMobilePackage.VM_TAB__CSS_CLASS:
 				setCssClass((String)newValue);
@@ -468,6 +501,9 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 			case VaadinMobilePackage.VM_TAB__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case VaadinMobilePackage.VM_TAB__TAGS:
+				getTags().clear();
+				return;
 			case VaadinMobilePackage.VM_TAB__CSS_CLASS:
 				setCssClass(CSS_CLASS_EDEFAULT);
 				return;
@@ -498,6 +534,8 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case VaadinMobilePackage.VM_TAB__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case VaadinMobilePackage.VM_TAB__TAGS:
+				return tags != null && !tags.isEmpty();
 			case VaadinMobilePackage.VM_TAB__CSS_CLASS:
 				return CSS_CLASS_EDEFAULT == null ? cssClass != null : !CSS_CLASS_EDEFAULT.equals(cssClass);
 			case VaadinMobilePackage.VM_TAB__CSS_ID:
@@ -567,6 +605,8 @@ public class VMTabImpl extends MinimalEObjectImpl.Container implements VMTab {
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", tags: ");
+		result.append(tags);
 		result.append(", cssClass: ");
 		result.append(cssClass);
 		result.append(", cssID: ");

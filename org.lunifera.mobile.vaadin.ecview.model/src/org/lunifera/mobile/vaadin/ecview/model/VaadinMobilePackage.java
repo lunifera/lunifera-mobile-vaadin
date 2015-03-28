@@ -95,6 +95,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_HORIZONTAL_BUTTON_GROUP__TAGS = CoreModelPackage.YLAYOUT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_HORIZONTAL_BUTTON_GROUP__PROPERTIES = CoreModelPackage.YLAYOUT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,6 +248,15 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_SWITCH__TAGS = CoreModelPackage.YFIELD__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SWITCH__PROPERTIES = CoreModelPackage.YFIELD__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -414,6 +432,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_VERTICAL_COMPONENT_GROUP__TAGS = CoreModelPackage.YLAYOUT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_VERTICAL_COMPONENT_GROUP__PROPERTIES = CoreModelPackage.YLAYOUT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -559,6 +586,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_TAB_SHEET__TAGS = CoreModelPackage.YEMBEDDABLE__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_TAB_SHEET__PROPERTIES = CoreModelPackage.YEMBEDDABLE__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -668,6 +704,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_TAB__TAGS = CoreModelPackage.YELEMENT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_TAB__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,6 +802,15 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_NAVIGATION_PAGE__TAGS = CoreModelPackage.YLAYOUT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_PAGE__PROPERTIES = CoreModelPackage.YLAYOUT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -1022,6 +1076,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_BUTTON__TAGS = CoreModelPackage.YACTION__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BUTTON__PROPERTIES = CoreModelPackage.YACTION__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1167,6 +1230,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_COMMAND__TAGS = CoreModelPackage.YCOMMAND__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_COMMAND__PROPERTIES = CoreModelPackage.YCOMMAND__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Navigation Handler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1240,6 +1312,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_HANDLER__TAGS = CoreModelPackage.YELEMENT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_HANDLER__PROPERTIES = CoreModelPackage.YELEMENT__PROPERTIES;
+
+	/**
 	 * The number of structural features of the '<em>VM Navigation Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1284,6 +1365,15 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_SEARCH_PANEL__TAGS = CoreModelPackage.YLAYOUT__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SEARCH_PANEL__PROPERTIES = CoreModelPackage.YLAYOUT__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
@@ -1494,6 +1584,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_NAVIGATION_ROOT__TAGS = CoreModelPackage.YLAYOUT__TAGS;
 
 	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_ROOT__PROPERTIES = CoreModelPackage.YLAYOUT__PROPERTIES;
+
+	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1637,6 +1736,15 @@ public interface VaadinMobilePackage extends EPackage {
 	 * @ordered
 	 */
 	int VM_NAVIGATION_BAR_BUTTON__TAGS = CoreModelPackage.YACTION__TAGS;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_NAVIGATION_BAR_BUTTON__PROPERTIES = CoreModelPackage.YACTION__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Css Class</b></em>' attribute.

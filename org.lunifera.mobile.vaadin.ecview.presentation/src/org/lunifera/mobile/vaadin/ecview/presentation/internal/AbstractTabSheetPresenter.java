@@ -20,7 +20,7 @@ import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabSheetPresentation;
 import org.lunifera.mobile.vaadin.ecview.model.VMTabSheet;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractVaadinWidgetPresenter;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.common.AbstractVaadinWidgetPresenter;
 
 import com.vaadin.ui.ComponentContainer;
 

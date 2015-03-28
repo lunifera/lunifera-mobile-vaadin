@@ -21,7 +21,7 @@ import org.lunifera.ecview.core.common.filter.IFilterProvidingPresentation;
 import org.lunifera.ecview.core.ui.core.editparts.extension.ISearchFieldEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMSearchPanel;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.IConstants;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.common.AbstractLayoutPresenter;
 import org.lunifera.runtime.web.vaadin.common.data.filter.Filters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

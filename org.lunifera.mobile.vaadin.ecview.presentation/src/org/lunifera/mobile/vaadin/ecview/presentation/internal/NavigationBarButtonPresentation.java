@@ -14,7 +14,7 @@ import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationBarButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractVaadinWidgetPresenter;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.common.AbstractVaadinWidgetPresenter;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.util.Util;
 
 import com.vaadin.ui.Button;

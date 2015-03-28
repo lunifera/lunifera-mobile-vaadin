@@ -16,7 +16,7 @@ import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.editpart.IEmbeddableEditpart;
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.mobile.vaadin.ecview.model.VMHorizontalButtonGroup;
-import org.lunifera.runtime.web.ecview.presentation.vaadin.internal.AbstractLayoutPresenter;
+import org.lunifera.runtime.web.ecview.presentation.vaadin.common.AbstractLayoutPresenter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

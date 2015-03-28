@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -13,10 +14,14 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.lunifera.ecview.core.common.model.binding.BindingFactory;
 import org.lunifera.ecview.core.common.model.binding.YECViewModelValueBindingEndpoint;
+import org.lunifera.ecview.core.common.model.core.CoreModelPackage;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YView;
+import org.lunifera.ecview.core.common.model.core.impl.YStringToStringMapImpl;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationCommand;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationHandler;
 import org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage;
@@ -31,6 +36,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl#getId <em>Id</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl#getTags <em>Tags</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl#getProperties <em>Properties</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl#getNavigationHandler <em>Navigation Handler</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl#getTargetPage <em>Target Page</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationCommandImpl#getValue <em>Value</em>}</li>
@@ -88,6 +94,16 @@ public class VMNavigationCommandImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected EList<String> tags;
+
+	/**
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, String> properties;
 
 	/**
 	 * The cached value of the '{@link #getNavigationHandler() <em>Navigation Handler</em>}' reference.
@@ -193,6 +209,18 @@ public class VMNavigationCommandImpl extends MinimalEObjectImpl.Container
 			tags = new EDataTypeUniqueEList<String>(String.class, this, VaadinMobilePackage.VM_NAVIGATION_COMMAND__TAGS);
 		}
 		return tags;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, String> getProperties() {
+		if (properties == null) {
+			properties = new EcoreEMap<String,String>(CoreModelPackage.Literals.YSTRING_TO_STRING_MAP, YStringToStringMapImpl.class, this, VaadinMobilePackage.VM_NAVIGATION_COMMAND__PROPERTIES);
+		}
+		return properties;
 	}
 
 	/**
@@ -348,6 +376,8 @@ public class VMNavigationCommandImpl extends MinimalEObjectImpl.Container
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__PROPERTIES:
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__TARGET_PAGE:
 				return basicSetTargetPage(null, msgs);
 		}
@@ -367,6 +397,9 @@ public class VMNavigationCommandImpl extends MinimalEObjectImpl.Container
 				return getName();
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__TAGS:
 				return getTags();
+			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__PROPERTIES:
+				if (coreType) return getProperties();
+				else return getProperties().map();
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__NAVIGATION_HANDLER:
 				if (resolve) return getNavigationHandler();
 				return basicGetNavigationHandler();
@@ -395,6 +428,9 @@ public class VMNavigationCommandImpl extends MinimalEObjectImpl.Container
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__TAGS:
 				getTags().clear();
 				getTags().addAll((Collection<? extends String>)newValue);
+				return;
+			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__PROPERTIES:
+				((EStructuralFeature.Setting)getProperties()).set(newValue);
 				return;
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__NAVIGATION_HANDLER:
 				setNavigationHandler((VMNavigationHandler)newValue);
@@ -425,6 +461,9 @@ public class VMNavigationCommandImpl extends MinimalEObjectImpl.Container
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__TAGS:
 				getTags().clear();
 				return;
+			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__PROPERTIES:
+				getProperties().clear();
+				return;
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__NAVIGATION_HANDLER:
 				setNavigationHandler((VMNavigationHandler)null);
 				return;
@@ -451,6 +490,8 @@ public class VMNavigationCommandImpl extends MinimalEObjectImpl.Container
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__TAGS:
 				return tags != null && !tags.isEmpty();
+			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__PROPERTIES:
+				return properties != null && !properties.isEmpty();
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__NAVIGATION_HANDLER:
 				return navigationHandler != null;
 			case VaadinMobilePackage.VM_NAVIGATION_COMMAND__TARGET_PAGE:

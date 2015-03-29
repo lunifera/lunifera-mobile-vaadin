@@ -349,6 +349,15 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_SWITCH__ENABLED = CoreModelPackage.YFIELD__ENABLED;
 
 	/**
+	 * The feature id for the '<em><b>Tab Index</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_SWITCH__TAB_INDEX = CoreModelPackage.YFIELD__TAB_INDEX;
+
+	/**
 	 * The feature id for the '<em><b>Validators</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -82,6 +82,8 @@ public class NavigationButtonPresentation extends
 
 			associateWidget(button, modelAccess.vmField);
 
+			initialize(button, getCastedModel());
+
 			// creates the binding for the field
 			createBindings(modelAccess.vmField, button);
 

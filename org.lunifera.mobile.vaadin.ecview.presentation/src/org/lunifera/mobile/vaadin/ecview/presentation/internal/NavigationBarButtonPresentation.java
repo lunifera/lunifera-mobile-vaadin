@@ -63,6 +63,8 @@ public class NavigationBarButtonPresentation extends
 				button.setId(getEditpart().getId());
 			}
 
+			initialize(button, getCastedModel());
+			
 			// creates the binding for the field
 			createBindings(modelAccess.yField, button);
 

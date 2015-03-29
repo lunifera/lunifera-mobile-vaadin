@@ -142,6 +142,8 @@ public class MobileTabSheetPresentation extends
 				tabSheet.addStyleName(CSS_CLASS_CONTROL);
 			}
 
+			initialize(tabSheet, getCastedModel());
+			
 			renderTabs(false);
 		}
 

@@ -13,6 +13,7 @@ import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
 import org.lunifera.ecview.core.common.model.core.YEnable;
 import org.lunifera.ecview.core.common.model.core.YField;
+import org.lunifera.ecview.core.common.model.core.YFocusable;
 import org.lunifera.ecview.core.common.model.core.YLayout;
 import org.lunifera.ecview.core.common.model.core.YMarginable;
 import org.lunifera.ecview.core.common.model.core.YSpacingable;
@@ -96,6 +97,7 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 				if (result == null) result = caseYEmbeddable(vmSwitch);
 				if (result == null) result = caseYEditable(vmSwitch);
 				if (result == null) result = caseYEnable(vmSwitch);
+				if (result == null) result = caseYFocusable(vmSwitch);
 				if (result == null) result = caseYElement(vmSwitch);
 				if (result == null) result = caseYCssAble(vmSwitch);
 				if (result == null) result = caseYVisibleable(vmSwitch);
@@ -494,6 +496,21 @@ public class VaadinMobileSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseYLayout(YLayout object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>YFocusable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>YFocusable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseYFocusable(YFocusable object) {
 		return null;
 	}
 

@@ -2,6 +2,7 @@
  */
 package org.lunifera.mobile.vaadin.ecview.model;
 
+import org.eclipse.emf.common.util.EList;
 import org.lunifera.ecview.core.common.model.core.YCssAble;
 import org.lunifera.ecview.core.common.model.core.YElement;
 import org.lunifera.ecview.core.common.model.core.YEmbeddable;
@@ -19,6 +20,7 @@ import org.lunifera.ecview.core.common.model.datatypes.YDatadescription;
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getParent <em>Parent</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getEmbeddable <em>Embeddable</em>}</li>
  *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getDatadescription <em>Datadescription</em>}</li>
+ *   <li>{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}</li>
  * </ul>
  * </p>
  *
@@ -106,6 +108,22 @@ public interface VMTab extends YElement, YCssAble, VMNavigationHandler {
 	 * @generated
 	 */
 	void setDatadescription(YDatadescription value);
+
+	/**
+	 * Returns the value of the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * The list contents are of type {@link org.lunifera.ecview.core.common.model.datatypes.YDatadescription}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Orphan Datadescriptions</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Orphan Datadescriptions</em>' containment reference list.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage#getVMTab_OrphanDatadescriptions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<YDatadescription> getOrphanDatadescriptions();
 
 	/**
 	 * <!-- begin-user-doc -->

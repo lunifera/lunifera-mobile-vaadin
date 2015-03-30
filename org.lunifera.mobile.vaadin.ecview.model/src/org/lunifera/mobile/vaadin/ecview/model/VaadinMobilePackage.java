@@ -767,13 +767,22 @@ public interface VaadinMobilePackage extends EPackage {
 	int VM_TAB__DATADESCRIPTION = CoreModelPackage.YELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VM_TAB__ORPHAN_DATADESCRIPTIONS = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>VM Tab</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VM_TAB_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 5;
+	int VM_TAB_FEATURE_COUNT = CoreModelPackage.YELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl <em>VM Navigation Page</em>}' class.
@@ -1989,6 +1998,17 @@ public interface VaadinMobilePackage extends EPackage {
 	EReference getVMTab_Datadescription();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.lunifera.mobile.vaadin.ecview.model.VMTab#getOrphanDatadescriptions <em>Orphan Datadescriptions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Orphan Datadescriptions</em>'.
+	 * @see org.lunifera.mobile.vaadin.ecview.model.VMTab#getOrphanDatadescriptions()
+	 * @see #getVMTab()
+	 * @generated
+	 */
+	EReference getVMTab_OrphanDatadescriptions();
+
+	/**
 	 * Returns the meta object for class '{@link org.lunifera.mobile.vaadin.ecview.model.VMNavigationPage <em>VM Navigation Page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2441,6 +2461,13 @@ public interface VaadinMobilePackage extends EPackage {
 		 * @generated
 		 */
 		EReference VM_TAB__DATADESCRIPTION = eINSTANCE.getVMTab_Datadescription();
+		/**
+		 * The meta object literal for the '<em><b>Orphan Datadescriptions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VM_TAB__ORPHAN_DATADESCRIPTIONS = eINSTANCE.getVMTab_OrphanDatadescriptions();
 		/**
 		 * The meta object literal for the '{@link org.lunifera.mobile.vaadin.ecview.model.impl.VMNavigationPageImpl <em>VM Navigation Page</em>}' class.
 		 * <!-- begin-user-doc -->

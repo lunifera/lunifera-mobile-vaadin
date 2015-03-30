@@ -15,9 +15,8 @@ import org.lunifera.mobile.vaadin.ecview.model.VMNavigationBarButton;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VM Navigation Bar Button</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>VM Navigation Bar Button</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
@@ -30,11 +29,12 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
  *
  * @generated
  */
-public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigationBarButton {
+public class VMNavigationBarButtonImpl extends YActionImpl implements
+		VMNavigationBarButton {
 	/**
 	 * The default value of the '{@link #isInitialEditable() <em>Initial Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #isInitialEditable()
 	 * @generated
 	 * @ordered
@@ -42,8 +42,8 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	protected static final boolean INITIAL_EDITABLE_EDEFAULT = true;
 	/**
 	 * The cached value of the '{@link #isInitialEditable() <em>Initial Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #isInitialEditable()
 	 * @generated
 	 * @ordered
@@ -51,8 +51,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	protected boolean initialEditable = INITIAL_EDITABLE_EDEFAULT;
 	/**
 	 * The default value of the '{@link #isEditable() <em>Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isEditable()
 	 * @generated
 	 * @ordered
@@ -60,8 +59,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	protected static final boolean EDITABLE_EDEFAULT = true;
 	/**
 	 * The cached value of the '{@link #isEditable() <em>Editable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #isEditable()
 	 * @generated
 	 * @ordered
@@ -69,8 +67,8 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	protected boolean editable = EDITABLE_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getDatadescription() <em>Datadescription</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getDatadescription()
 	 * @generated
 	 * @ordered
@@ -79,8 +77,8 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 
 	/**
 	 * The default value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getLastClickTime()
 	 * @generated
 	 * @ordered
@@ -88,8 +86,8 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	protected static final long LAST_CLICK_TIME_EDEFAULT = 0L;
 	/**
 	 * The cached value of the '{@link #getLastClickTime() <em>Last Click Time</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
 	 * @see #getLastClickTime()
 	 * @generated
 	 * @ordered
@@ -97,8 +95,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	protected long lastClickTime = LAST_CLICK_TIME_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected VMNavigationBarButtonImpl() {
@@ -106,8 +103,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -116,8 +112,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isInitialEditable() {
@@ -125,8 +120,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setInitialEditable(boolean newInitialEditable) {
@@ -137,8 +131,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public boolean isEditable() {
@@ -146,8 +139,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setEditable(boolean newEditable) {
@@ -158,8 +150,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YDatadescription getDatadescription() {
@@ -175,8 +166,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public YDatadescription basicGetDatadescription() {
@@ -184,8 +174,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setDatadescription(YDatadescription newDatadescription) {
@@ -196,8 +185,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public long getLastClickTime() {
@@ -205,8 +193,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setLastClickTime(long newLastClickTime) {
@@ -217,8 +204,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -238,8 +224,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -262,8 +247,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -286,8 +270,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -304,10 +287,9 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 		}
 		return super.eIsSet(featureID);
 	}
-	
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -323,8 +305,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -340,8 +321,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -368,6 +348,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescription(label));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabel(label);
 		}
@@ -382,6 +363,7 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 		YDatadescription ds = getDatadescription();
 		if (ds == null) {
 			setDatadescription(createDatadescriptionForI18n(i18nKey));
+			getOrphanDatadescriptions().add(getDatadescription());
 		} else {
 			ds.setLabelI18nKey(i18nKey);
 		}
@@ -401,4 +383,4 @@ public class VMNavigationBarButtonImpl extends YActionImpl implements VMNavigati
 		return dsc;
 	}
 
-} //VMNavigationBarButtonImpl
+} // VMNavigationBarButtonImpl

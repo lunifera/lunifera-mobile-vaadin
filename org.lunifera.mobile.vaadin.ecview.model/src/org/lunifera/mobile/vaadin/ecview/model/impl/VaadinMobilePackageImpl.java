@@ -286,6 +286,15 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVMTab_OrphanDatadescriptions() {
+		return (EReference)vmTabEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVMNavigationPage() {
 		return vmNavigationPageEClass;
 	}
@@ -612,6 +621,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		createEReference(vmTabEClass, VM_TAB__PARENT);
 		createEReference(vmTabEClass, VM_TAB__EMBEDDABLE);
 		createEReference(vmTabEClass, VM_TAB__DATADESCRIPTION);
+		createEReference(vmTabEClass, VM_TAB__ORPHAN_DATADESCRIPTIONS);
 
 		vmNavigationPageEClass = createEClass(VM_NAVIGATION_PAGE);
 		createEAttribute(vmNavigationPageEClass, VM_NAVIGATION_PAGE__TYPE);
@@ -725,6 +735,7 @@ public class VaadinMobilePackageImpl extends EPackageImpl implements VaadinMobil
 		initEReference(getVMTab_Parent(), this.getVMTabSheet(), this.getVMTabSheet_Tabs(), "parent", null, 1, 1, VMTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVMTab_Embeddable(), theCoreModelPackage.getYEmbeddable(), null, "embeddable", null, 1, 1, VMTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVMTab_Datadescription(), theDatatypesPackage.getYDatadescription(), null, "datadescription", null, 0, 1, VMTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVMTab_OrphanDatadescriptions(), theDatatypesPackage.getYDatadescription(), null, "orphanDatadescriptions", null, 0, -1, VMTab.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(vmTabEClass, theCoreModelPackage.getYView(), "getView", 0, 1, IS_UNIQUE, IS_ORDERED);
 

@@ -19,6 +19,9 @@
         eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/core.ecore#//YEmbeddable"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datadescription" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orphanDatadescriptions"
+        upperBound="-1" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/datatypes.ecore#//YDatadescription"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VMNavigationPage" eSuperTypes="../../org.lunifera.ecview.core.common.model/model/core.ecore#//YLayout #//VMNavigationHandler">
     <eOperations name="createValueEndpoint" eType="ecore:EClass ../../org.lunifera.ecview.core.common.model/model/binding.ecore#//YECViewModelValueBindingEndpoint"/>

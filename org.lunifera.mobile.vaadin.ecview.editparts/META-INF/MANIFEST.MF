@@ -11,5 +11,5 @@ Export-Package: org.lunifera.mobile.vaadin.ecview.editparts;uses:="org.lunifera.
  org.lunifera.mobile.vaadin.ecview.editparts.presentation;uses:="org.lunifera.ecview.core.common.editpart.binding,org.lunifera.ecview.core.common.presentation,org.lunifera.mobile.vaadin.ecview.editparts"
 Require-Bundle: org.lunifera.ecview.core.common;bundle-version="[0.9.0,0.10.0)",
  org.eclipse.core.databinding;bundle-version="1.4.1",
- org.lunifera.ecview.core.extension.editparts,
- org.lunifera.runtime.common;bundle-version="0.9.1"
+ org.lunifera.ecview.core.extension.editparts;bundle-version="[0.9.1,0.10.0)",
+ org.lunifera.runtime.common;bundle-version="[0.9.1,0.10.0)"

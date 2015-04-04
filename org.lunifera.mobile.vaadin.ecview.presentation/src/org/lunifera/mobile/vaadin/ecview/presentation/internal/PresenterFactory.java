@@ -15,10 +15,13 @@ import org.lunifera.ecview.core.common.editpart.IElementEditpart;
 import org.lunifera.ecview.core.common.presentation.IPresentationFactory;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.IHorizontalButtonGroupEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.IMobileSearchPanelEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationBarButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationRootEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.ISwitchEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IVerticalComponentGroupEditpart;
 import org.lunifera.runtime.web.ecview.presentation.vaadin.VaadinRenderer;
@@ -58,6 +61,12 @@ public class PresenterFactory implements IPresentationFactory {
 			return (A) new NavigationPagePresentation(editpart);
 		} else if (editpart instanceof INavigationButtonEditpart) {
 			return (A) new NavigationButtonPresentation(editpart);
+		} else if (editpart instanceof IMobileSearchPanelEditpart) {
+			return (A) new MobileSearchPanelPresentation(editpart);
+		} else if (editpart instanceof INavigationRootEditpart) {
+			return (A) new NavigationRootPresentation(editpart);
+		} else if (editpart instanceof INavigationBarButtonEditpart) {
+			return (A) new NavigationBarButtonPresentation(editpart);
 		}
 
 		throw new IllegalArgumentException(String.format(

@@ -14,6 +14,7 @@ package org.lunifera.mobile.vaadin.ecview.editparts.presentation;
 
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 import org.lunifera.ecview.core.common.presentation.ILayoutPresentation;
+import org.lunifera.mobile.vaadin.ecview.editparts.INavigationBarButtonEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.INavigationPageEditpart;
 
 public interface INavigationPagePresentation<C> extends ILayoutPresentation<C> {
@@ -38,10 +39,16 @@ public interface INavigationPagePresentation<C> extends ILayoutPresentation<C> {
 			IBindableEndpointEditpart bindingEndpoint);
 
 	/**
+	 * Tells the navigation page to navigate back.
+	 */
+	void navigateBack();
+
+	/**
 	 * Sets the input binding endpoint. Fields of the navigation page needs to
 	 * be bound against the object at the end of the binding endpoint. For
 	 * instance, if a table row triggers binding, it will pass a binding
-	 * endpoint targeting the selected table row. Needs to be called before rendering the child.
+	 * endpoint targeting the selected table row. Needs to be called before
+	 * rendering the child.
 	 * 
 	 * <p>
 	 * This method is called on the child navigation page, that was triggered by
@@ -49,7 +56,14 @@ public interface INavigationPagePresentation<C> extends ILayoutPresentation<C> {
 	 * 
 	 * @param bindingEndpoint
 	 */
-	void setInputDataBindingEndpoint(
-			IBindableEndpointEditpart bindingEndpoint);
+	void setInputDataBindingEndpoint(IBindableEndpointEditpart bindingEndpoint);
+
+	void addBarAction(INavigationBarButtonEditpart editPart);
+
+	void insertBarAction(INavigationBarButtonEditpart editPart, int index);
+
+	void moveBarAction(INavigationBarButtonEditpart editPart, int position);
+
+	void removeBarAction(INavigationBarButtonEditpart editPart);
 
 }

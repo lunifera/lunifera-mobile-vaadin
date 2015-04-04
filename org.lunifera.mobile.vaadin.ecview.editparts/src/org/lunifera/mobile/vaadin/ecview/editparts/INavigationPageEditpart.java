@@ -10,6 +10,8 @@
  */
 package org.lunifera.mobile.vaadin.ecview.editparts;
 
+import java.util.List;
+
 import org.lunifera.ecview.core.common.editpart.ILayoutEditpart;
 import org.lunifera.ecview.core.common.editpart.binding.IBindableEndpointEditpart;
 
@@ -23,7 +25,8 @@ public interface INavigationPageEditpart extends ILayoutEditpart,
 	 * Sets the input binding endpoint. Fields of the navigation page needs to
 	 * be bound against the object at the end of the binding endpoint. For
 	 * instance, if a table row triggers binding, it will pass a binding
-	 * endpoint targeting the selected table row. Needs to be called before rendering the child.
+	 * endpoint targeting the selected table row. Needs to be called before
+	 * rendering the child.
 	 * 
 	 * <p>
 	 * This method is called on the child navigation page, that was triggered by
@@ -31,7 +34,12 @@ public interface INavigationPageEditpart extends ILayoutEditpart,
 	 * 
 	 * @param bindingEndpoint
 	 */
-	void setInputDataBindingEndpoint(
-			IBindableEndpointEditpart bindingEndpoint);
-	
+	void setInputDataBindingEndpoint(IBindableEndpointEditpart bindingEndpoint);
+
+	/**
+	 * Returns a list of all attached navigation bar buttons.
+	 * 
+	 * @return navigationBarButtons
+	 */
+	List<INavigationBarButtonEditpart> getBarButtons();
 }

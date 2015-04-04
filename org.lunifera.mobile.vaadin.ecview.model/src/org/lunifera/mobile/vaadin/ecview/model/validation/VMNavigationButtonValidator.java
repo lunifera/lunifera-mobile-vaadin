@@ -26,4 +26,6 @@ public interface VMNavigationButtonValidator {
 	boolean validatePageAlias(VMNavigationPage value);
 
 	boolean validateDatadescription(YDatadescription value);
+
+	boolean validateLastClickTime(long value);
 }

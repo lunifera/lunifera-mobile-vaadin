@@ -19,7 +19,6 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
 /**
  * The implementation of the IMobileNavigationPageEditpart.
  */
-@SuppressWarnings("restriction")
 public class NavigationButtonEditpart extends
 		ActionEditpart<VMNavigationButton> implements INavigationButtonEditpart {
 

@@ -16,7 +16,6 @@ import org.lunifera.ecview.core.common.editpart.emf.EmbeddableEditpart;
 import org.lunifera.ecview.core.common.model.core.YView;
 import org.lunifera.ecview.core.common.presentation.DelegatingPresenterFactory;
 import org.lunifera.ecview.core.common.presentation.IWidgetPresentation;
-import org.lunifera.ecview.core.ui.core.editparts.extension.presentation.ITabPresentation;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.IMobileTabSheetEditpart;
 import org.lunifera.mobile.vaadin.ecview.editparts.presentation.IMobileTabPresentation;
@@ -26,7 +25,6 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings("restriction")
 public class MobileTabEditpart extends ElementEditpart<VMTab> implements IMobileTabEditpart {
 
 	private static final Logger LOGGER = LoggerFactory

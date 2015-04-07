@@ -18,7 +18,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
 /**
  * The implementation of the IHorizontalButtonGroupEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class HorizontalButtonGroupEditpart extends
 		LayoutEditpart<VMHorizontalButtonGroup> implements
 		IHorizontalButtonGroupEditpart {

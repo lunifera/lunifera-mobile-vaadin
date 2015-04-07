@@ -28,7 +28,6 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings("restriction")
 public class MobileTabSheetEditpart extends EmbeddableEditpart<VMTabSheet>
 		implements IMobileTabSheetEditpart {
 

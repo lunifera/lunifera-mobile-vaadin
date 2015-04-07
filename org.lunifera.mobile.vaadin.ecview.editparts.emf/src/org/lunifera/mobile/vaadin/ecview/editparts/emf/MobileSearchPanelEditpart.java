@@ -21,7 +21,7 @@ import org.lunifera.mobile.vaadin.ecview.model.VaadinMobilePackage;
 /**
  * The implementation of the ISearchPanelEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class MobileSearchPanelEditpart extends LayoutEditpart<VMSearchPanel>
 		implements IMobileSearchPanelEditpart {
 

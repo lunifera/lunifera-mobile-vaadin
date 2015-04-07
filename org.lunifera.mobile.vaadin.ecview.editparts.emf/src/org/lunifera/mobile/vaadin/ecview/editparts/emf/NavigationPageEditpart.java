@@ -33,7 +33,7 @@ import org.slf4j.LoggerFactory;
 /**
  * The implementation of the IMobileNavigationPageEditpart.
  */
-@SuppressWarnings("restriction")
+@SuppressWarnings("unchecked")
 public class NavigationPageEditpart extends LayoutEditpart<VMNavigationPage>
 		implements INavigationPageEditpart {
 

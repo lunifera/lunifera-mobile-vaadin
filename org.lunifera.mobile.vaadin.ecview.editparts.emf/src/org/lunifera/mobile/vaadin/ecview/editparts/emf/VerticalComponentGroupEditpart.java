@@ -16,8 +16,9 @@ import org.lunifera.mobile.vaadin.ecview.model.VMVerticalComponentGroup;
 import org.lunifera.mobile.vaadin.ecview.model.VaadinMobileFactory;
 
 /**
- * The implementation of the IHorizontalButtonGroupEditpart.
+ * The implementation of the IVerticalComponentGroupEditpart.
  */
+@SuppressWarnings("unchecked")
 public class VerticalComponentGroupEditpart extends
 		LayoutEditpart<VMVerticalComponentGroup> implements
 		IVerticalComponentGroupEditpart {
@@ -27,5 +28,6 @@ public class VerticalComponentGroupEditpart extends
 		return (VMVerticalComponentGroup) VaadinMobileFactory.eINSTANCE
 				.createVMVerticalComponentGroup();
 	}
-
 }
+
+

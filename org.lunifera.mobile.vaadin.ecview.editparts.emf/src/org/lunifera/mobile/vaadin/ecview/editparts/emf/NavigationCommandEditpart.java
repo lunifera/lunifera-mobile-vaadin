@@ -29,7 +29,6 @@ import org.slf4j.LoggerFactory;
 /**
  * The implementation of the IHorizontalButtonGroupEditpart.
  */
-@SuppressWarnings("restriction")
 public class NavigationCommandEditpart extends
 		CommandEditpart<VMNavigationCommand> implements
 		INavigationCommandEditpart {

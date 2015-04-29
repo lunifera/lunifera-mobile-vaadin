@@ -27,7 +27,6 @@ import com.vaadin.ui.ComponentContainer;
 /**
  * This presenter is responsible to render a tab sheet on the given layout.
  */
-@SuppressWarnings("restriction")
 public class MobileTabSheetPresentation extends
 		AbstractTabSheetPresenter<ComponentContainer> implements
 		IMobileTabSheetPresentation<ComponentContainer> {

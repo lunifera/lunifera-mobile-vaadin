@@ -27,7 +27,6 @@ import com.vaadin.ui.ComponentContainer;
 /**
  * An abstract base class implementing {@link ILayoutPresentation}.
  */
-@SuppressWarnings("restriction")
 public abstract class AbstractTabSheetPresenter<A extends ComponentContainer>
 		extends AbstractVaadinWidgetPresenter<A> implements
 		IMobileTabSheetPresentation<A> {

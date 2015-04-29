@@ -34,7 +34,6 @@ import com.vaadin.ui.Field;
 /**
  * This presenter is responsible to render a xswitch on the given layout.
  */
-@SuppressWarnings("restriction")
 public class SwitchPresentation extends AbstractFieldWidgetPresenter<Component> {
 
 	private final ModelAccess modelAccess;

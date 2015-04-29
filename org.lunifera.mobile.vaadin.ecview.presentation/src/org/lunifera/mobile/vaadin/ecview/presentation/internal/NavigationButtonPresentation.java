@@ -28,7 +28,6 @@ import com.vaadin.ui.ComponentContainer;
 /**
  * This presenter is responsible to render a text field on the given layout.
  */
-@SuppressWarnings("restriction")
 public class NavigationButtonPresentation extends
 		AbstractVaadinWidgetPresenter<Component> {
 

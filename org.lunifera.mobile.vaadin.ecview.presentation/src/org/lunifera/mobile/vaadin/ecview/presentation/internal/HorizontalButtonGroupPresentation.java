@@ -28,7 +28,6 @@ import com.vaadin.ui.CssLayout;
 /**
  * This presenter is responsible to render a text field on the given layout.
  */
-@SuppressWarnings("restriction")
 public class HorizontalButtonGroupPresentation extends
 		AbstractLayoutPresenter<ComponentContainer> {
 

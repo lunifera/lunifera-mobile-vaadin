@@ -30,7 +30,6 @@ import com.vaadin.ui.TabSheet.Tab;
 /**
  * This presenter is responsible to render a tab sheet on the given layout.
  */
-@SuppressWarnings("restriction")
 public class MobileTabPresentation extends AbstractTabPresenter<Component>
 		implements IMobileTabPresentation<Component> {
 

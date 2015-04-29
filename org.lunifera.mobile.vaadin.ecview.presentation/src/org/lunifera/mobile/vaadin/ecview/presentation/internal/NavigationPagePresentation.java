@@ -60,7 +60,7 @@ import com.vaadin.ui.VerticalLayout;
 /**
  * This presenter is responsible to render a text field on the given layout.
  */
-@SuppressWarnings({ "restriction", "serial" })
+@SuppressWarnings("serial")
 public class NavigationPagePresentation extends
 		AbstractLayoutPresenter<ComponentContainer> implements
 		INavigationPagePresentation<ComponentContainer>, NavigationListener {
